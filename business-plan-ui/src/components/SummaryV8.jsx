@@ -4,45 +4,24 @@ import archImage from '../assets/architecture_diagram.png';
 
 const ACCENT = '#dfe6f7';
 
-/* ── 헤드라인 밴드 스타일 ── */
-const bandStyle = {
-  background: '#1e293b',
-  color: '#fff',
-  padding: '1.5rem 2rem',
-  marginBottom: '1.8rem',
-  position: 'relative',
-};
-
-const tagStyle = {
-  display: 'inline-block',
-  border: '1.5px solid #fff',
-  padding: '0.2rem 0.7rem',
-  fontSize: '0.78rem',
-  fontWeight: '700',
-  letterSpacing: '0.04em',
-  marginRight: '0.5rem',
-  marginTop: '0.5rem',
-};
-
-/* ── 키-밸류 카드 스타일 ── */
-const kvCard = {
+/* ── 공통 스타일 ── */
+const sectionBorder = {
   border: '1.5px solid #000',
-  padding: '0',
-  display: 'flex',
-  flexDirection: 'column',
+  marginBottom: '0.8rem',
 };
 
-const kvHeader = {
+const sectionHeader = {
   backgroundColor: '#1e293b',
   color: '#fff',
   padding: '0.4rem 0.8rem',
   fontWeight: '700',
   fontSize: '0.85rem',
   fontFamily: 'var(--hwp-font-heading)',
+  borderBottom: '1.5px solid #000',
 };
 
-const kvBody = {
-  padding: '0.7rem 0.8rem',
+const sectionBody = {
+  padding: '0.6rem 0.8rem',
   fontSize: '0.88rem',
   lineHeight: '1.65',
 };
@@ -58,158 +37,90 @@ const SummaryV8 = () => {
 
         <h1 className="hwp-checkbox-section">창업아이템 개요(요약)</h1>
 
-        {/* ════════ 원페이지 헤드라인 밴드 ════════ */}
-        <div style={bandStyle}>
-          <div style={{ fontSize: '0.78rem', opacity: 0.7, marginBottom: '0.3rem', fontFamily: 'var(--hwp-font-heading)' }}>
-            ITEM NAME
-          </div>
-          <div style={{ fontSize: '1.2rem', fontWeight: '700', lineHeight: '1.4', wordBreak: 'keep-all', fontFamily: 'var(--hwp-font-heading)' }}>
-            중소 제약사용 보안형 온프레미스<br/>AI 신약개발 자동화·그리드 솔루션 (Bio-MLOps)
-          </div>
-          <div style={{ marginTop: '0.6rem', fontSize: '0.9rem', opacity: 0.9, lineHeight: '1.5' }}>
-            "우수한 글로벌 AI가 쏟아져도 중소 제약사는 도입 불가 → <strong>보안 × 편의 × 가격</strong> 3축을 한 패키지로 해결하는 곡괭이(Infra) 비즈니스"
-          </div>
-          <div style={{ marginTop: '0.8rem' }}>
-            <span style={tagStyle}>🔒 온프레미스 망분리</span>
-            <span style={tagStyle}>⚡ No-Code 1-Click</span>
-            <span style={tagStyle}>💰 Grid 비용 1/10</span>
-          </div>
-        </div>
-
-        {/* ════════ 2×2 키-밸류 카드 그리드 ════════ */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
-
-          {/* 카드 1: 핵심기능 */}
-          <div style={kvCard}>
-            <div style={kvHeader}>1. 핵심기능</div>
-            <div style={kvBody}>
-              <div style={{ display: 'flex', gap: '0.6rem', marginBottom: '0.4rem' }}>
-                <span style={{ fontWeight: '700', minWidth: '1.4rem' }}>①</span>
-                <span>알파폴드 등 최상위 오픈AI 원클릭 실행</span>
-              </div>
-              <div style={{ display: 'flex', gap: '0.6rem' }}>
-                <span style={{ fontWeight: '700', minWidth: '1.4rem' }}>②</span>
-                <span>사내 PC 유휴자원 연계 분산연산(Grid)</span>
-              </div>
-            </div>
-          </div>
-
-          {/* 카드 2: 타겟 고객 */}
-          <div style={kvCard}>
-            <div style={kvHeader}>2. 타겟 고객</div>
-            <div style={kvBody}>
-              <div style={{ display: 'flex', gap: '0.6rem', marginBottom: '0.4rem' }}>
-                <span style={{ fontWeight: '700', minWidth: '1.4rem' }}>B2B</span>
-                <span>MLOps 인력 없는 국내외 벤처·중견 제약사</span>
-              </div>
-              <div style={{ display: 'flex', gap: '0.6rem' }}>
-                <span style={{ fontWeight: '700', minWidth: '1.4rem' }}>B2C</span>
-                <span>데이터 유출 우려 대학 연구소·개인 연구자</span>
-              </div>
-            </div>
-          </div>
-
-          {/* 카드 3: 차별성 3대 축 */}
-          <div style={kvCard}>
-            <div style={kvHeader}>3. 차별성 (3대 축)</div>
-            <div style={kvBody}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.84rem' }}>
-                <tbody>
-                  <tr>
-                    <td style={{ fontWeight: '700', padding: '0.3rem 0', width: '35%', borderBottom: '1px dashed #ccc' }}>보안 (온프레미스)</td>
-                    <td style={{ padding: '0.3rem 0', borderBottom: '1px dashed #ccc' }}>기밀 유출 원천 차단</td>
-                  </tr>
-                  <tr>
-                    <td style={{ fontWeight: '700', padding: '0.3rem 0', borderBottom: '1px dashed #ccc' }}>편의 (No-Code)</td>
-                    <td style={{ padding: '0.3rem 0', borderBottom: '1px dashed #ccc' }}>마우스 클릭만으로 AI 구동</td>
-                  </tr>
-                  <tr>
-                    <td style={{ fontWeight: '700', padding: '0.3rem 0' }}>가격 (Grid)</td>
-                    <td style={{ padding: '0.3rem 0' }}>사내 PC 유휴자원 병렬 처리</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          {/* 카드 4: 판매전략 */}
-          <div style={kvCard}>
-            <div style={kvHeader}>4. 국내외 목표시장 & 판매전략</div>
-            <div style={kvBody}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.84rem', lineHeight: '1.6' }}>
-                <div style={{ border: '1.5px solid #000', padding: '0.4rem 0.6rem', fontWeight: '700', textAlign: 'center', minWidth: '60px', fontFamily: 'var(--hwp-font-heading)' }}>
-                  1단계
-                </div>
-                <span style={{ fontSize: '1.1rem' }}>→</span>
-                <span>B2C 저가 배포로 생태계 락인</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.84rem', lineHeight: '1.6', marginTop: '0.4rem' }}>
-                <div style={{ border: '1.5px solid #000', padding: '0.4rem 0.6rem', fontWeight: '700', textAlign: 'center', minWidth: '60px', fontFamily: 'var(--hwp-font-heading)', backgroundColor: '#1e293b', color: '#fff' }}>
-                  2단계
-                </div>
-                <span style={{ fontSize: '1.1rem' }}>→</span>
-                <span>B2B 고단가 온프레미스 POC 돌입</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* ════════ 개발단계 — 수평 프로그레스 ════════ */}
-        <div style={{ border: '1.5px solid #000', marginBottom: '1.5rem' }}>
-          <div style={{ backgroundColor: ACCENT, padding: '0.45rem 0.8rem', fontWeight: '700', fontSize: '0.88rem', fontFamily: 'var(--hwp-font-heading)', borderBottom: '1px solid #000' }}>
-            5. 개발단계 — 현재 위치
-          </div>
-          <div style={{ display: 'flex', alignItems: 'stretch' }}>
-            {[
-              { step: '아이디어 기획', desc: 'B2C+B2B 하이브리드 BM 기획 완료', done: true },
-              { step: '핵심기술 확보', desc: '오프라인 1-Click AI 자동화 스크립트 확보', done: true },
-              { step: '시제품 제작', desc: 'B2C 클라우드 선배포 & B2B MVP 개발 중', done: false, current: true },
-            ].map((item, i) => (
-              <React.Fragment key={i}>
-                {i > 0 && (
-                  <div style={{ display: 'flex', alignItems: 'center', padding: '0 0.2rem', fontSize: '1.3rem', fontWeight: 'bold' }}>→</div>
-                )}
-                <div style={{
-                  flex: 1,
-                  padding: '0.7rem',
-                  backgroundColor: item.current ? '#1e293b' : item.done ? '#f0f0f0' : '#fff',
-                  color: item.current ? '#fff' : '#000',
-                  borderRight: i < 2 ? 'none' : 'none',
-                  position: 'relative',
-                }}>
-                  <div style={{ fontSize: '0.78rem', fontWeight: '700', fontFamily: 'var(--hwp-font-heading)', marginBottom: '0.3rem' }}>
-                    {item.done && !item.current ? '✓ ' : item.current ? '▶ ' : ''}{item.step}
-                  </div>
-                  <div style={{ fontSize: '0.78rem', lineHeight: '1.4', opacity: item.current ? 0.9 : 0.7 }}>
-                    {item.desc}
-                  </div>
-                </div>
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
-
-        {/* ════════ 이미지 영역 ════════ */}
-        <table className="hwp-table" style={{ marginTop: '0.5rem' }}>
-          <thead>
-            <tr><th colSpan={2} style={{ backgroundColor: ACCENT }}>6. 이미지 (참고사진 및 구조 설계도)</th></tr>
-          </thead>
+        {/* ════════ 1열 개조식 테이블 ════════ */}
+        <table className="hwp-table" style={{ tableLayout: 'fixed', width: '100%' }}>
+          <colgroup>
+            <col style={{ width: '18%' }} />
+            <col style={{ width: '82%' }} />
+          </colgroup>
           <tbody>
+            {/* ① 창업아이템 소개 — 핵심기능, 소비자층, 사용처 통합 */}
             <tr>
-              <td style={{ width: '50%', textAlign: 'center', padding: '1rem' }}>
-                <div style={{ width: '100%', height: '160px', overflow: 'hidden' }}>
-                  <img src={uiImage} alt="비전문가 친화형 대시보드" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-                </div>
-                <div style={{ fontSize: '0.8rem', marginTop: '0.5rem', fontWeight: 'bold' }}>
-                  &lt; 노코드(No-Code) AI 시뮬레이션 관리 대시보드 &gt;
-                </div>
+              <td style={{ backgroundColor: '#1e293b', color: '#fff', fontWeight: '700', fontSize: '0.85rem', fontFamily: 'var(--hwp-font-heading)', textAlign: 'center', verticalAlign: 'middle', padding: '0.6rem 0.5rem' }}>
+                창업아이템<br />소개
               </td>
-              <td style={{ width: '50%', textAlign: 'center', padding: '1rem' }}>
-                <div style={{ width: '100%', height: '160px', overflow: 'hidden' }}>
-                  <img src={archImage} alt="망분리 아키텍처" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              <td style={{ padding: '0.6rem 0.8rem', fontSize: '0.88rem', lineHeight: '1.7' }}>
+                <div style={{ fontWeight: '700', fontSize: '0.92rem', fontFamily: 'var(--hwp-font-heading)', marginBottom: '0.3rem' }}>
+                  실험 연구자 친화형 약물·펩타이드 디자인 AI 파이프라인 자동화 플랫폼
                 </div>
-                <div style={{ fontSize: '0.8rem', marginTop: '0.5rem', fontWeight: 'bold' }}>
-                  &lt; 유출 제로(0) 온프레미스 망분리 및 사내 그리드 연산 아키텍처 &gt;
+                <div>• <strong>[핵심기능]</strong> AlphaFold·RFdiffusion·DiffDock 등 약물·펩타이드 디자인 오픈소스 AI를 <strong>No-Code 원클릭</strong>으로 자동 실행</div>
+                <div>• <strong>[핵심기능]</strong> 사내 PC 유휴자원 연계 <strong>그리드 분산연산</strong> → GPU 비용 1/10 절감</div>
+                <div>• <strong>[핵심기능]</strong> <strong>온프레미스 망분리</strong> 배포 → 기밀 연구 데이터 유출 원천 차단</div>
+                <div>• <strong>[소비자층]</strong> AI·MLOps 전문인력 없는 국내외 벤처·중견 <strong>제약사</strong>(B2B), 대학 연구소·개인 <strong>연구자</strong>(B2C)</div>
+                <div>• <strong>[사용처]</strong> 단백질 구조 예측, 약물 후보물질 도킹, 펩타이드 서열 설계 등 AI 기반 약물·펩타이드 디자인 파이프라인 실행</div>
+              </td>
+            </tr>
+
+            {/* ② 창업아이템의 차별성 */}
+            <tr>
+              <td style={{ backgroundColor: '#1e293b', color: '#fff', fontWeight: '700', fontSize: '0.85rem', fontFamily: 'var(--hwp-font-heading)', textAlign: 'center', verticalAlign: 'middle', padding: '0.6rem 0.5rem' }}>
+                창업아이템의<br />차별성
+              </td>
+              <td style={{ padding: '0.6rem 0.8rem', fontSize: '0.88rem', lineHeight: '1.7' }}>
+                <div>• 🔒 <strong>보안</strong> — Benchling·Schrödinger 등 경쟁 플랫폼 대비 유일한 온프레미스 망분리 지원</div>
+                <div>• ⚡ <strong>편의</strong> — 코딩 없이 마우스 클릭만으로 AI 파이프라인 구동 (No-Code UI), 실험 연구자도 즉시 사용</div>
+                <div>• 💰 <strong>가격</strong> — 사내 PC 유휴자원 병렬 처리(Grid)로 클라우드 GPU 대비 연산 비용 1/10 절감</div>
+                <div>• <strong>[보유역량]</strong> 대표자 AI·MLOps 실무 경력 기반 핵심기술 자체 확보, 글로벌 오픈소스 활용 빠른 개발</div>
+              </td>
+            </tr>
+
+            {/* ③ 개발단계 */}
+            <tr>
+              <td style={{ backgroundColor: '#1e293b', color: '#fff', fontWeight: '700', fontSize: '0.85rem', fontFamily: 'var(--hwp-font-heading)', textAlign: 'center', verticalAlign: 'middle', padding: '0.6rem 0.5rem' }}>
+                개발단계
+              </td>
+              <td style={{ padding: '0.6rem 0.8rem', fontSize: '0.88rem', lineHeight: '1.7' }}>
+                <div>• ✓ 아이디어 기획 — B2C+B2B 하이브리드 BM 기획 완료</div>
+                <div>• ✓ 핵심기술 확보 — AI 파이프라인 원클릭 자동화 스크립트 확보</div>
+                <div>• <strong>▶ 시제품 제작 중</strong> — B2C 클라우드 버전 선배포 &amp; B2B 온프레미스 MVP 개발 진행</div>
+              </td>
+            </tr>
+
+            {/* ④ 국내외 목표시장 */}
+            <tr>
+              <td style={{ backgroundColor: '#1e293b', color: '#fff', fontWeight: '700', fontSize: '0.85rem', fontFamily: 'var(--hwp-font-heading)', textAlign: 'center', verticalAlign: 'middle', padding: '0.6rem 0.5rem' }}>
+                국내외<br />목표시장
+              </td>
+              <td style={{ padding: '0.6rem 0.8rem', fontSize: '0.88rem', lineHeight: '1.7' }}>
+                <div>• <strong>[국내]</strong> AI 약물 디자인 도입 희망 중소·벤처 제약사 및 대학 연구실</div>
+                <div>• <strong>[해외]</strong> 동남아·일본 등 아시아권 중소 바이오텍</div>
+                <div>• <strong>[판매전략]</strong> 1단계('26) B2C 무료·저가 배포 락인 → 2단계('27) B2B 기업 POC → 3단계('28) 아시아 확장</div>
+              </td>
+            </tr>
+
+            {/* ⑤ 이미지 */}
+            <tr>
+              <td style={{ backgroundColor: '#1e293b', color: '#fff', fontWeight: '700', fontSize: '0.85rem', fontFamily: 'var(--hwp-font-heading)', textAlign: 'center', verticalAlign: 'middle', padding: '0.6rem 0.5rem' }}>
+                이미지
+              </td>
+              <td style={{ padding: '0.8rem' }}>
+                <div style={{ display: 'flex', gap: '1rem' }}>
+                  <div style={{ flex: 1, textAlign: 'center' }}>
+                    <div style={{ width: '100%', height: '140px', overflow: 'hidden' }}>
+                      <img src={uiImage} alt="비전문가 친화형 대시보드" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                    </div>
+                    <div style={{ fontSize: '0.75rem', marginTop: '0.3rem', fontWeight: 'bold', color: '#475569' }}>
+                      &lt; 노코드(No-Code) AI 관리 대시보드 &gt;
+                    </div>
+                  </div>
+                  <div style={{ flex: 1, textAlign: 'center' }}>
+                    <div style={{ width: '100%', height: '140px', overflow: 'hidden' }}>
+                      <img src={archImage} alt="망분리 아키텍처" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                    </div>
+                    <div style={{ fontSize: '0.75rem', marginTop: '0.3rem', fontWeight: 'bold', color: '#475569' }}>
+                      &lt; 온프레미스 망분리 + 그리드 아키텍처 &gt;
+                    </div>
+                  </div>
                 </div>
               </td>
             </tr>

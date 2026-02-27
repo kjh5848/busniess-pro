@@ -4,6 +4,9 @@ import ComparisonTable from './ui/ComparisonTable';
 import uiImage1 from '../assets/step1_alphafold.png';
 import uiImage2 from '../assets/step2_diffdock.png';
 import uiImage3 from '../assets/step3_rfdiffusion.png';
+import dashboardUI from '../assets/메인 대시보드 UI.png';
+import onpremiseUI from '../assets/온프레미스_설치패키지.png';
+import techDocsIP from '../assets/기술문서_IP.png';
 
 const ACCENT = '#dfe6f7';
 
@@ -39,12 +42,12 @@ const compRows = [
 const techCards = [
   {
     num: '01',
-    keyword: '원클릭 자동화',
-    title: '세계적으로 검증된 AI 신약 도구를 하나로 통합',
+    keyword: '오픈소스 통합 자동화',
+    title: 'GitHub 최신 AI 신약 도구를 통합 UI에서 원클릭 실행',
     points: [
-      'AlphaFold 3 등 글로벌 최상위급 AI 신약 탐색 도구 다수 탑재',
-      '코딩 없이 마우스 클릭만으로 사용 가능한 쉬운 화면 제공',
-      '설치 과정을 자동화하여 연구자가 즉시 사용 가능한 환경 제공',
+      'AlphaFold·DiffDock·RFdiffusion 등 GitHub 공개 오픈소스를 자동 패키징하여 제공',
+      '연구자가 원하는 모듈만 골라 조합 — 약물·펩타이드·단백질 디자인 등 취향에 맞게 구성',
+      '코딩 없이 마우스 클릭만으로 사용 가능한 No-Code 통합 대시보드 제공',
     ],
   },
   {
@@ -69,58 +72,52 @@ const techCards = [
   },
 ];
 
-/* ── 2-2 고객 핵심 요구사항 ── */
-const customerNeeds = [
-  '고비용 해외 SW 라이선스 없이도 AI 신약개발을 수행할 수 있는 합리적 비용의 도구',
-  '신약 데이터가 외부로 유출되지 않는 보안 환경 (온프레미스/망분리)',
-  '코딩 없이 사용할 수 있는 직관적 웹 인터페이스',
-  '실험 결과를 별도 도구 없이 바로 확인할 수 있는 시각화 기능',
-  '도입 전 실제 데이터로 검증해볼 수 있는 시범(PoC) 기회',
-];
-
-/* ── 2-2 요구사항 대비 제품 문제점 + 개선 방안 (3축 통합) ── */
+/* ── 2-2 고객 요구사항 대응 방안 (3축 통합 테이블) ── */
 const improvementTable = [
   {
     category: '기능·성능',
-    need: 'AI 예측 후 물리 검증까지 원스톱 수행',
-    gap: 'AI→물리 검증 워크플로우 단절 (수동 전환)',
-    action: 'AI·물리 하이브리드 파이프라인 원클릭 자동 통합',
-    target: '처리 시간 1/5, R²≥0.9',
-  },
-  {
-    category: '기능·성능',
-    need: '사내 보안 정책상 클라우드 업로드 불가',
-    gap: '망분리 환경용 온프레미스 버전 없음',
-    action: '망분리 온프레미스 완결형 설치 — 외부 통신 0%',
-    target: '데이터 유출 제로(0)',
-  },
-  {
-    category: '디자인',
-    need: '코딩 없이 사용할 수 있는 인터페이스',
-    gap: '현재 시제품이 CLI 기반 — 비전문가 접근 불가',
-    action: 'No-Code Web GUI 대시보드 개발',
-    target: '비전문가 즉시 사용 가능',
+    painPoints: [
+      '여러 AI 도구를 개별 설치·연결하는 데 며칠 소요',
+      '사내 보안 규정상 외부 클라우드 업로드 불가',
+    ],
+    gaps: [
+      'AI 도구 간 입출력 불일치 → 수동 전환 필수, 연구 시간 낭비',
+      '대부분 클라우드 SaaS 방식 → 망분리 환경 사용 불가',
+    ],
+    actions: [
+      'AI 엔진 간 데이터 자동 전달 통합 파이프라인(Pipeline SDK) 개발',
+      'Docker 기반 온프레미스 완결형 설치 패키지 개발 (폐쇄망 독립 구동)',
+    ],
   },
   {
     category: '디자인',
-    need: '결과를 바로 시각적으로 확인',
-    gap: '결과 시각화 부재 — 별도 외부 SW 필요',
-    action: '3D 분자 시각화 + 결합 친화도 차트 내장',
-    target: '별도 분석 SW 불필요',
+    painPoints: [
+      'CLI(코딩) 모르면 AI 도구 사용 자체 불가',
+      '결과 확인에 별도 시각화 SW 재설치 필요',
+    ],
+    gaps: [
+      '시제품이 CLI 기반 → 비전공 연구자 접근 불가',
+      '3D 구조·차트 확인에 외부 도구(PyMol 등) 별도 필요',
+    ],
+    actions: [
+      'No-Code Web GUI 대시보드 개발 (마우스 클릭만으로 분석 수행)',
+      '대시보드 내 3D 분자 뷰어 + 결합 친화도 차트 내장',
+    ],
   },
   {
     category: '사업화',
-    need: '도입 전 실제 데이터로 검증 기회',
-    gap: '고객사 데이터 기반 시범(PoC) 프로그램 없음',
-    action: '부산 바이오 기업 대상 무상 PoC 파일럿 운영',
-    target: "'26.Q3 내 3건 PoC 완료",
-  },
-  {
-    category: '사업화',
-    need: '월 정액제 등 예산 배정 가능한 과금 체계',
-    gap: '과금 모델 미정립 (라이선스만 검토 중)',
-    action: 'SaaS 월 구독 + 온프레미스 연간 라이선스 이중 모델',
-    target: 'MRR 기반 안정적 성장',
+    painPoints: [
+      '효과 미검증 상태에서 도입 비용 선투자 부담',
+      'GPU 종량 과금 → 비용 예측 불가, 예산 편성 곤란',
+    ],
+    gaps: [
+      '실 데이터 기반 시범(PoC) 검증 프로그램 없음',
+      '과금 모델 미정립(라이선스만 검토) → 월별 예산 배정 부적합',
+    ],
+    actions: [
+      '부산 바이오 기업 대상 무상 PoC 파일럿 운영',
+      'SaaS 월 정액 구독 + 온프레미스 연간 라이선스 이중 모델',
+    ],
   },
 ];
 
@@ -158,28 +155,27 @@ const vsData = [
   },
 ];
 
-/* ── 2-3 기술적 진입장벽(Moat) 데이터 ── */
-const moatData = [
+/* ── 2-3 자사 보유역량 기반 경쟁력 확보 방안 데이터 ── */
+const capabilityData = [
   {
-    axis: '사내 설치 자동화',
-    keyword: 'Auto-Setup Engine',
-    moat: '보안망에서 인터넷 없이 자동 설치 완료',
-    barrier: 'OS·GPU 드라이버·CUDA 버전별 의존성 자동 해결 기술 필요',
-    pct: 80,
+    capability: '대표자 MLOps·DevOps 실무 경력',
+    plan: '온프레미스 패키징·자동 설치 핵심 엔진(Auto-Setup Engine) 직접 개발',
+    effect: '외주 의존 없이 핵심 기술 내재화 — 유지보수·업데이트 자체 대응 가능',
   },
   {
-    axis: '파이프라인 통합',
-    keyword: 'Pipeline SDK',
-    moat: '14종 분자 파일 자동 인식 + AI 도구 간 자동 전달',
-    barrier: 'AlphaFold·DiffDock·RFdiffusion 각각의 입출력 호환 래핑 필요',
-    pct: 95,
+    capability: '오픈소스 AI 엔진 래핑 기술 확보 완료',
+    plan: 'AlphaFold·DiffDock·RFdiffusion 간 14종 분자 파일 호환 Pipeline SDK 개발',
+    effect: '후발 주자 대비 6개월 이상 개발 선점 우위 확보',
   },
   {
-    axis: 'PC 그리드 연산',
-    keyword: 'Grid Orchestrator',
-    moat: '여러 PC를 하나로 묶어 연산, 오류 시 자동 복구',
-    barrier: '이기종 GPU/CPU 혼합 환경에서 작업 분배·재시도 로직 구축 필요',
-    pct: 80,
+    capability: 'Docker/컨테이너 기반 배포 역량',
+    plan: '망분리 폐쇄망 원클릭 설치 패키지 + 사내 PC Grid 분산연산 모듈 구현',
+    effect: '클라우드 경쟁사가 진입 불가능한 온프레미스 시장 독점 공략',
+  },
+  {
+    capability: '특허 출원 2건 예정 (사업비 反映)',
+    plan: 'Auto-Setup Engine 알고리즘 + Grid Job Sharding 프로토콜 특허 출원',
+    effect: '핵심 알고리즘 법적 보호 → 경쟁사 기술 모방 법적 차단',
   },
 ];
 
@@ -210,7 +206,7 @@ const FeasibilityV8 = () => {
             marginBottom: '1.5rem', lineHeight: '1.6', fontWeight: '700',
             fontSize: '0.95rem', wordBreak: 'keep-all',
           }}>
-            ▶ 신약 직접 발굴이 아닌, 글로벌 공개 AI 엔진을 망분리 온프레미스로 패키징해 제공하는 <strong>'인프라 건축가'</strong> 포지션
+            ▶ 약물/단백질/펩타이드 디자인에 필요한 Bio/Chem informatics 기술을 자동화하여, 일반 연구자·실험자들이 쉽게 사용할 수 있도록 하는 <strong>AI 신약개발 Process 자동화 플랫폼 (Bio-MLOps 파이프라인)</strong>
           </div>
 
           {/* ════════ ① 현재 개발단계 현황 ════════ */}
@@ -309,7 +305,7 @@ const FeasibilityV8 = () => {
                 <td style={{ fontSize: '0.82rem', lineHeight: '1.55' }}>
                   UI/UX 와이어프레임 설계·디자인 시스템·React 프론트엔드·반응형 QA·사용성 테스트(UT) — 전문 디자인·개발 업체 분리 발주
                 </td>
-                <td style={{ fontSize: '0.82rem', textAlign: 'center' }}>'26.5 ~ '26.10<br/>(외주 46,500,000원)</td>
+                <td style={{ fontSize: '0.82rem', textAlign: 'center' }}>'26.5 ~ '26.10<br/>(외주 13,500,000원)</td>
               </tr>
               <tr>
                 <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.82rem' }}>
@@ -333,8 +329,9 @@ const FeasibilityV8 = () => {
             {[
               {
                 num: '산출물 ①',
-                title: 'Bio-MLOps Web Dashboard v1.0',
-                type: 'SaaS 제품',
+                title: '(SaaS 제품)',
+                subtitle: '(Web Dashboard v1.0)',
+                img: dashboardUI,
                 details: [
                   'No-Code 웹 GUI 기반 AI 신약개발 대시보드',
                   'AlphaFold·DiffDock·RFdiffusion 통합 파이프라인',
@@ -343,8 +340,9 @@ const FeasibilityV8 = () => {
               },
               {
                 num: '산출물 ②',
-                title: '온프레미스 설치 패키지 v1.0',
-                type: '설치형 솔루션',
+                title: '(설치형 솔루션)',
+                subtitle: '(온프레미스 설치 패키지 v1.0)',
+                img: onpremiseUI,
                 details: [
                   'Docker 기반 원클릭 자동 셋업 엔진 탑재',
                   '망분리 폐쇄망 독립 설치 가능',
@@ -353,8 +351,9 @@ const FeasibilityV8 = () => {
               },
               {
                 num: '산출물 ③',
-                title: '기술 문서·IP 확보',
-                type: '무형자산',
+                title: '(무형자산)',
+                subtitle: '(기술 문서·IP 확보)',
+                img: techDocsIP,
                 details: [
                   'API 레퍼런스 및 사용자 매뉴얼',
                   'Auto-Setup Engine 특허 출원 1건',
@@ -367,38 +366,37 @@ const FeasibilityV8 = () => {
                 borderLeft: i === 0 ? '1.5px solid #000' : 'none',
                 display: 'flex', flexDirection: 'column',
               }}>
-                {/* 헤더 */}
+                {/* 헤더: 산출물 번호 + 타입 */}
                 <div style={{
-                  backgroundColor: '#1e293b', color: '#fff',
+                  backgroundColor: ACCENT,
                   padding: '0.45rem 0.6rem', textAlign: 'center',
-                  fontWeight: '700', fontSize: '0.78rem',
-                  fontFamily: 'var(--hwp-font-heading)',
-                  borderBottom: '1px solid #000',
-                }}>
-                  {item.num}
-                </div>
-                {/* 타이틀 */}
-                <div style={{
-                  backgroundColor: ACCENT, padding: '0.4rem 0.6rem',
                   fontWeight: '700', fontSize: '0.82rem',
                   fontFamily: 'var(--hwp-font-heading)',
-                  borderBottom: '1px solid #000', textAlign: 'center',
+                  borderBottom: '1px solid #000',
                   lineHeight: '1.4',
                 }}>
-                  {item.title}
+                  <div>{item.num}</div>
+                  <div style={{ fontSize: '0.78rem' }}>{item.title}</div>
                 </div>
-                {/* 타입 태그 */}
+                {/* 이미지 */}
+                <div style={{
+                  height: '130px', overflow: 'hidden',
+                  borderBottom: '1px solid #000',
+                  backgroundColor: '#0a0a1a',
+                }}>
+                  <img src={item.img} alt={item.num} style={{
+                    width: '100%', height: '100%', objectFit: 'cover',
+                  }} />
+                </div>
+                {/* 서브타이틀 (캡션) */}
                 <div style={{
                   padding: '0.3rem 0.6rem', textAlign: 'center',
                   borderBottom: '1px solid #ccc',
+                  fontSize: '0.75rem', fontWeight: '600',
+                  fontFamily: 'var(--hwp-font-heading)',
+                  color: '#333',
                 }}>
-                  <span style={{
-                    display: 'inline-block', border: '1px solid #000',
-                    padding: '0.1rem 0.5rem', fontSize: '0.72rem',
-                    fontWeight: '600', fontFamily: 'var(--hwp-font-heading)',
-                  }}>
-                    {item.type}
-                  </span>
+                  {item.subtitle}
                 </div>
                 {/* 상세 내용 */}
                 <div style={{ padding: '0.5rem 0.6rem', fontSize: '0.8rem', lineHeight: '1.6', flex: 1 }}>
@@ -460,6 +458,87 @@ const FeasibilityV8 = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* ════════ Bio-MLOps 솔루션이 자동화하는 대상과 범위 ════════ */}
+          <div style={{ fontWeight: 'bold', fontSize: '0.88rem', marginBottom: '0.6rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
+            ■ Bio-MLOps 솔루션이 자동화하는 대상과 범위
+          </div>
+
+          <div style={{ border: '1.5px solid #000', marginBottom: '1.5rem', overflow: 'hidden' }}>
+            {/* 헤더 밴드 */}
+            <div style={{
+              backgroundColor: '#1e293b', color: '#fff', padding: '0.7rem 1rem',
+              fontWeight: '700', fontSize: '0.88rem', lineHeight: '1.6',
+              borderBottom: '1px solid #000', wordBreak: 'keep-all',
+            }}>
+              본 아이템은 전체 과정 중 가장 첫 관문인 <strong>'초기 후보 물질 발굴·최적화'</strong> 단계를 컴퓨터 시뮬레이션으로 대체하는 인프라를 제공함.
+            </div>
+
+            {/* 커버 분야 */}
+            <div style={{ display: 'flex', borderBottom: '1px solid #000' }}>
+              <div style={{
+                width: '130px', fontWeight: '700', padding: '0.6rem 0.8rem',
+                backgroundColor: ACCENT, borderRight: '1px solid #000',
+                fontFamily: 'var(--hwp-font-heading)', fontSize: '0.82rem',
+                display: 'flex', alignItems: 'center',
+              }}>커버하는 분야</div>
+              <div style={{ padding: '0.6rem 0.8rem', flex: 1, fontSize: '0.84rem', lineHeight: '1.7' }}>
+                단백질 <strong>3D 구조 예측</strong>, 분자 <strong>도킹(Docking)</strong>, <strong>자유에너지 섭동(FEP)</strong> 시뮬레이션
+              </div>
+            </div>
+
+            {/* 구체적인 설계 */}
+            <div style={{ display: 'flex', borderBottom: '1px solid #000' }}>
+              <div style={{
+                width: '130px', fontWeight: '700', padding: '0.6rem 0.8rem',
+                backgroundColor: ACCENT, borderRight: '1px solid #000',
+                fontFamily: 'var(--hwp-font-heading)', fontSize: '0.82rem',
+                display: 'flex', alignItems: 'center',
+              }}>구체적인 설계</div>
+              <div style={{ padding: '0.6rem 0.8rem', flex: 1, fontSize: '0.84rem', lineHeight: '1.7' }}>
+                질병의 원인이 되는 <strong>표적 단백질(Target Proteins)</strong>과 약물 후보군 <strong>저분자 화합물(Small Molecules / Ligands)</strong> 사이의 에너지를 계산하여 가상의 효능을 계산함.
+              </div>
+            </div>
+
+            {/* 핵심 가치 제안 */}
+            <div style={{ display: 'flex', borderBottom: '1px solid #000' }}>
+              <div style={{
+                width: '130px', fontWeight: '700', padding: '0.6rem 0.8rem',
+                backgroundColor: ACCENT, borderRight: '1px solid #000',
+                fontFamily: 'var(--hwp-font-heading)', fontSize: '0.82rem',
+                display: 'flex', alignItems: 'center',
+              }}>핵심 가치 제안<br/><span style={{ fontSize: '0.72rem', fontWeight: '400' }}>(필터 역할)</span></div>
+              <div style={{ padding: '0.6rem 0.8rem', flex: 1, fontSize: '0.84rem', lineHeight: '1.7' }}>
+                동물 실험이나 사람 대상의 임상 시험으로 넘어가기 전, 오직 <strong>컴퓨터 상에서 수만 개의 화합물을 미리 결합시켜</strong> 보고 약효가 없거나 독성이 의심되는 가짜 물질들을 <strong style={{ color: '#c0392b' }}>사전에 80% 이상 걸러냄</strong>. 이를 통해 수백억 원의 매몰 비용과 수 년의 물리적 실험 시간을 극적으로 구원함.
+              </div>
+            </div>
+
+            {/* 우선 공략 분야 */}
+            <div style={{ display: 'flex', borderBottom: '1px solid #000' }}>
+              <div style={{
+                width: '130px', fontWeight: '700', padding: '0.6rem 0.8rem',
+                backgroundColor: ACCENT, borderRight: '1px solid #000',
+                fontFamily: 'var(--hwp-font-heading)', fontSize: '0.82rem',
+                display: 'flex', alignItems: 'center',
+              }}>우선 공략 분야</div>
+              <div style={{ padding: '0.6rem 0.8rem', flex: 1, fontSize: '0.84rem', lineHeight: '1.7' }}>
+                단가가 가장 높은 <strong>FEP(자유에너지 섭동)</strong> 분야 자동화·패키징을 최우선 구현 → 이후 펩타이드 디자인, 단백질 디자인 등 타 분야로 순차 확장
+              </div>
+            </div>
+
+            {/* 기술 접근 방식 */}
+            <div style={{ display: 'flex' }}>
+              <div style={{
+                width: '130px', fontWeight: '700', padding: '0.6rem 0.8rem',
+                backgroundColor: ACCENT, borderRight: '1px solid #000',
+                fontFamily: 'var(--hwp-font-heading)', fontSize: '0.82rem',
+                display: 'flex', alignItems: 'center',
+              }}>기술 접근 방식</div>
+              <div style={{ padding: '0.6rem 0.8rem', flex: 1, fontSize: '0.84rem', lineHeight: '1.7' }}>
+                글로벌 최상위 AI 엔진(AlphaFold·DiffDock 등)을 <strong>자동화 파이프라인으로 통합</strong>하고, 온프레미스 패키징하여 비전문 연구자도 즉시 사용 가능한 턴키 솔루션으로 제공하는 것이 핵심 역량
+              </div>
+            </div>
           </div>
 
           {/* ── STEP 시각화 이미지 ── */}
@@ -714,148 +793,91 @@ const FeasibilityV8 = () => {
             ※ 고객 요구사항 분석을 통해 파악된 제품(서비스)의 문제점에 대한 기능·성능, 디자인, 사업화 활동 등을 개선하기 위한 방안
           </p>
 
-          {/* ── ① 고객 핵심 요구사항 (아이콘 카드) ── */}
+          {/* ── ① 요구사항 수집 방법 ── */}
           <div style={{ fontWeight: 'bold', fontSize: '0.88rem', marginBottom: '0.6rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
-            ■ 고객 핵심 요구사항
+            ■ 고객 요구사항 수집 및 분석 근거
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '0', marginBottom: '1.5rem' }}>
-            {[
-              { icon: '💰', label: '합리적 비용', desc: '고비용 해외 라이선스 없이 AI 신약개발 수행' },
-              { icon: '🔒', label: '데이터 보안', desc: '신약 데이터 외부 유출 차단 (온프레미스/망분리)' },
-              { icon: '🖱️', label: '직관적 UI', desc: '코딩 없이 사용할 수 있는 웹 인터페이스' },
-              { icon: '📊', label: '결과 시각화', desc: '별도 도구 없이 실험 결과 즉시 확인' },
-              { icon: '🧪', label: 'PoC 검증', desc: '도입 전 실제 데이터로 시범 검증 기회' },
-            ].map((card, i) => (
-              <div key={i} style={{
-                border: '1.5px solid #000',
-                borderLeft: i === 0 ? '1.5px solid #000' : 'none',
-                textAlign: 'center', display: 'flex', flexDirection: 'column',
-              }}>
-                <div style={{
-                  backgroundColor: '#1e293b', color: '#fff',
-                  padding: '0.5rem 0.3rem',
-                  fontSize: '1.2rem', borderBottom: '1px solid #000',
-                }}>
-                  {card.icon}
-                </div>
-                <div style={{
-                  backgroundColor: ACCENT, padding: '0.35rem 0.3rem',
-                  fontWeight: '700', fontSize: '0.78rem',
-                  fontFamily: 'var(--hwp-font-heading)',
-                  borderBottom: '1px solid #ccc',
-                }}>
-                  {card.label}
-                </div>
-                <div style={{
-                  padding: '0.5rem 0.4rem', fontSize: '0.75rem',
-                  lineHeight: '1.45', flex: 1,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                }}>
-                  {card.desc}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* ── ② 요구 → 문제 → 개선 → 목표 도식 (3축별) ── */}
-          <div style={{ fontWeight: 'bold', fontSize: '0.88rem', marginBottom: '0.6rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
-            ■ 요구사항 대비 제품 문제점 및 개선 방안
-          </div>
-
-          {/* 흐름 범례 */}
           <div style={{
-            display: 'flex', alignItems: 'center', gap: '0.5rem',
-            marginBottom: '0.8rem', fontSize: '0.75rem', color: '#666',
+            border: '1.5px solid #000', marginBottom: '1.5rem', overflow: 'hidden',
           }}>
-            <span style={{ backgroundColor: '#f8f8f8', border: '1px solid #ccc', padding: '0.15rem 0.5rem' }}>고객 요구</span>
-            <span>→</span>
-            <span style={{ backgroundColor: '#fff0f0', border: '1px solid #e0a0a0', padding: '0.15rem 0.5rem', color: '#c0392b' }}>제품 문제점</span>
-            <span>→</span>
-            <span style={{ backgroundColor: '#f0f4ff', border: '1px solid #a0b0e0', padding: '0.15rem 0.5rem' }}>개선 방안</span>
-            <span>→</span>
-            <span style={{ backgroundColor: '#1e293b', color: '#fff', padding: '0.15rem 0.5rem' }}>목표</span>
-          </div>
-
-          {/* 3축 흐름 다이어그램 */}
-          {[
-            { axis: '기능·성능', color: '#1e293b', rows: improvementTable.filter(r => r.category === '기능·성능') },
-            { axis: '디자인', color: '#1e293b', rows: improvementTable.filter(r => r.category === '디자인') },
-            { axis: '사업화', color: '#1e293b', rows: improvementTable.filter(r => r.category === '사업화') },
-          ].map((group, gi) => (
-            <div key={gi} style={{ marginBottom: gi < 2 ? '0.6rem' : '1.5rem' }}>
-              {group.rows.map((row, ri) => (
-                <div key={ri} style={{
-                  display: 'grid',
-                  gridTemplateColumns: '70px 1fr 32px 1fr 32px 1fr 32px auto',
-                  alignItems: 'stretch',
-                  marginBottom: ri < group.rows.length - 1 ? '0.4rem' : 0,
+            <div style={{
+              display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
+            }}>
+              {[
+                { method: '연구자 심층 인터뷰', detail: '바이오·제약 분야 연구자 5인 대상 1:1 인터뷰를 통해 기존 도구의 불편사항과 니즈 파악', icon: '🎤' },
+                { method: '기존 제품 리뷰 분석', detail: '해외 CADD SW(Schrödinger, MOE) 및 클라우드 AI(Galaxy) 사용자 리뷰·불만 사례 수집·분석', icon: '📋' },
+                { method: '잠재 고객사 미팅', detail: '부산 지역 바이오 기업·대학 연구실 3곳과 미팅, 도입 의사결정 기준 및 장벽 요인 청취', icon: '🤝' },
+              ].map((item, i) => (
+                <div key={i} style={{
+                  borderRight: i < 2 ? '1px solid #000' : 'none',
                 }}>
-                  {/* 축 라벨 (첫 행만) */}
-                  <div style={{
-                    backgroundColor: ri === 0 ? group.color : 'transparent',
-                    color: ri === 0 ? '#fff' : 'transparent',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontWeight: '700', fontSize: '0.78rem',
-                    fontFamily: 'var(--hwp-font-heading)',
-                    border: ri === 0 ? '1.5px solid #000' : '1.5px solid transparent',
-                    writingMode: group.rows.length > 1 ? 'vertical-rl' : 'horizontal-tb',
-                    padding: '0.3rem',
-                    ...(ri === 0 && group.rows.length > 1 ? {
-                      gridRow: `span ${group.rows.length}`,
-                    } : {}),
-                  }}>
-                    {ri === 0 ? group.axis : ''}
-                  </div>
-
-                  {/* 고객 요구 */}
-                  <div style={{
-                    border: '1.5px solid #ccc', backgroundColor: '#f8f8f8',
-                    padding: '0.45rem 0.5rem', fontSize: '0.8rem', lineHeight: '1.4',
-                    display: 'flex', alignItems: 'center',
-                  }}>
-                    {row.need}
-                  </div>
-
-                  {/* → */}
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', color: '#999' }}>→</div>
-
-                  {/* 제품 문제점 */}
-                  <div style={{
-                    border: '1.5px solid #e0a0a0', backgroundColor: '#fff0f0',
-                    padding: '0.45rem 0.5rem', fontSize: '0.8rem', lineHeight: '1.4',
-                    color: '#c0392b', fontWeight: '600',
-                    display: 'flex', alignItems: 'center',
-                  }}>
-                    {row.gap}
-                  </div>
-
-                  {/* → */}
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', color: '#999' }}>→</div>
-
-                  {/* 개선 방안 */}
-                  <div style={{
-                    border: '1.5px solid #a0b0e0', backgroundColor: '#f0f4ff',
-                    padding: '0.45rem 0.5rem', fontSize: '0.8rem', lineHeight: '1.4',
-                    display: 'flex', alignItems: 'center',
-                  }}>
-                    {row.action}
-                  </div>
-
-                  {/* → */}
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', color: '#999' }}>→</div>
-
-                  {/* 목표 */}
                   <div style={{
                     backgroundColor: '#1e293b', color: '#fff',
-                    padding: '0.45rem 0.5rem', fontSize: '0.78rem', lineHeight: '1.4',
-                    fontWeight: '700', display: 'flex', alignItems: 'center',
-                    minWidth: '100px',
+                    padding: '0.5rem 0.6rem', textAlign: 'center',
+                    fontWeight: '700', fontSize: '0.82rem',
+                    fontFamily: 'var(--hwp-font-heading)',
+                    borderBottom: '1px solid #000',
                   }}>
-                    {row.target}
+                    {item.icon} {item.method}
+                  </div>
+                  <div style={{
+                    padding: '0.6rem', fontSize: '0.8rem', lineHeight: '1.55',
+                  }}>
+                    {item.detail}
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* ── ② 고객 요구사항 대응 통합 테이블 ── */}
+          <div style={{ fontWeight: 'bold', fontSize: '0.88rem', marginBottom: '0.6rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
+            ■ 고객 요구사항 대비 문제점 및 개선 방안
+          </div>
+
+          {improvementTable.map((group, gi) => (
+            <div key={gi} style={{ marginBottom: gi < improvementTable.length - 1 ? '1rem' : '1.5rem' }}>
+              {/* 축 헤더 밴드 */}
+              <div style={{
+                backgroundColor: '#1e293b', color: '#fff',
+                padding: '0.45rem 0.8rem',
+                fontWeight: '700', fontSize: '0.84rem',
+                fontFamily: 'var(--hwp-font-heading)',
+                display: 'flex', alignItems: 'center', gap: '0.5rem',
+              }}>
+                <span style={{
+                  border: '1.5px solid #fff', padding: '0.1rem 0.45rem',
+                  fontSize: '0.72rem', fontWeight: '700',
+                }}>{gi + 1}</span>
+                {group.category}
+              </div>
+
+              {/* 2열: Pain Point / 개선 방안 */}
+              <table className="hwp-table" style={{ borderTop: 'none' }}>
+                <thead>
+                  <tr>
+                    <th style={{ backgroundColor: ACCENT, width: '50%', fontWeight: '700', fontSize: '0.8rem', fontFamily: 'var(--hwp-font-heading)' }}>
+                      고객 요구사항 (Pain Point)
+                    </th>
+                    <th style={{ backgroundColor: ACCENT, width: '50%', fontWeight: '700', fontSize: '0.8rem', fontFamily: 'var(--hwp-font-heading)' }}>
+                      개선 방안 (Action Plan)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {group.painPoints.map((pt, pi) => (
+                    <tr key={pi}>
+                      <td style={{ fontSize: '0.82rem', lineHeight: '1.55', padding: '0.5rem 0.6rem', color: '#c0392b' }}>
+                        <span style={{ fontWeight: '700', marginRight: '0.3rem' }}>❌</span> {pt}
+                      </td>
+                      <td style={{ fontSize: '0.82rem', lineHeight: '1.55', padding: '0.5rem 0.6rem', fontWeight: '600' }}>
+                        <span style={{ fontWeight: '700', marginRight: '0.3rem', color: '#2c7a3f' }}>✔</span> {group.actions[pi]}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           ))}
 
@@ -864,7 +886,7 @@ const FeasibilityV8 = () => {
             background: '#1e293b', color: '#fff', padding: '0.8rem 1.2rem',
             fontWeight: '700', fontSize: '0.88rem', wordBreak: 'keep-all', lineHeight: '1.7',
           }}>
-            ▶ 고객 요구사항 분석 결과, 파악된 <strong>기능·성능 / 디자인 / 사업화</strong> 3개 영역의 제품 문제점을 사업기간 내 체계적으로 개선 추진 예정
+            ▶ 연구자 인터뷰·기존 제품 리뷰·잠재 고객사 미팅으로 수집한 요구사항을 <strong>기능·성능 / 디자인 / 사업화</strong> 3축으로 분류하고, 각 문제점에 대한 기술적·사업적 개선 방안을 사업기간('26.4~11) 내 체계적으로 추진
           </div>
         </section>
 
@@ -951,70 +973,39 @@ const FeasibilityV8 = () => {
             </tbody>
           </table>
 
-          {/* ── ② Moat 카드형 진입장벽 ── */}
+          {/* ── ② 자사 보유역량 기반 경쟁력 확보 방안 ── */}
           <div style={{ fontWeight: 'bold', fontSize: '0.88rem', marginBottom: '0.6rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
-            ■ 기술 진입장벽(Moat) — 경쟁사 모방 난이도
+            ■ 자사 보유역량 기반 경쟁력 확보 방안
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0', marginBottom: '1.5rem' }}>
-            {moatData.map((m, i) => (
-              <div key={i} style={{
-                border: '1.5px solid #000',
-                borderLeft: i === 0 ? '1.5px solid #000' : 'none',
-                display: 'flex', flexDirection: 'column',
-              }}>
-                {/* 헤더 */}
-                <div style={{
-                  backgroundColor: '#1e293b', color: '#fff',
-                  padding: '0.5rem 0.7rem', textAlign: 'center',
-                  fontWeight: '700', fontSize: '0.8rem',
-                  fontFamily: 'var(--hwp-font-heading)',
-                  borderBottom: '1px solid #000',
-                }}>
-                  {m.axis}
-                </div>
-                {/* 키워드 */}
-                <div style={{
-                  backgroundColor: ACCENT, padding: '0.35rem 0.7rem',
-                  fontWeight: '700', fontSize: '0.82rem',
-                  fontFamily: 'var(--hwp-font-heading)',
-                  borderBottom: '1px solid #000', textAlign: 'center',
-                  color: '#1e293b',
-                }}>
-                  {m.keyword}
-                </div>
-                {/* 내용 */}
-                <div style={{ padding: '0.5rem 0.7rem', fontSize: '0.8rem', lineHeight: '1.55', flex: 1 }}>
-                  <div style={{ marginBottom: '0.4rem' }}>{m.moat}</div>
-                  <div style={{ fontSize: '0.75rem', color: '#888', fontStyle: 'italic' }}>
-                    ※ {m.barrier}
-                  </div>
-                </div>
-                {/* 프로그레스 바 */}
-                <div style={{
-                  padding: '0.4rem 0.7rem 0.5rem', borderTop: '1px solid #eee',
-                }}>
-                  <div style={{
-                    display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                    marginBottom: '0.25rem',
+          <table className="hwp-table" style={{ marginBottom: '1.5rem' }}>
+            <thead>
+              <tr>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '24%' }}>자사 보유역량</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '40%' }}>경쟁력 확보 방안</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '36%' }}>기대 효과</th>
+              </tr>
+            </thead>
+            <tbody>
+              {capabilityData.map((c, i) => (
+                <tr key={i}>
+                  <td className="label" style={{
+                    backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.82rem',
+                    fontFamily: 'var(--hwp-font-heading)', textAlign: 'center',
+                    lineHeight: '1.45',
                   }}>
-                    <span style={{ fontSize: '0.72rem', fontWeight: '600', color: '#666' }}>모방 난이도</span>
-                    <span style={{ fontSize: '0.78rem', fontWeight: '700', color: '#1e293b' }}>{m.pct}%</span>
-                  </div>
-                  <div style={{
-                    height: '8px', backgroundColor: '#eee', borderRadius: '4px', overflow: 'hidden',
-                  }}>
-                    <div style={{
-                      width: `${m.pct}%`, height: '100%',
-                      backgroundColor: m.pct >= 90 ? '#c0392b' : '#1e293b',
-                      borderRadius: '4px',
-                      transition: 'width 0.5s ease',
-                    }} />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+                    {c.capability}
+                  </td>
+                  <td style={{ fontSize: '0.82rem', lineHeight: '1.55' }}>
+                    {c.plan}
+                  </td>
+                  <td style={{ fontSize: '0.82rem', lineHeight: '1.55', fontWeight: '600', color: '#1e293b' }}>
+                    {c.effect}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
 
           {/* ── ③ 포지셔닝 매트릭스 (2×2) ── */}
           <div style={{ fontWeight: 'bold', fontSize: '0.88rem', marginBottom: '0.5rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
@@ -1197,7 +1188,7 @@ const FeasibilityV8 = () => {
           }}>
             <div style={{ display: 'flex', gap: '0.4rem' }}>
               <span style={{ fontWeight: '700', flexShrink: 0 }}>·</span>
-              <span><strong>하이브리드 전략:</strong> AI 엔진은 글로벌 오픈소스 활용하여 최신 성능 확보 + 자동화·오케스트레이션 코어는 독자 개발하여 기술적 해자(Moat) 구축</span>
+              <span><strong>하이브리드 전략:</strong> AI 엔진은 글로벌 오픈소스 활용하여 최신 성능 확보 + 자동화·오케스트레이션 코어는 독자 개발하여 핵심 기술 내재화</span>
             </div>
           </div>
 
@@ -1206,7 +1197,7 @@ const FeasibilityV8 = () => {
             background: '#1e293b', color: '#fff', padding: '0.8rem 1.2rem',
             fontWeight: '700', fontSize: '0.9rem', wordBreak: 'keep-all', lineHeight: '1.6',
           }}>
-            ▶ <strong>보안 × 편의성 × 가격</strong> 3축 동시 충족 → 3대 기술 Moat(모방 난이도 80~95%) → 공백 시장 선점 → 특허 2건 출원으로 <strong>독점적 경쟁력 확보</strong>
+            ▶ <strong>보안 × 편의성 × 가격</strong> 3축 동시 충족 → 자사 보유역량 기반 핵심 기술 내재화 → 공백 시장 선점 → 특허 2건 출원으로 <strong>독점적 경쟁력 확보</strong>
           </div>
 
         </section>

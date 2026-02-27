@@ -1,5 +1,6 @@
 import React from 'react';
-import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, AreaChart, Area, LabelList } from 'recharts';
+import newsClippingsImg from '../assets/news_clippings.png';
 
 const ACCENT = '#dfe6f7';
 
@@ -7,6 +8,20 @@ const roiData = [
   { method: '해외 소프트웨어', cost: 100 },
   { method: '사내 고가 서버', cost: 150 },
   { method: '자사 그리드', cost: 15 },
+];
+
+/* ── 시장 규모 데이터 (그래프용) ── */
+const marketChartData = [
+  { year: '2021', size: 3.2, label: '3.2조' },
+  { year: '2022', size: 4.5, label: '4.5조' },
+  { year: '2023', size: 5.9, label: '5.9조' },
+  { year: '2024', size: 8.2, label: '8.2조' },
+  { year: '2025(E)', size: 11.0, label: '11.0조' },
+  { year: '2026(E)', size: 15.0, label: '15.0조' },
+  { year: '2027(E)', size: 22.0, label: '22.0조' },
+  { year: '2028(E)', size: 28.5, label: '28.5조' },
+  { year: '2029(E)', size: 35.0, label: '' },
+  { year: '2030(E)', size: 41.5, label: '41.5조' },
 ];
 
 /* ── 4대 진입장벽 데이터 ── */
@@ -42,7 +57,7 @@ const valueProps = [
   {
     num: '가',
     title: '1-Click AI 인프라 보급',
-    desc: 'IT 엔지니어가 없는 제약사에서도 연구원이 마우스 클릭만으로 글로벌 검증 AI를 대시보드 내에서 즉각 셋업·구동할 수 있도록 자동화 파이프라인(Bio-MLOps) 보급.',
+    desc: 'IT 엔지니어가 없는 제약사에서도 연구원이 마우스 클릭만으로 GitHub에 공개된 최신 AI(AlphaFold·DiffDock 등)를 대시보드 내에서 즉각 셋업·구동 가능. 연구자가 원하는 모듈만 골라 조합하여 취향에 맞는 파이프라인을 구성할 수 있도록 자동화(Bio-MLOps) 보급.',
   },
   {
     num: '나',
@@ -181,6 +196,203 @@ const ProblemRecognitionV8 = () => {
           <p className="hwp-guide-text" style={{ marginBottom: '1.5rem' }}>
             ※ Pick and Shovel(곡괭이) 전략: 진입 장벽의 혁신적 해체를 위한 인프라 보급 생태계 조성.
           </p>
+
+          {/* ════════ (A) 시장 동향 — 뉴스 기사 이미지 ════════ */}
+          <div style={{ marginBottom: '1.8rem' }}>
+            <div style={{ fontWeight: 'bold', fontSize: '0.82rem', color: '#374151', marginBottom: '0.8rem', paddingLeft: '4px' }}>
+              ■ AI 신약개발 시장 주요 동향
+            </div>
+            <div style={{ border: '1.5px solid #000', overflow: 'hidden' }}>
+              <img
+                src={newsClippingsImg}
+                alt="AI 신약개발 시장 관련 뉴스 기사 모음"
+                style={{ width: '100%', display: 'block' }}
+              />
+            </div>
+            <div style={{ textAlign: 'center', fontSize: '0.78rem', color: '#6b7280', marginTop: '0.4rem' }}>
+              [그림] 글로벌 AI 신약개발 시장 동향 — 주요 뉴스 헤드라인 발췌
+            </div>
+          </div>
+
+          {/* ════════ (B) 글로벌 시장 규모 성장 그래프 ════════ */}
+          <div style={{ marginBottom: '1.8rem' }}>
+            <div style={{ fontWeight: 'bold', fontSize: '0.82rem', color: '#374151', marginBottom: '0.8rem', paddingLeft: '4px' }}>
+              ■ 글로벌 AI 신약개발 시장 규모 전망
+            </div>
+
+            {/* 와이드 우상향 그래프 */}
+            <div style={{ border: '1.5px solid #000', overflow: 'hidden' }}>
+              <div style={{
+                backgroundColor: '#1e293b', color: '#fff', padding: '0.5rem 1rem',
+                fontWeight: '700', fontSize: '0.85rem', fontFamily: 'var(--hwp-font-heading)',
+                borderBottom: '1px solid #000', textAlign: 'center',
+              }}>
+                글로벌 AI 신약개발 시장 규모 전망 (단위: 조 원)
+              </div>
+              <div style={{ padding: '1rem 0.5rem 0.3rem 0.5rem', backgroundColor: '#fafbfc' }}>
+                <div style={{ height: 280, width: '100%' }}>
+                  <ResponsiveContainer width="100%" height="100%">
+                    <AreaChart
+                      data={marketChartData}
+                      margin={{ top: 25, right: 30, bottom: 5, left: 10 }}
+                    >
+                      <defs>
+                        <linearGradient id="marketGradient" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stopColor="#1e293b" stopOpacity={0.35} />
+                          <stop offset="100%" stopColor="#dfe6f7" stopOpacity={0.15} />
+                        </linearGradient>
+                      </defs>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                      <XAxis
+                        dataKey="year" fontSize={12} stroke="#9ca3af"
+                        tick={{ fill: '#374151', fontWeight: '600', fontSize: 11 }}
+                        tickLine={{ stroke: '#ccc' }}
+                      />
+                      <YAxis
+                        fontSize={12} stroke="#9ca3af"
+                        tick={{ fill: '#6b7280' }}
+                        tickFormatter={(v) => `${v}조`}
+                        domain={[0, 48]}
+                        tickCount={6}
+                      />
+                      <Tooltip
+                        contentStyle={{
+                          fontSize: '0.85rem', borderRadius: '4px',
+                          border: '1px solid #d1d5db', fontWeight: '600',
+                        }}
+                        formatter={(val) => [`${val}조 원`, '시장 규모']}
+                      />
+                      <Area
+                        type="monotone" dataKey="size"
+                        stroke="#1e293b" strokeWidth={2.5}
+                        fill="url(#marketGradient)"
+                        dot={{ r: 4, fill: '#1e293b', stroke: '#fff', strokeWidth: 2 }}
+                        activeDot={{ r: 6 }}
+                      >
+                        <LabelList
+                          dataKey="label" position="top"
+                          style={{ fontSize: '0.72rem', fontWeight: '700', fill: '#1e293b' }}
+                          offset={8}
+                        />
+                      </Area>
+                    </AreaChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+              {/* CAGR 및 범례 */}
+              <div style={{
+                display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                padding: '0.5rem 1rem', borderTop: '1px solid #e5e7eb',
+                fontSize: '0.78rem', color: '#6b7280',
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                  <span>● 2021~2024: <strong style={{ color: '#333' }}>실적</strong></span>
+                  <span>● 2025~2030: <strong style={{ color: '#333' }}>전망</strong></span>
+                </div>
+                <div style={{
+                  backgroundColor: '#1e293b', color: '#fff',
+                  padding: '0.2rem 0.6rem', fontWeight: '700', fontSize: '0.82rem',
+                }}>
+                  CAGR 30%+
+                </div>
+              </div>
+            </div>
+
+            <p style={{ fontSize: '0.78rem', color: '#6b7280', marginTop: '0.4rem', paddingLeft: '4px' }}>
+              ※ 출처: Grand View Research, Markets and Markets, 한국바이오의약품협회 종합
+            </p>
+          </div>
+
+          {/* ════════ (C) 사업화 목적 ════════ */}
+          <div style={{ marginBottom: '1.8rem' }}>
+            <div style={{ fontWeight: 'bold', fontSize: '0.82rem', color: '#374151', marginBottom: '0.8rem', paddingLeft: '4px' }}>
+              ■ 사업화 목적 — 왜 지금 이 사업인가
+            </div>
+            <div style={{ border: '1.5px solid #000', overflow: 'hidden' }}>
+              <div style={{
+                backgroundColor: '#1e293b', color: '#fff', padding: '0.7rem 1rem',
+                fontWeight: '700', fontSize: '0.88rem', lineHeight: '1.6',
+                borderBottom: '1px solid #000', wordBreak: 'keep-all',
+              }}>
+                "AI 신약개발의 민주화" — 빅파마 독점 AI 인프라를 중소 연구 생태계에 보급하여 기술 양극화를 해소하고, 국가 바이오 경쟁력을 견인하는 것이 본 아이템의 사업화 목적임.
+              </div>
+              <div style={{ padding: '0.8rem 1rem' }}>
+                {[
+                  {
+                    label: '① 시장 기회 포착',
+                    text: '글로벌 AI 신약개발 시장이 연 30% 이상 폭발적으로 성장하는 가운데, 실제 도입 주체인 중소·중견 제약사의 90% 이상은 비용·인력·보안 장벽으로 AI 전환에 실패 중임. 이 거대한 "미충족 수요(Unmet Demand)"가 본 아이템의 사업 기회임.',
+                  },
+                  {
+                    label: '② 곡괭이(Pick & Shovel) 전략',
+                    text: 'AI 신약 파이프라인을 직접 운영하는 대신, 그것을 원하는 수많은 제약사·연구소에 인프라를 팔아 수익을 확보하는 안정적 B2B 비즈니스 모델. 골드러시에서 금을 캐지 않고 곡괭이를 팔아 이익을 낸 전략과 동일함.',
+                  },
+                  {
+                    label: '③ 타이밍의 적시성',
+                    text: 'AlphaFold 3 등 무료 글로벌 최상위 AI가 쏟아지고 있으나, 이를 현장에서 실제로 구동할 인프라·자동화 도구는 전무함. 기술 공급과 현장 수요 사이의 이 갭을 메우는 것이 지금 이 시점에서만 가능한 선점 기회임.',
+                  },
+                ].map((item, i) => (
+                  <div key={i} style={{ marginBottom: i < 2 ? '0.7rem' : 0, fontSize: '0.86rem', lineHeight: '1.7' }}>
+                    <div style={{ fontWeight: '700', fontFamily: 'var(--hwp-font-heading)', marginBottom: '0.2rem' }}>
+                      {item.label}
+                    </div>
+                    <div style={{ paddingLeft: '0.5rem', wordBreak: 'keep-all' }}>{item.text}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ════════ (D) 정책적·사회적 필요성 ════════ */}
+          <div style={{ marginBottom: '1.8rem' }}>
+            <div style={{ fontWeight: 'bold', fontSize: '0.82rem', color: '#374151', marginBottom: '0.8rem', paddingLeft: '4px' }}>
+              ■ 정책적·사회적 필요성
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0' }}>
+              {/* 정책적 필요성 */}
+              <div style={{ border: '1.5px solid #000', borderRight: 'none' }}>
+                <div style={{
+                  backgroundColor: ACCENT, padding: '0.5rem 0.8rem',
+                  fontWeight: '700', fontSize: '0.85rem', fontFamily: 'var(--hwp-font-heading)',
+                  textAlign: 'center', borderBottom: '1px solid #000',
+                }}>
+                  🏛️ 정책적 필요성
+                </div>
+                <div style={{ padding: '0.7rem 0.8rem', fontSize: '0.84rem', lineHeight: '1.7' }}>
+                  <div style={{ marginBottom: '0.4rem' }}>
+                    · 정부 「바이오헬스 산업 혁신전략」에서 AI 기반 신약개발 인프라 확대를 핵심 국정과제로 선정
+                  </div>
+                  <div style={{ marginBottom: '0.4rem' }}>
+                    · 「K-바이오 글로벌 도약 전략」상 중소 제약사 디지털 전환 지원 정책 명시
+                  </div>
+                  <div>
+                    · 부산시 바이오메디컬 클러스터 육성사업과 직접적 시너지 기대
+                  </div>
+                </div>
+              </div>
+              {/* 사회적 필요성 */}
+              <div style={{ border: '1.5px solid #000' }}>
+                <div style={{
+                  backgroundColor: '#1e293b', color: '#fff', padding: '0.5rem 0.8rem',
+                  fontWeight: '700', fontSize: '0.85rem', fontFamily: 'var(--hwp-font-heading)',
+                  textAlign: 'center', borderBottom: '1px solid #000',
+                }}>
+                  🌍 사회적 필요성
+                </div>
+                <div style={{ padding: '0.7rem 0.8rem', fontSize: '0.84rem', lineHeight: '1.7' }}>
+                  <div style={{ marginBottom: '0.4rem' }}>
+                    · 상위 10% 빅파마 vs 하위 90% 중소사 간 AI 기술 양극화 심화 → 산업 생태계 불균형 가속
+                  </div>
+                  <div style={{ marginBottom: '0.4rem' }}>
+                    · 동일 질환 신약 개발의 비효율적 중복 투자 방지를 위한 AI 인프라 공유 필요
+                  </div>
+                  <div>
+                    · 국민 건강과 직결되는 희귀질환·감염병 신약의 개발 속도 가속화에 기여
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
           {/* 그래프 */}
           <div style={{ marginBottom: '0.5rem', paddingBottom: '0.5rem' }}>

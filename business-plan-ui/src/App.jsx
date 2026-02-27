@@ -8,6 +8,9 @@ import SummaryV8 from './components/SummaryV8';
 import ProblemRecognitionV8 from './components/ProblemRecognitionV8';
 import FeasibilityV8 from './components/FeasibilityV8';
 import GrowthV8 from './components/GrowthV8';
+import ProblemRecognitionV9 from './components/ProblemRecognitionV9';
+import FeasibilityV9 from './components/FeasibilityV9';
+import GrowthV9 from './components/GrowthV9';
 import TeamV3 from './components/TeamV3';
 import GlossarySidebar from './components/GlossarySidebar';
 import { BookOpen } from 'lucide-react';
@@ -28,7 +31,7 @@ const tabStyle = (active) => ({
 });
 
 function App() {
-  const [version, setVersion] = useState('v8');
+  const [version, setVersion] = useState('v9');
 
   return (
     <div>
@@ -63,6 +66,12 @@ function App() {
           >
             V8 도식화
           </button>
+          <button
+            style={tabStyle(version === 'v9')}
+            onClick={() => setVersion('v9')}
+          >
+            V9 압축
+          </button>
         </div>
       </div>
 
@@ -79,13 +88,22 @@ function App() {
                 <GrowthV7 />
                 <TeamV3 />
               </>
-            ) : (
+            ) : version === 'v8' ? (
               <>
                 <SummaryV8 />
                 <ProblemRecognitionV8 />
                 <FeasibilityV8 />
                 <PerformanceV6 />
                 <GrowthV8 />
+                <TeamV3 />
+              </>
+            ) : (
+              <>
+                <SummaryV8 />
+                <ProblemRecognitionV9 />
+                <FeasibilityV9 />
+                <PerformanceV6 />
+                <GrowthV9 />
                 <TeamV3 />
               </>
             )}
@@ -100,3 +118,4 @@ function App() {
 }
 
 export default App;
+
