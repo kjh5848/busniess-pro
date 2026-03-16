@@ -28,8 +28,8 @@ const tamChartData = [
 
 /* ── 경쟁 강도 분석 ── */
 const competitionData = [
-  { competitor: 'Schrödinger', strength: '정밀도 최고(물리 엔진)', weakness: '연간 수억 원 라이선스, CLI 전문가 전용', threat: '중' },
-  { competitor: 'Galaxy/CloudAI', strength: '무료·쉬움', weakness: '외부 클라우드 강제, 보안 취약', threat: '높음' },
+  { competitor: 'Schrödinger', strength: '물리 엔진 정밀도 최고, GUI(Maestro) 제공', weakness: '고가 라이선스(학술 $7,500~/년), 폐쇄형 자체 엔진(오픈소스 AI 미통합)', threat: '중' },
+  { competitor: '히츠(HITS)', strength: '자체 AI 엔진(11조 화합물 DB), 대형 제약사 레퍼런스', weakness: '클라우드 SaaS 전용(온프레미스 미지원), 오픈소스 AI 미지원', threat: '높음' },
   { competitor: '국내 CADD 업체', strength: '한국어 지원', weakness: 'AI 미탑재, 기능 제한적', threat: '낮음' },
 ];
 
@@ -145,7 +145,7 @@ const GrowthV8 = () => {
             border: '1.5px solid #000', padding: '0.6rem 0.8rem', marginBottom: '1.5rem',
             fontSize: '0.84rem', lineHeight: '1.7', backgroundColor: '#fafafa',
           }}>
-            <span style={{ fontWeight: '700' }}>▶ 경쟁 공백:</span> 해외 제품은 고가·CLI 전문가용이며, 클라우드 AI는 보안 취약. <strong>"No-Code + 온프레미스 + 저비용"을 동시 충족하는 제품은 전무</strong>한 상태로, 동사가 공략할 수 있는 명확한 시장 틈새가 존재함.
+            <span style={{ fontWeight: '700' }}>▶ 경쟁 공백:</span> Schrödinger는 고가 라이선스·폐쇄형 엔진, 히츠(HITS)는 클라우드 전용으로 보안 민감 기관 도입 곤란. <strong>최신 오픈소스 AI 통합 + No-Code 원클릭 + 온프레미스 + 그리드 저비용 연산을 동시 충족하는 제품은 전무</strong>한 상태로, 동사가 공략할 수 있는 명확한 시장 틈새가 존재함.
           </div>
 
           {/* ── ③ 향후 전망 (성장성) ── */}
