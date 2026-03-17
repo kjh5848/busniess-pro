@@ -1,0 +1,236 @@
+/* =============================================================================
+   HWP Theme CSS — 2025년도 예비창업패키지 사업계획서 양식 디자인 기반
+   출처: [별첨 1] 2025년도 예비창업패키지 사업계획서 양식_바이오_v2.pdf
+   ============================================================================= */
+
+/* ---------------------------------------------------------------------------
+   1. CSS 변수 (Design Tokens)
+   --------------------------------------------------------------------------- */
+:root {
+  /* ── 기본 무채색 ── */
+  --hwp-black:      #000000;
+  --hwp-dark:       #222222;
+  --hwp-gray:       #666666;
+  --hwp-mid:        #999999;
+  --hwp-light:      #e5e5e5;
+  --hwp-vlight:     #f5f5f5;
+  --hwp-white:      #ffffff;
+
+  /* ── 표 헤더/셀 배경 (PDF 직접 추출) ── */
+  --hwp-header-bg:    #C0C0C0; /* 표 열/행 헤더 — 중간 회색 */
+  --hwp-header-dark:  #A0A0A0; /* 강조 헤더 (더 어두운) */
+  --hwp-cell-left:    #F2F2F2; /* 좌측 레이블 셀 — 연한 회색 */
+  --hwp-cell-alt:     #FAFAFA; /* 홀짝 alternating row */
+
+  /* ── 강조 색상 (안내문구/파란색) ── */
+  --hwp-blue:         #1F4E79; /* 안내문구 짙은 파란색 */
+  --hwp-blue-light:   #2E75B6; /* 링크·강조 중간 파란색 */
+
+  /* ── 안내박스 배경 (노랑/베이지) ── */
+  --hwp-yellow-bg:    #FFFDE7; /* ※ 안내 박스 배경 */
+  --hwp-yellow-border:#F0E68C; /* 안내 박스 점선 색상 */
+
+  /* ── 테두리 두께 ── */
+  --hwp-border-outer: 2px solid var(--hwp-black);   /* 표 외곽 */
+  --hwp-border-thin:  1px solid var(--hwp-black);    /* 표 내부 실선 */
+  --hwp-border-dotted:1px dotted var(--hwp-gray);   /* 표 내부 점선 */
+  --hwp-border-thick: 2px solid var(--hwp-black);   /* 강조 선 */
+
+  /* ── 타이포그래피 ── */
+  --hwp-font-heading: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  --hwp-font-body:    'Noto Serif KR', 'Batang', serif;
+  --hwp-font-sans:    'Noto Sans KR', 'Malgun Gothic', sans-serif;
+
+  /* ── 여백/패딩 ── */
+  --hwp-cell-pad:     6px 10px;
+  --hwp-section-gap:  24px;
+}
+
+
+/* ---------------------------------------------------------------------------
+   2. 기본 표 (hwp-table) — 외곽 두꺼운 선, 내부 얇은 선
+   --------------------------------------------------------------------------- */
+.hwp-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: var(--hwp-border-outer);
+  font-family: var(--hwp-font-sans);
+  font-size: 13px;
+  word-break: keep-all;
+  line-height: 1.6;
+}
+.hwp-table th {
+  background-color: var(--hwp-header-bg);
+  border: var(--hwp-border-thin);
+  padding: var(--hwp-cell-pad);
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+.hwp-table td {
+  border: var(--hwp-border-dotted);
+  border-right: var(--hwp-border-thin);
+  padding: var(--hwp-cell-pad);
+  vertical-align: top;
+}
+/* 행 구분선을 실선으로 강화하고 싶을 때 */
+.hwp-table.solid td {
+  border: var(--hwp-border-thin);
+}
+
+/* 좌측 레이블 셀 (이중 헤더 역할) */
+.hwp-table td.label,
+.hwp-th-col {
+  background-color: var(--hwp-cell-left);
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  border-right: var(--hwp-border-thin);
+  white-space: pre-line;
+}
+
+/* 어두운 헤더 강조 (2단 헤더 상단 등) */
+.hwp-table th.dark {
+  background-color: var(--hwp-header-dark);
+}
+
+/* 이중선 테두리 표 (속표지/요약표) */
+.hwp-table.double-border {
+  border: 4px double var(--hwp-black);
+}
+
+
+/* ---------------------------------------------------------------------------
+   3. 섹션 제목 도형
+   --------------------------------------------------------------------------- */
+
+/* 3-A: 사각형 배경 섹션 타이틀 (예: "예비창업패키지 예비창업자 사업계획서") */
+.hwp-section-title {
+  display: block;
+  background-color: var(--hwp-header-bg);
+  border: var(--hwp-border-thin);
+  padding: 8px 16px;
+  font-family: var(--hwp-font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+/* 3-B: 태그형 섹션 타이틀 (오른쪽 끝 사선 컷, 예: "1. 문제 인식 (Problem)") */
+.hwp-section-title-tag {
+  display: inline-block;
+  position: relative;
+  background-color: var(--hwp-header-bg);
+  border: var(--hwp-border-thin);
+  padding: 6px 40px 6px 14px;
+  font-family: var(--hwp-font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  /* 오른쪽 사선 컷 — clip-path 사용 */
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%);
+}
+
+/* 3-C: 소제목 넘버링 (1-1, 1-2 등) */
+.hwp-subsection-title {
+  font-family: var(--hwp-font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  margin: 16px 0 6px 0;
+  padding-bottom: 3px;
+  border-bottom: var(--hwp-border-thin);
+}
+
+
+/* ---------------------------------------------------------------------------
+   4. 체크박스 섹션 헤더 (□ 아이콘 + 볼드 제목)
+   --------------------------------------------------------------------------- */
+.hwp-checkbox-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--hwp-font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  margin: var(--hwp-section-gap) 0 10px 0;
+}
+.hwp-checkbox-section::before {
+  content: '□';
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+
+/* ---------------------------------------------------------------------------
+   5. 안내 박스 (※ 주의사항, 작성 팁)
+   --------------------------------------------------------------------------- */
+.hwp-notice-box {
+  border: 1.5px dashed var(--hwp-yellow-border);
+  background-color: var(--hwp-yellow-bg);
+  padding: 10px 14px;
+  font-family: var(--hwp-font-sans);
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--hwp-dark);
+  word-break: keep-all;
+  margin: 10px 0;
+}
+.hwp-notice-box p {
+  margin: 2px 0;
+}
+
+
+/* ---------------------------------------------------------------------------
+   6. 안내 문구 텍스트 (파란색)
+   --------------------------------------------------------------------------- */
+.hwp-guide-text {
+  color: var(--hwp-blue);
+  font-size: 12px;
+  font-family: var(--hwp-font-sans);
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+
+/* ---------------------------------------------------------------------------
+   7. 글상자 (텍스트 박스) — hwp-info-box 유지 + 신규 스타일
+   --------------------------------------------------------------------------- */
+.hwp-info-box {
+  border: var(--hwp-border-thin);
+  padding: 1rem;
+  display: flex; /* 제목+내용 나란히 배치 */
+  font-family: var(--hwp-font-sans);
+}
+
+/* 흐름 구분용 수평선 (섹션 사이) */
+.hwp-divider {
+  border: none;
+  border-top: var(--hwp-border-outer);
+  margin: var(--hwp-section-gap) 0;
+}
+
+/* 키워드 강조 (인라인 박스) */
+.v2-keyword {
+  border: 1px solid var(--hwp-black);
+  background-color: var(--hwp-vlight);
+  padding: 1px 5px;
+  font-size: 0.9em;
+}
+
+
+/* ---------------------------------------------------------------------------
+   8. 공통 본문 스타일
+   --------------------------------------------------------------------------- */
+.hwp-body {
+  font-family: var(--hwp-font-body);
+  font-size: 13px;
+  line-height: 1.8;
+  word-break: keep-all;
+  color: var(--hwp-dark);
+}
+.hwp-body p {
+  margin: 6px 0;
+}

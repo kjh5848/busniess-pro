@@ -6,4 +6,3 @@ dist/
 Thumbs.db
 __pycache__/
 *.pyc
-.agents/
