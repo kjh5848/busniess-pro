@@ -39,11 +39,7 @@ Depending on what the user asks for, load the corresponding asset from the `hwp-
 
 ### 6. Build the React Component
 - Create the layout using strict HTML structures suitable for HWP drawing tools.
-- Implement the "Table" design with thick 2px top/bottom borders and light 1px borders for inner cells.
-- Implement data as "Text Boxes" (`글상자`).
-- **CRITICAL (작성 예정 Placeholder):** If a section in the source text is empty, missing, or explicitly marked as "작성 예정" (To be written), DO NOT hallucinate content. Instead, create an empty placeholder box UI (e.g., a dashed border box) containing the text "작성 예정" or the exact missing section title.
-- If there are process flows, use horizontal boxes with simple arrows (`→`) between them.
-- Do NOT use `lucide-react` or `border-radius`.
+- **CRITICAL:** Follow the UI design rules laid out in `rules.md` (R-09 to R-11) for Table design, Text Boxes layout, correctly handling "작성 예정" empty placeholders without hallucination, and avoiding blocked dependencies (no `lucide-react`, no `border-radius`).
 
 ### 7. Verify and Notify
 - Add the component to `App.jsx`.

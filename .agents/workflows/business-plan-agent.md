@@ -80,7 +80,7 @@ python d:\workspace\strayCat\.agents\skills\business-plan-writer\scripts\init_pr
 
 ## Step-01: 컨텍스트 로드
 
-**목적**: 최소 파일만 선별 로드 (rules.md R-09)
+**목적**: 최소 파일만 선별 로드 (rules.md R-12)
 
 로드 파일 목록 (순서 중요):
 
@@ -91,7 +91,7 @@ python d:\workspace\strayCat\.agents\skills\business-plan-writer\scripts\init_pr
 4. 작성할 섹션의 기존 초안:
    - `projects/{프로젝트}/sections/{해당섹션}.md`
 
-> ⚠️ 다른 섹션 파일 및 구버전 컴포넌트 동시 로드 금지 (rules.md R-09)
+> ⚠️ 다른 섹션 파일 및 구버전 컴포넌트 동시 로드 금지 (rules.md R-12)
 
 완료 섹션 현황 표시:
 ```
@@ -208,12 +208,12 @@ python d:\workspace\strayCat\.agents\skills\business-plan-writer\scripts\init_pr
 projects/{프로젝트명}/ui/{섹션식별자}V1.jsx
 ```
 
-**명명 규칙 (rules.md R-08)**:
+**명명 규칙 (rules.md R-09)**:
 - `SummaryV1.jsx`, `ProblemRecognitionV1.jsx`, `FeasibilityV1.jsx`
 - `PerformanceV1.jsx`, `GrowthV1.jsx`, `TeamV1.jsx`
 - 수정 시 버전 번호 증가: V1 → V2 → V3 ...
 
-**UI 생성 체크리스트 (rules.md R-08)**:
+**UI 생성 체크리스트 (rules.md R-09)**:
 - [ ] 흑백 모노크롬 (컬러 0개)
 - [ ] `border-radius: 0` 적용
 - [ ] Recharts 포함 시 흑백 팔레트
