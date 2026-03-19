@@ -20,7 +20,7 @@ const FeasibilityV1 = () => {
           <div className="v2-info-box" style={{ borderLeft: '4px solid var(--hwp-black)', marginBottom: '1.2rem', backgroundColor: 'var(--hwp-vlight)' }}>
             <p style={{ fontWeight: 'bold', margin: '0', fontSize: '0.9rem', wordBreak: 'keep-all', lineHeight: '1.6', color: 'var(--hwp-black)' }}>
               ▶ <strong>기존 독점 구조 타파:</strong> 천문학적 라이선스 비용으로 대형 제약사만 독점하던 기존 IT 설계 시스템의 불평등 구조 원천 해소<br/>
-              ▶ <strong>보안 종속 완비형 시스템 제공:</strong> 최상위 AI(Boltz-2) 및 초정밀 시뮬레이션(OpenFE) 통합 아키텍처를 기반으로, No-Code 클릭만으로 폐쇄 사내망에서 구동되는 독립형 인프라 배포
+              ▶ <strong>보안 종속 완비형 시스템 제공:</strong> 최상위 AI(Boltz-2) 및 초정밀 시뮬레이션(OpenFE) 통합 아키텍처를 기반으로, 노코드(코딩 불필요) 클릭만으로 폐쇄 사내망에서 구동되는 독립형 인프라 배포
             </p>
           </div>
 
@@ -102,10 +102,10 @@ const FeasibilityV1 = () => {
                 </tr>
                 <tr>
                   <td className="text-center font-bold" style={{ backgroundColor: 'var(--hwp-white)', borderRight: '1px solid var(--hwp-vlight)' }}>
-                    3. 평범한 연구원 전용<br/>마우스 클릭식(No-Code) 화면
+                    3. 평범한 연구원 전용<br/>마우스 클릭식(노코드(코딩 불필요)) 화면
                   </td>
                   <td>
-                    ✓ <strong>연구자 친화적 설계:</strong> 복잡한 코딩(Python, Linux 등) 없이 웹 브라우저 마우스 드래그만으로 시스템을 제어하는 <strong>웹 노코드(No-Code) GUI 탑재</strong><br/>
+                    ✓ <strong>연구자 친화적 설계:</strong> 복잡한 코딩(Python, Linux 등) 없이 웹 브라우저 마우스 드래그만으로 시스템을 제어하는 <strong>웹 노코드(노코드(코딩 불필요)) 시각화 화면 탑재</strong><br/>
                     ✓ <strong>학습 비용 최소화:</strong> 비전공 약학 연구원도 1시간 내 적응 및 독자적 구조 설계·결과물 즉시 도출 가능
                   </td>
                 </tr>
@@ -129,8 +129,8 @@ const FeasibilityV1 = () => {
                 <tr>
                   <td className="font-bold text-center" style={{ backgroundColor: 'var(--hwp-white)', borderRight: '1px solid var(--hwp-vlight)' }}>최종 산출물<br/><span style={{ fontSize: '0.7rem', color: 'var(--hwp-gray)' }}>(~26.11.30)</span></td>
                   <td>
-                    ① <strong>Web Dashboard v1.0 (SaaS 및 로컬 겸용)</strong>: 분자 설계 및 도킹 결과 통합 뷰어<br/>
-                    ② <strong>Installer Package v1.0 (Win/Ubuntu)</strong>: 원클릭 자동 셋업 온프레미스 배포판<br/>
+                    ① <strong>Web Dashboard v1.0 (클라우드 서비스(웹) 및 로컬 겸용)</strong>: 분자 설계 및 도킹 결과 통합 뷰어<br/>
+                    ② <strong>Installer Package v1.0 (Win/Ubuntu)</strong>: 원클릭 자동 셋업 자체 구축형(폐쇄망) 배포판<br/>
                     ③ <strong>사용자 매뉴얼 및 특허 출원서 2건</strong>: 이종 엔진 통합 아키텍처 특허 확보
                   </td>
                 </tr>
@@ -149,7 +149,7 @@ const FeasibilityV1 = () => {
             backgroundColor: 'var(--hwp-vlight)', position: 'relative'
           }}>
             <div style={{ position: 'absolute', top: '-12px', left: '15px', background: 'var(--hwp-white)', padding: '0 10px', fontWeight: 'bold', fontSize: '0.85rem', color: 'var(--hwp-dark)' }}>
-              [그림 2] 완전 폐쇄형 온프레미스(Air-gapped) 인프라 보안 구조도
+              [그림 2] 완전 폐쇄형 자체 구축형(폐쇄망)(Air-gapped) 인프라 보안 구조도
             </div>
             
             <div style={{ display: 'grid', gridTemplateColumns: 'minmax(120px, 1fr) 50px minmax(280px, 2fr)', gap: '1rem', alignItems: 'center', marginTop: '0.5rem' }}>
@@ -158,7 +158,7 @@ const FeasibilityV1 = () => {
               <div style={{ border: '1px solid var(--hwp-light)', backgroundColor: 'var(--hwp-white)', padding: '1rem', textAlign: 'center', opacity: 0.8 }}>
                 <ServerOff size={28} color="var(--hwp-gray)" style={{ margin: '0 auto 0.5rem' }} />
                 <div style={{ fontWeight: 'bold', fontSize: '0.75rem', color: 'var(--hwp-dark)' }}>퍼블릭 클라우드</div>
-                <div style={{ fontSize: '0.65rem', color: 'var(--hwp-gray)', marginTop: '0.3rem' }}>외부 API 및 SaaS</div>
+                <div style={{ fontSize: '0.65rem', color: 'var(--hwp-gray)', marginTop: '0.3rem' }}>외부 API 및 클라우드 서비스(웹)</div>
               </div>
 
               {/* 차단 방화벽 */}
@@ -181,7 +181,7 @@ const FeasibilityV1 = () => {
                     <div style={{ fontSize: '0.65rem', color: 'var(--hwp-gray)', marginTop: '0.2rem' }}>소비자용 RTX 4090 최적화</div>
                   </div>
                   <div style={{ border: '1px solid var(--hwp-vlight)', backgroundColor: 'var(--hwp-white)', padding: '0.8rem', textAlign: 'center' }}>
-                    <div style={{ fontWeight: 'bold', fontSize: '0.75rem', color: 'var(--hwp-dark)' }}>AI Docker Image</div>
+                    <div style={{ fontWeight: 'bold', fontSize: '0.75rem', color: 'var(--hwp-dark)' }}>인공지능 자동설치 패키지</div>
                     <div style={{ fontSize: '0.65rem', color: 'var(--hwp-dark)', marginTop: '0.2rem' }}>기밀 데이터 유출 원천 방지</div>
                   </div>
                 </div>
@@ -197,7 +197,7 @@ const FeasibilityV1 = () => {
               <thead>
                 <tr>
                   <th style={{ width: '16%' }}>비교 항목</th>
-                  <th style={{ width: '28%' }}>기존 상용 CADD<br/><span style={{ fontSize: '0.7rem', fontWeight: 'normal' }}>(Schrödinger 등)</span></th>
+                  <th style={{ width: '28%' }}>기존 상용 신약설계 프로그램<br/><span style={{ fontSize: '0.7rem', fontWeight: 'normal' }}>(Schrödinger 등)</span></th>
                   <th style={{ width: '28%' }}>단순 클라우드 기반 AI<br/><span style={{ fontSize: '0.7rem', fontWeight: 'normal' }}>(해외스타트업 등)</span></th>
                   <th style={{ width: '28%' }}>동사 하이브리드<br/><span style={{ fontSize: '0.7rem', fontWeight: 'normal', color: 'blue' }}>(블루오션 개척)</span></th>
                 </tr>
@@ -225,7 +225,7 @@ const FeasibilityV1 = () => {
                   <td className="font-bold bg-gray-50">사용성 (UX)</td>
                   <td>높은 학습 곡선, 복잡한 세팅</td>
                   <td>해석 불가한 결과물 (블랙박스)</td>
-                  <td className="font-bold bg-blue-50">No-Code 웹 GUI (직관적 결과 해석)</td>
+                  <td className="font-bold bg-blue-50">노코드(코딩 불필요) 웹 시각화 화면 (직관적 결과 해석)</td>
                 </tr>
               </tbody>
             </table>
@@ -239,11 +239,11 @@ const FeasibilityV1 = () => {
               <tbody>
                 <tr>
                   <td style={{ width: '25%', backgroundColor: 'var(--hwp-white)', fontWeight: 'bold', borderRight: '1px solid var(--hwp-vlight)', textAlign: 'center' }}>
-                    SaaS 기반 미끼(PoC)<br/>및 2-Track 업셀링
+                    클라우드 서비스(웹) 기반 미끼(PoC)<br/>및 2-Track 업셀링
                   </td>
                   <td>
-                    ▶ <strong>초기 도입 장벽 해소:</strong> 저렴한 클라우드 SaaS 기반 샘플 데이터 테스트 및 솔루션 우수성 체감 검증 유도<br/>
-                    ▶ <strong>프리미엄 업셀링:</strong> 데이터 보안 필요성이 입증된 핵심 타겟 고객 대상, 고수익 폐쇄형 온프레미스 패키지로의 확정적 전환 납품
+                    ▶ <strong>초기 도입 장벽 해소:</strong> 저렴한 클라우드 클라우드 서비스(웹) 기반 샘플 데이터 테스트 및 솔루션 우수성 체감 검증 유도<br/>
+                    ▶ <strong>프리미엄 업셀링:</strong> 데이터 보안 필요성이 입증된 핵심 타겟 고객 대상, 고수익 폐쇄형 자체 구축형(폐쇄망) 패키지로의 확정적 전환 납품
                   </td>
                 </tr>
                 <tr>
@@ -303,7 +303,7 @@ const FeasibilityV1 = () => {
                   <td className="font-bold bg-gray-50">외주용역비</td>
                   <td>소프트웨어 개발</td>
                   <td className="text-left" style={{ lineHeight: '1.5' }}>
-                    <strong>No-Code 웹 GUI 대시보드 프론트엔드/백오피스 전면 위탁</strong><br />
+                    <strong>노코드(코딩 불필요) 웹 시각화 제어 화면 프론트엔드/백오피스 전면 위탁</strong><br />
                     - 3D 분자 구조 시각화 인터페이스, 사용자 작업 큐(Queue) 관리 UI UX
                   </td>
                   <td className="font-bold">20.0%</td>
@@ -333,7 +333,7 @@ const FeasibilityV1 = () => {
                   <td className="font-bold bg-gray-50">광고선전비</td>
                   <td>마케팅 홍보</td>
                   <td className="text-left" style={{ lineHeight: '1.5' }}>
-                    - B2B 전시회용 SaaS 랜딩페이지 및 브로슈어 책자 디자인 인쇄: 500만<br />
+                    - B2B 전시회용 클라우드 서비스(웹) 랜딩페이지 및 브로슈어 책자 디자인 인쇄: 500만<br />
                     - 신약개발 시연 영상(3D 모션그래픽 포함) 제작 스튜디오 기획: 500만
                   </td>
                   <td className="font-bold">10.0%</td>
@@ -360,7 +360,7 @@ const FeasibilityV1 = () => {
           <div style={{ backgroundColor: 'var(--hwp-white)', border: '1px solid var(--hwp-vlight)', padding: '1rem', borderLeft: '4px solid var(--hwp-black)', fontSize: '0.85rem', lineHeight: '1.5' }}>
             <strong>[예산 집행의 타당성 및 효과성 요약]</strong><br />
             ✓ <strong>초기 기술 격차 확대를 위한 인건비 집중 투자(45%):</strong> AI 알고리즘 오차율 단축 및 최상급 인력 선제 채용을 통한 압도적 기술 장벽 조기 구축 완료<br />
-            ✓ <strong>전략적 외주 위탁을 통한 리소스 극대화(20%):</strong> 대표자는 핵심 BM 고도화 및 백엔드 엔진 튜닝에 100% 집중, Web GUI는 IT 전문 에이전시 위임을 통한 MVP 최적화 및 론칭 기한 단축 보장
+            ✓ <strong>전략적 외주 위탁을 통한 리소스 극대화(20%):</strong> 대표자는 핵심 BM 고도화 및 백엔드 엔진 튜닝에 100% 집중, 웹 시각화 화면는 IT 전문 에이전시 위임을 통한 MVP 최적화 및 론칭 기한 단축 보장
           </div>
         </section>
 

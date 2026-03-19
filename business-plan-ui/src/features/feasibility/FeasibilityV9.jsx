@@ -10,12 +10,12 @@ const ACCENT = '#dfe6f7';
 /* ── 경쟁 비교 테이블 데이터 ── */
 const compHeaders = [
   '구분',
-  '기존 방식 (해외 CADD)',
+  '기존 방식 (해외 신약설계 프로그램)',
   '단순 AI 클라우드',
   '동사 솔루션',
 ];
 const compRows = [
-  { label: '사용성', cells: ['CLI 명령어 방식', '결과 해석 어려움', 'No-Code 원클릭'] },
+  { label: '사용성', cells: ['개발자용 명령어 방식', '결과 해석 어려움', '노코드(코딩 불필요) 원클릭'] },
   { label: '보안', cells: ['사내 설치형', '외부 클라우드 필수 → 유출 위험', '사내 서버 설치 → 유출 제로'] },
   { label: '비용', cells: ['수억 원 라이선스', '종량제 과금', '기존 대비 1/10'] },
 ];
@@ -28,7 +28,7 @@ const techCards = [
     points: [
       'AlphaFold·DiffDock·RFdiffusion 등 오픈소스 자동 패키징',
       '연구자가 원하는 모듈만 골라 조합 — 약물·펩타이드·단백질 디자인',
-      'No-Code 통합 대시보드 제공',
+      '노코드(코딩 불필요) 통합 대시보드 제공',
     ],
   },
   {
@@ -46,18 +46,18 @@ const techCards = [
 /* ── 고객 요구사항 통합 ── */
 const improvementRows = [
   { pain: 'AI 도구 개별 설치 며칠 소요', action: '통합 파이프라인(Pipeline SDK) 원클릭 설치', cat: '기능' },
-  { pain: '사내 보안 규정상 클라우드 불가', action: 'Docker 기반 온프레미스 완결형 패키지', cat: '기능' },
-  { pain: 'CLI 모르면 AI 도구 사용 불가', action: 'No-Code Web GUI 대시보드', cat: '디자인' },
-  { pain: '도입 비용 선투자 부담', action: '무상 PoC 파일럿 + SaaS 월정액 모델', cat: '사업화' },
+  { pain: '사내 보안 규정상 클라우드 불가', action: '자동설치 패키지 기반 자체 구축형(폐쇄망) 완결형 패키지', cat: '기능' },
+  { pain: '개발자용 명령어 모르면 AI 도구 사용 불가', action: '노코드(코딩 불필요) 웹 시각화 화면 대시보드', cat: '디자인' },
+  { pain: '도입 비용 선투자 부담', action: '무상 PoC 파일럿 + 클라우드 서비스(웹) 월정액 모델', cat: '사업화' },
 ];
 
 /* ── 포지셔닝 데이터 ── */
 const positioningData = [
-  { name: 'Schrödinger', x: 25, y: 20, desc: '고가·CLI', color: '#bbb' },
-  { name: 'MOE/CCG', x: 18, y: 30, desc: '고가·CLI', color: '#bbb' },
+  { name: 'Schrödinger', x: 25, y: 20, desc: '고가·개발자용 명령어', color: '#bbb' },
+  { name: 'MOE/CCG', x: 18, y: 30, desc: '고가·개발자용 명령어', color: '#bbb' },
   { name: 'Galaxy', x: 35, y: 75, desc: '쉬움·클라우드', color: '#aaa' },
-  { name: 'DeepChem', x: 45, y: 15, desc: '무료·CLI', color: '#bbb' },
-  { name: '동사', x: 82, y: 88, desc: 'No-Code+온프레미스', color: '#1e293b', highlight: true },
+  { name: 'DeepChem', x: 45, y: 15, desc: '무료·개발자용 명령어', color: '#bbb' },
+  { name: '동사', x: 82, y: 88, desc: '노코드(코딩 불필요)+자체 구축형(폐쇄망)', color: '#1e293b', highlight: true },
 ];
 
 const FeasibilityV9 = () => {
@@ -78,7 +78,7 @@ const FeasibilityV9 = () => {
             marginBottom: '1.2rem', lineHeight: '1.5', fontWeight: '700',
             fontSize: '0.88rem', wordBreak: 'keep-all',
           }}>
-            ▶ 약물/단백질/펩타이드 디자인에 필요한 Bio/Chem informatics 기술을 자동화하여, 일반 연구자·실험자들이 쉽게 사용할 수 있도록 하는 <strong>AI 신약개발 Process 자동화 플랫폼 (Bio-MLOps)</strong>
+            ▶ 약물/단백질/펩타이드 디자인에 필요한 Bio/Chem informatics 기술을 자동화하여, 일반 연구자·실험자들이 쉽게 사용할 수 있도록 하는 <strong>AI 신약개발 Process 자동화 플랫폼 (바이오 인공지능 운영관리)</strong>
           </div>
 
           {/* ── 자동화 대상과 범위 ── */}
@@ -92,7 +92,7 @@ const FeasibilityV9 = () => {
                 { label: '구체적 설계', val: '표적 단백질(Target Proteins)과 저분자 화합물(Ligands) 사이의 에너지·효능 계산 자동화' },
                 { label: '핵심 가치', val: <>컴퓨터 상에서 수만 개 화합물을 사전 결합시켜 <strong style={{ color: '#c0392b' }}>80% 이상 사전 필터링</strong> → 수백억 원 매몰비용 절감</> },
                 { label: '우선 공략', val: <>단가 최고인 <strong>FEP 분야</strong> 우선 자동화 → 이후 펩타이드·단백질 디자인으로 확장</> },
-                { label: '기술 접근', val: <>글로벌 최상위 AI 엔진(AlphaFold·DiffDock 등)을 <strong>자동화 파이프라인으로 통합</strong>하고, 온프레미스 패키징하여 턴키 솔루션으로 제공</> },
+                { label: '기술 접근', val: <>글로벌 최상위 AI 엔진(AlphaFold·DiffDock 등)을 <strong>자동화 파이프라인으로 통합</strong>하고, 자체 구축형(폐쇄망) 패키징하여 턴키 솔루션으로 제공</> },
               ].map((row, i) => (
                 <tr key={i}>
                   <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.78rem', fontFamily: 'var(--hwp-font-heading)', width: '100px', textAlign: 'center' }}>{row.label}</td>
@@ -121,7 +121,7 @@ const FeasibilityV9 = () => {
                   name: 'AlphaFold 3', src: 'DeepMind',
                   role: '표적 단백질의 3D 원자 구조를 AI로 예측',
                   platform: 'STEP 1 — 단백질 이름/서열 입력 → 자동 구조 예측·PDB 생성',
-                  wrap: 'Docker 패키징 + REST API 래퍼 → GUI에서 검색/업로드만으로 실행',
+                  wrap: '자동설치 패키징 + 프로그램 연동 모듈(API) → 시각화 화면에서 검색/업로드만으로 실행',
                 },
                 {
                   name: 'DiffDock', src: 'MIT CSAIL',
@@ -224,8 +224,8 @@ const FeasibilityV9 = () => {
               }}>현재 개발단계</div>
               <div style={{ padding: '0.5rem 0.6rem', fontSize: '0.8rem', lineHeight: '1.6' }}>
                 <div style={{ marginBottom: '0.2rem' }}>✓ <strong>아이디어 기획</strong> — 완료</div>
-                <div style={{ marginBottom: '0.2rem' }}>✓ <strong>핵심 기술 확보</strong> — 완료 (래퍼 개발, Docker 패키징)</div>
-                <div>▶ <strong>시제품 제작</strong> — 진행중 60% (CLI 파이프라인 완료, Web UI 설계 중)</div>
+                <div style={{ marginBottom: '0.2rem' }}>✓ <strong>핵심 기술 확보</strong> — 완료 (래퍼 개발, 자동설치 패키징)</div>
+                <div>▶ <strong>시제품 제작</strong> — 진행중 60% (개발자용 명령어 파이프라인 완료, Web UI 설계 중)</div>
               </div>
             </div>
             {/* 최종 산출물 */}
@@ -236,8 +236,8 @@ const FeasibilityV9 = () => {
                 borderBottom: '1px solid #000', textAlign: 'center',
               }}>사업기간 내 최종 산출물 (~2026.11)</div>
               <div style={{ padding: '0.5rem 0.6rem', fontSize: '0.8rem', lineHeight: '1.6' }}>
-                <div style={{ marginBottom: '0.2rem' }}>① <strong>Web Dashboard v1.0</strong> — No-Code GUI SaaS 제품</div>
-                <div style={{ marginBottom: '0.2rem' }}>② <strong>온프레미스 설치 패키지</strong> — Docker 원클릭 + Grid 모듈</div>
+                <div style={{ marginBottom: '0.2rem' }}>① <strong>Web Dashboard v1.0</strong> — 노코드(코딩 불필요) 시각화 화면 클라우드 서비스(웹) 제품</div>
+                <div style={{ marginBottom: '0.2rem' }}>② <strong>자체 구축형(폐쇄망) 설치 패키지</strong> — 자동설치 패키지 원클릭 + Grid 모듈</div>
                 <div>③ <strong>기술 문서·IP</strong> — 특허 출원 1건 + 사용자 매뉴얼</div>
               </div>
             </div>
@@ -255,15 +255,15 @@ const FeasibilityV9 = () => {
             </thead>
             <tbody>
               <tr>
-                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>Bio-MLOps 핵심 엔진</td>
+                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>바이오 인공지능 운영관리 핵심 엔진</td>
                 <td style={{ textAlign: 'center', fontWeight: '700', fontSize: '0.8rem' }}>대표자</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>오픈소스 래핑·자동화·온프레미스 패키징·Grid 오케스트레이션</td>
+                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>오픈소스 래핑·자동화·자체 구축형(폐쇄망) 패키징·Grid 오케스트레이션</td>
                 <td style={{ fontSize: '0.8rem', textAlign: 'center' }}>'26.4~11 (전 기간)</td>
               </tr>
               <tr>
                 <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>웹 프론트엔드 UI/UX</td>
                 <td style={{ textAlign: 'center', fontWeight: '700', fontSize: '0.8rem', color: '#c0392b' }}>외주</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>No-Code 대시보드 설계·개발·QA·UT</td>
+                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>노코드(코딩 불필요) 대시보드 설계·개발·QA·UT</td>
                 <td style={{ fontSize: '0.8rem', textAlign: 'center' }}>'26.5~10 (13,500,000원)</td>
               </tr>
               <tr>
@@ -356,7 +356,7 @@ const FeasibilityV9 = () => {
                 ))}
               </div>
               <div style={{ backgroundColor: ACCENT, padding: '0.35rem 0.6rem', borderTop: '1.5px solid #000', fontSize: '0.78rem', fontWeight: '600' }}>
-                → <strong>No-Code + 온프레미스</strong> 우상단에 유일 포지셔닝
+                → <strong>노코드(코딩 불필요) + 자체 구축형(폐쇄망)</strong> 우상단에 유일 포지셔닝
               </div>
             </div>
 
@@ -369,9 +369,9 @@ const FeasibilityV9 = () => {
               }}>자사 보유역량 기반 경쟁력</div>
               <div style={{ padding: '0.5rem 0.6rem', fontSize: '0.8rem', lineHeight: '1.6' }}>
                 {[
-                  { cap: 'MLOps·DevOps 경력', plan: '온프레미스 Auto-Setup Engine 직접 개발', effect: '핵심 기술 내재화' },
+                  { cap: '인공지능 운영관리·DevOps 경력', plan: '자체 구축형(폐쇄망) Auto-Setup Engine 직접 개발', effect: '핵심 기술 내재화' },
                   { cap: '오픈소스 래핑 기술', plan: 'Pipeline SDK 14종 파일 호환', effect: '6개월 이상 선점 우위' },
-                  { cap: 'Docker 배포 역량', plan: '폐쇄망 원클릭 설치 + Grid 모듈', effect: '온프레미스 시장 독점 공략' },
+                  { cap: '자동설치 패키지 배포 역량', plan: '폐쇄망 원클릭 설치 + Grid 모듈', effect: '자체 구축형(폐쇄망) 시장 독점 공략' },
                   { cap: '특허 2건 예정', plan: 'Auto-Setup + Grid Sharding 출원', effect: '법적 보호 → 모방 차단' },
                 ].map((c, i) => (
                   <div key={i} style={{ marginBottom: i < 3 ? '0.5rem' : 0, borderBottom: i < 3 ? '1px dashed #ccc' : 'none', paddingBottom: i < 3 ? '0.5rem' : 0 }}>

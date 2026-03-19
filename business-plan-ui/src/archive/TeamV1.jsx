@@ -22,7 +22,7 @@ const TeamV1 = () => {
           {/* Rule 5: Key Message Quote */}
           <div className="v2-info-box" style={{ borderLeft: '4px solid #333', marginBottom: '1.5rem', backgroundColor: '#fcfcfc' }}>
             <p style={{ fontWeight: 'bold', margin: '0', fontSize: '1.05rem', wordBreak: 'keep-all', lineHeight: '1.6' }}>
-              ▶ 대표자의 MLOps 기반 파이프라인 개발 및 시스템 아키텍처 총괄<br/>
+              ▶ 대표자의 인공지능 운영관리 기반 파이프라인 개발 및 시스템 아키텍처 총괄<br/>
               ▶ 계산화학 도메인 전문 연구원 1인 채용을 통한 기술-도메인 투트랙 조직 구조 확립
             </p>
           </div>
@@ -54,9 +54,9 @@ const TeamV1 = () => {
                   </td>
                   <td className="text-center">경상국립대학교<br/>(환경산림과학부)</td>
                   <td>
-                    • <strong>MLOps 시스템 엔지니어링 및 파이썬 파이프라인/REST API 설계</strong><br/>
-                    • IT 시스템 설계, Docker 컨테이너 패키징 및 오케스트레이션 수행<br/>
-                    • <strong>핵심역량:</strong> GUI 프로토콜 등 시스템 전반을 단독 개발할 풀스택 역량 확립
+                    • <strong>인공지능 운영관리 시스템 엔지니어링 및 파이썬 파이프라인/프로그램 연동 모듈 설계</strong><br/>
+                    • IT 시스템 설계, 독립형 구동 패키지 패키징 및 오케스트레이션 수행<br/>
+                    • <strong>핵심역량:</strong> 시각화 화면 프로토콜 등 시스템 전반을 단독 개발할 풀스택 역량 확립
                   </td>
                   <td className="text-center font-bold">100%</td>
                 </tr>

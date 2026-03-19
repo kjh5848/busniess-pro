@@ -62,7 +62,7 @@ const ScaleUpV1 = () => {
               display: 'flex', flexDirection: 'column', justifyContent: 'center'
             }}>
               <div style={{ fontSize: '0.95rem', marginBottom: '1rem', paddingBottom: '0.5rem', borderBottom: '1px solid var(--hwp-gray)' }}>
-                ▶ <strong>[수익 시장 집중]</strong><br/>중소·중견 제약사 및 바이오 벤처 중심의 온프레미스 AI 인프라 대체 수요 집중 공략
+                ▶ <strong>[수익 시장 집중]</strong><br/>중소·중견 제약사 및 바이오 벤처 중심의 자체 구축형(폐쇄망) AI 인프라 대체 수요 집중 공략
               </div>
               <ul style={{ margin: 0, paddingLeft: '1.2rem', fontWeight: 'normal', fontSize: '0.85rem', lineHeight: '1.6' }}>
                 <li style={{ marginBottom: '0.8rem' }}><strong>글로벌 시장(TAM):</strong> 연평균 성장률 30% 급성장하는 글로벌 AI 신약 개발 인프라 시장 (약 4.8조 원 규모)</li>
@@ -99,7 +99,7 @@ const ScaleUpV1 = () => {
                     Phase 2 (2~3년차)<br/><span style={{ fontSize: '0.75rem', fontWeight: 'normal' }}>중견 타겟 SAM 확장</span>
                   </td>
                   <td>
-                    ✓ <strong>라이선스 고도화 및 세일즈:</strong> 클라우드 비용을 감당하지 못하는 국내 중소·중견 제약사로 B2B 엔터프라이즈 라이선스(온프레미스) 판매 본격화<br/>
+                    ✓ <strong>라이선스 고도화 및 세일즈:</strong> 클라우드 비용을 감당하지 못하는 국내 중소·중견 제약사로 B2B 엔터프라이즈 라이선스(자체 구축형(폐쇄망)) 판매 본격화<br/>
                     ✓ <strong>솔루션 도메인 확장:</strong> 표적 단백질 분해제(TPD) 및 핵산 치료제 특화 확장 모듈 상용화<br/>
                     ✓ <strong>방어적 업셀링:</strong> 락인(Lock-in) 효과 구축을 거쳐 고부가가치 클라우드 연동 업티어(Up-tier) 모델 추가 파이프라인 형성
                   </td>
@@ -110,7 +110,7 @@ const ScaleUpV1 = () => {
                   </td>
                   <td>
                     ✓ <strong>글로벌 SOTA 기술 장벽 완료:</strong> 초정밀 물리 시뮬레이션의 계산 코어를 글로벌 학계 1위 수준 초고속 연산 모듈로 자체 대체<br/>
-                    ✓ <strong>해외 온프레미스 시장 수출:</strong> 미국, 유럽 등 보안이 필수적인 글로벌 중소 제약사 및 CRO 에이전시 대상 엔터프라이즈 납품<br/>
+                    ✓ <strong>해외 자체 구축형(폐쇄망) 시장 수출:</strong> 미국, 유럽 등 보안이 필수적인 글로벌 중소 제약사 및 CRO 에이전시 대상 엔터프라이즈 납품<br/>
                     ✓ <strong>자체 IP(파이프라인) 스핀오프:</strong> 당사 시스템을 활용한 자체 신규 항암제 선도물질 조기 발굴 및 빅파마 대상 라이선스 아웃(L/O) 병행
                   </td>
                 </tr>

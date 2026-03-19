@@ -4,7 +4,7 @@ import React from 'react';
  * BoxPlusLayout
  *
  * 여러 개의 박스를 "+" 기호로 연결하는 레이아웃 컴포넌트입니다.
- * 이미지의 "SaaS 구독 + On-Demand 연산 + Enterprise API" 패턴을 구현합니다.
+ * 이미지의 "클라우드 서비스(웹) 구독 + On-Demand 연산 + Enterprise API" 패턴을 구현합니다.
  *
  * @param {Object[]} items - 박스 데이터 배열
  *   @param {string} items[].title   - 박스 상단 제목 (헤더 영역)
@@ -16,7 +16,7 @@ import React from 'react';
  * 사용 예시:
  * <BoxPlusLayout
  *   items={[
- *     { title: 'SaaS 구독 (Main)', main: '월 요금', sub: '초기 스타트업/연구소 타겟' },
+ *     { title: '클라우드 서비스(웹) 구독 (Main)', main: '월 요금', sub: '초기 스타트업/연구소 타겟' },
  *     { title: 'On-Demand 연산', main: 'GPU 시간당 과금', sub: '대규모 시뮬레이션 수행 시' },
  *     { title: 'Enterprise API', main: '연간 라이선스 계약', sub: '보안/커스텀이 필요한 대기업' },
  *   ]}

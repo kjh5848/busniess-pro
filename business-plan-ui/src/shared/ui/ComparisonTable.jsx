@@ -18,10 +18,10 @@ import React from 'react';
  *
  * 사용 예시:
  * <ComparisonTable
- *   headers={['구분', '기존 컴퓨터 시뮬레이션', '단순 AI 모델 (Black-box)', '동사 (Hybrid Engine)']}
+ *   headers={['구분', '기존 컴퓨터 시뮬레이션', '단순 AI 모델 (블랙박스(내부 구조 파악 불가))', '동사 (Hybrid Engine)']}
  *   rows={[
  *     { label: '핵심가치', cells: ['정밀도 중심', '속도 중심', '정밀도 + 속도 + 편의성'] },
- *     { label: '사용성',   cells: ['명령어(CLI) 기반 복잡함', '블랙박스로 해석 난해', 'Web GUI (No-Code)'] },
+ *     { label: '사용성',   cells: ['명령어(개발자용 명령어) 기반 복잡함', '블랙박스로 해석 난해', '웹 시각화 화면 (노코드(코딩 불필요))'] },
  *   ]}
  *   highlightCol={3}
  * />

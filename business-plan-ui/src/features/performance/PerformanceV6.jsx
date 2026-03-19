@@ -15,7 +15,7 @@ const PerformanceV6 = () => {
           {/* Rule 5: Key Message Quote */}
           <div className="v2-info-box" style={{ borderLeft: '4px solid #333', marginBottom: '1.5rem', backgroundColor: '#fcfcfc' }}>
             <p style={{ fontWeight: 'bold', margin: '0', fontSize: '1.05rem', wordBreak: 'keep-all', lineHeight: '1.6' }}>
-              "중소 제약사·연구소가 전문 IT 인력 없이도 글로벌 검증 AI 신약 도구를 사내 폐쇄망에서 즉시 구동할 수 있는 No-Code 온프레미스 Bio-MLOps MVP를 완성하고, B2C 클라우드 베타 서비스를 런칭하여 초기 사용자 기반을 확보한다."
+              "중소 제약사·연구소가 전문 IT 인력 없이도 글로벌 검증 AI 신약 도구를 사내 폐쇄망에서 즉시 구동할 수 있는 노코드(코딩 불필요) 자체 구축형(폐쇄망) 바이오 인공지능 운영관리 초기모델(MVP)를 완성하고, B2C 클라우드 베타 서비스를 런칭하여 초기 사용자 기반을 확보한다."
             </p>
           </div>
 
@@ -37,10 +37,10 @@ const PerformanceV6 = () => {
                 <tr>
                   <td rowSpan="3" className="text-center font-bold" style={{ backgroundColor: '#fcfcfc' }}>공<br/>통</td>
                   <td>
-                    <strong>Bio-MLOps 온프레미스 MVP 고도화</strong><br/>
-                    - AlphaFold·DiffDock·RFdiffusion 3종 엔진 오프라인 패키징 및 <span style={{ color: '#111', fontWeight: 'bold' }}>Docker 원클릭 자동 셋업 완성</span><br/>
-                    - No-Code 웹 대시보드(React) 베타 버전 배포 — 분자 입력→시뮬레이션→결과 시각화 전주기 자동화<br/>
-                    - B2C 클라우드 SaaS 얼리 액세스 오픈 및 <span style={{ color: '#111', fontWeight: 'bold' }}>초기 사용자 50명 이상 확보</span>
+                    <strong>바이오 인공지능 운영관리 자체 구축형(폐쇄망) MVP 고도화</strong><br/>
+                    - AlphaFold·DiffDock·RFdiffusion 3종 엔진 오프라인 패키징 및 <span style={{ color: '#111', fontWeight: 'bold' }}>자동설치 패키지 원클릭 자동 셋업 완성</span><br/>
+                    - 노코드(코딩 불필요) 웹 대시보드(React) 베타 버전 배포 — 분자 입력→시뮬레이션→결과 시각화 전주기 자동화<br/>
+                    - B2C 클라우드 클라우드 서비스(웹) 얼리 액세스 오픈 및 <span style={{ color: '#111', fontWeight: 'bold' }}>초기 사용자 50명 이상 확보</span>
                   </td>
                   <td className="text-center">
                     '26. 06. 30.<br/>
@@ -49,7 +49,7 @@ const PerformanceV6 = () => {
                   </td>
                 </tr>
                 <tr>
-                  <td><strong>매출목표(원)</strong> (B2C SaaS 유료 전환 + B2B 온프레미스 POC 계약 1건 이상 체결)</td>
+                  <td><strong>매출목표(원)</strong> (B2C 클라우드 서비스(웹) 유료 전환 + B2B 자체 구축형(폐쇄망) POC 계약 1건 이상 체결)</td>
                   <td className="text-center font-bold">'26. 11. 30.</td>
                 </tr>
                 <tr>
@@ -110,7 +110,7 @@ const PerformanceV6 = () => {
                   <td>
                     <strong>1단계 — MVP 핵심 엔진 통합</strong><br/>
                     · AlphaFold 3·DiffDock·RFdiffusion 오프라인 패키징 완료<br/>
-                    · Docker 기반 원클릭 셋업 스크립트 자동화 구현
+                    · 자동설치 패키지 기반 원클릭 셋업 스크립트 자동화 구현
                   </td>
                   <td className="text-center">
                     '26. 04. ~ 06.<br/>
@@ -119,8 +119,8 @@ const PerformanceV6 = () => {
                 </tr>
                 <tr>
                   <td>
-                    <strong>2단계 — No-Code 대시보드 UI 구축</strong><br/>
-                    · 비개발 연구원 대상 Web GUI 프론트엔드 개발 (React)<br/>
+                    <strong>2단계 — 노코드(코딩 불필요) 대시보드 UI 구축</strong><br/>
+                    · 비개발 연구원 대상 웹 시각화 화면 프론트엔드 개발 (React)<br/>
                     · 분자구조 3D 뷰어 / 작업큐 모니터링 / 결과리포트 화면 탑재
                   </td>
                   <td className="text-center">
@@ -145,7 +145,7 @@ const PerformanceV6 = () => {
                     매출<br/>목표
                   </td>
                   <td>
-                    · B2C SaaS 얼리버드 유료 전환 (무료 베타 → 월 구독 전환)<br/>
+                    · B2C 클라우드 서비스(웹) 얼리버드 유료 전환 (무료 베타 → 월 구독 전환)<br/>
                     · B2B 비공개 파트너스 대상 FEP(Front-End Premium) 1차 실증 과금<br/>
                     · 데모데이·바이오 컨퍼런스 B2B 리드 확보 후 POC 계약 추진
                   </td>
@@ -161,7 +161,7 @@ const PerformanceV6 = () => {
                   </td>
                   <td>
                     · 기존(0)명 → 신규(2)명 → 총(2)명 채용 계획<br/>
-                    · ① 클라우드 인프라 엔지니어 (Docker/K8s 기반 배포 전담)<br/>
+                    · ① 클라우드 인프라 엔지니어 (서버 인프라 기반 배포 전담)<br/>
                     · ② 데이터 전처리 전문 인재 (바이오 데이터 파이프라인 구축)
                   </td>
                   <td className="text-center">

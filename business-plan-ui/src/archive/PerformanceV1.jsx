@@ -15,7 +15,7 @@ const PerformanceV1 = () => {
           {/* Rule 5: Key Message Quote */}
           <div className="v2-info-box" style={{ borderLeft: '4px solid #333', marginBottom: '1.5rem', backgroundColor: '#fcfcfc' }}>
             <p style={{ fontWeight: 'bold', margin: '0', fontSize: '1.05rem', wordBreak: 'keep-all', lineHeight: '1.6' }}>
-              ▶ 단백질 구조 스크리닝(Boltz-2) 및 결합 자유 에너지 정밀 검수(OpenFE) 연계 하이브리드 파이프라인의 핵심인 No-Code 온프레미스 패키지 MVP 최종 확보
+              ▶ 단백질 구조 스크리닝(Boltz-2) 및 결합 자유 에너지 정밀 검수(OpenFE) 연계 하이브리드 파이프라인의 핵심인 노코드(코딩 불필요) 자체 구축형(폐쇄망) 패키지 MVP 최종 확보
             </p>
           </div>
 
@@ -37,9 +37,9 @@ const PerformanceV1 = () => {
                 <tr>
                   <td rowSpan="3" className="text-center font-bold" style={{ backgroundColor: '#fcfcfc' }}>공<br/>통</td>
                   <td>
-                    <strong>Bio-MLOps 및 GUI 엔진 통합 고도화</strong><br/>
-                    - Boltz-2 구조 예측 및 OpenFE 결합 시뮬레이션을 연결하는 오프라인 패키징 셋업 (CLI 환경)<br/>
-                    - 웹 브라우저 기반으로 접근하는 No-Code 대시보드(PoC버전) 배포<br/>
+                    <strong>바이오 인공지능 운영관리 및 시각화 화면 엔진 통합 고도화</strong><br/>
+                    - Boltz-2 구조 예측 및 OpenFE 결합 시뮬레이션을 연결하는 오프라인 패키징 셋업 (개발자용 명령어 환경)<br/>
+                    - 웹 브라우저 기반으로 접근하는 노코드(코딩 불필요) 대시보드(PoC버전) 배포<br/>
                     - 제약사 내부 망분리(오프라인) 워크스테이션에서 데모 구동 성공
                   </td>
                   <td className="text-center">
@@ -49,7 +49,7 @@ const PerformanceV1 = () => {
                   </td>
                 </tr>
                 <tr>
-                  <td><strong>매출목표(원)</strong> (비공개 제약 파트너사 대상 B2B 온프레미스 POC 계약 1건 이상 진행)</td>
+                  <td><strong>매출목표(원)</strong> (비공개 제약 파트너사 대상 B2B 자체 구축형(폐쇄망) POC 계약 1건 이상 진행)</td>
                   <td className="text-center font-bold">'26. 11. 30.</td>
                 </tr>
                 <tr>
@@ -110,7 +110,7 @@ const PerformanceV1 = () => {
                   <td>
                     <strong>1단계 — MVP 핵심 엔진 통합</strong><br/>
                     · Boltz-2, OpenFE 최적화 로컬 래핑 패키징 완료<br/>
-                    · Docker 기반 원클릭 폐쇄망 셋업 스크립트 작성
+                    · 자동설치 패키지 기반 원클릭 폐쇄망 셋업 스크립트 작성
                   </td>
                   <td className="text-center">
                     '26. 04. ~ 06.<br/>
@@ -119,8 +119,8 @@ const PerformanceV1 = () => {
                 </tr>
                 <tr>
                   <td>
-                    <strong>2단계 — No-Code 대시보드 UI 구축</strong><br/>
-                    · 비개발 연구원 대상 Web GUI 프론트엔드 개발 (React)<br/>
+                    <strong>2단계 — 노코드(코딩 불필요) 대시보드 UI 구축</strong><br/>
+                    · 비개발 연구원 대상 웹 시각화 화면 프론트엔드 개발 (React)<br/>
                     · 분자구조 3D 뷰어 / 작업큐 모니터링 / 결과리포트 화면 탑재
                   </td>
                   <td className="text-center">
@@ -145,7 +145,7 @@ const PerformanceV1 = () => {
                     매출<br/>목표
                   </td>
                   <td>
-                    · B2C SaaS 얼리버드 유료 전환 (무료 베타 → 월 구독 전환)<br/>
+                    · B2C 클라우드 서비스(웹) 얼리버드 유료 전환 (무료 베타 → 월 구독 전환)<br/>
                     · B2B 비공개 파트너스 대상 FEP(Front-End Premium) 1차 실증 과금<br/>
                     · 데모데이·바이오 컨퍼런스 B2B 리드 확보 후 POC 계약 추진
                   </td>
@@ -162,7 +162,7 @@ const PerformanceV1 = () => {
                   <td>
                     · 기존(0)명 → 신규(1)명 정규 채용<br/>
                     · 단백질 3D 구조 및 표적 결합 검수를 위한 계산화학 혹은 AI 전문가 채용<br/>
-                    · 대표(MLOps 아키텍트)와 딥테크 연구원(모델링) 간의 투트랙 분업
+                    · 대표(인공지능 운영관리 아키텍트)와 딥테크 연구원(모델링) 간의 투트랙 분업
                   </td>
                   <td className="text-center">
                     '26. 06. 30.<br/>

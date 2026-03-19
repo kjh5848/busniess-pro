@@ -17,7 +17,7 @@ import React from 'react';
  *   steps={[
  *     { label: '초기 레퍼런스 확보', sub: '(대학/연구소 무상 배포)' },
  *     { label: '국내 B2B 실증',      sub: '(바이오 벤처 유료화)' },
- *     { label: '아시아/중견 확장',    sub: '(SaaS 구독 모델 확산)' },
+ *     { label: '아시아/중견 확장',    sub: '(클라우드 서비스(웹) 구독 모델 확산)' },
  *     { label: '글로벌 스케일업',     sub: '(Big Pharma 파트너십)' },
  *   ]}
  * />

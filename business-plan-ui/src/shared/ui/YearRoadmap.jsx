@@ -29,7 +29,7 @@ import React from 'react';
  *         { title: '사업화',     bullets: ['국내 대학/연구소 베타 오픈', '초기 레퍼런스(논문 등) 확보'] },
  *       ],
  *       footers: [
- *         { title: '(비즈니스 모델)', items: ['Credit 기반 과금(GPU)', 'SaaS Freemium (무료+유료)'] },
+ *         { title: '(비즈니스 모델)', items: ['Credit 기반 과금(GPU)', '클라우드 서비스(웹) Freemium (무료+유료)'] },
  *         { title: '(지식재산권)',    items: ['핵심 특허 1건 출원'] },
  *       ],
  *     },

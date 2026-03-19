@@ -16,7 +16,7 @@ const marketChartData = [
 /* ── 4대 진입장벽 (명확한 문장형 서술) ── */
 const barriers = [
   { num: '01', title: '클라우드 인프라 유지비 폭증', desc: 'R&D 대비 고정비 성격인 IT 인프라 지출(2024년 3분기 115.3% 급증)이 중소 제약사의 치명적인 재무적 부담 가중' },
-  { num: '02', title: '슈뢰딩거 등 폐쇄형 솔루션 독점 과금', desc: '보안 문제로 온프레미스 망분리를 고집하나, 연간 수천만 원~수억 원에 달하는 슈뢰딩거 등 외산 상용 소프트웨어 라이선스에 강제 종속' },
+  { num: '02', title: '슈뢰딩거 등 폐쇄형 솔루션 독점 과금', desc: '보안 문제로 자체 구축형 폐쇄망를 고집하나, 연간 수천만 원~수억 원에 달하는 슈뢰딩거 등 외산 상용 소프트웨어 라이선스에 강제 종속' },
   { num: '03', title: 'AI 전산 전문 인력의 부재', desc: 'Boltz-2, AlphaFold 등 최고 수준(SOTA) 최첨단 AI 예측 모델 도입이 필수적이나, 오픈소스를 설치·구동할 AI 전산 전문 인력 확보 절대 불가' },
   { num: '04', title: '비용 폭탄에 의한 기술 소외 장벽', desc: '막대한 자본이 있어야만 AI를 쓸 수 있는 살인적인 소프트웨어 라이선스 관행이, 중소 제약사 신약 개발의 가장 높은 초기 진입 장벽 고착화' },
 ];
@@ -24,7 +24,7 @@ const barriers = [
 /* ── 3대 가치 제안 (원문 기반) ── */
 const valueProps = [
   { num: '가', title: '하이브리드 통합', desc: 'Boltz-2 초고속 스크리닝과 OpenFE 정밀 검증 융합' },
-  { num: '나', title: '연구자 친화형 GUI', desc: '파편화된 알고리즘을 하나로 연결하는 사용자 친화적 프로토콜 빌더' },
+  { num: '나', title: '연구자 친화형 시각화 화면', desc: '파편화된 알고리즘을 하나로 연결하는 사용자 친화적 프로토콜 빌더' },
   { num: '다', title: 'RTX 4090 최적화', desc: '소비자용 GPU 장비 기반 구축으로 인프라 경제성 확보 및 망분리 완결' },
 ];
 
@@ -188,7 +188,7 @@ const ProblemRecognitionV1 = () => {
             </div>
             <div style={{ padding: '0.6rem 0.8rem', fontSize: '0.84rem', lineHeight: '1.7' }}>
               <div style={{ marginBottom: '0.3rem' }}>
-                · <strong>최첨단 AI 진입 장벽 파괴:</strong> 복잡한 코딩과 설치 에러로 인해 전산 전문가만 쓸 수 있던 AlphaFold 등 조 단위 가치의 최신 AI를, 일반 윈도우 화면에서 마우스 클릭만으로 작동시키는 'No-Code 시스템' 수립 시급
+                · <strong>최첨단 AI 진입 장벽 파괴:</strong> 복잡한 코딩과 설치 에러로 인해 전산 전문가만 쓸 수 있던 AlphaFold 등 조 단위 가치의 최신 AI를, 일반 윈도우 화면에서 마우스 클릭만으로 작동시키는 '노코드(코딩 불필요) 시스템' 수립 시급
               </div>
               <div style={{ marginBottom: '0.3rem' }}>
                 · <strong>인프라 도입 비용 파괴:</strong> 막대한 대형 서버실을 구축하는 대신 단 한 대의 고출력 그래픽 장비(RTX 4090) 안에 모든 AI를 최적화하여 쑤셔 넣어 초기 비용 극단적 축소
@@ -249,7 +249,7 @@ const ProblemRecognitionV1 = () => {
             </div>
             <div style={{ padding: '0.6rem 0.8rem', fontSize: '0.84rem', lineHeight: '1.7' }}>
               <div style={{ marginBottom: '0.3rem' }}>· <strong>AI + 물리 검증 하이브리드 자동화:</strong> 파편화된 최고 수준의 알고리즘들을 하나로 엮어, 인간의 개입 없이 후보 물질 1차 선별부터 정밀 검증까지 논스톱으로 진행</div>
-              <div style={{ marginBottom: '0.3rem' }}>· <strong>약학 연구원 친화형 시각화 환경:</strong> 컴퓨터 전산 언어(코딩)를 모르는 비전문가도 직관적으로 세팅 및 조작할 수 있는 전용 그래픽 화면(GUI) 완비</div>
+              <div style={{ marginBottom: '0.3rem' }}>· <strong>약학 연구원 친화형 시각화 환경:</strong> 컴퓨터 전산 언어(코딩)를 모르는 비전문가도 직관적으로 세팅 및 조작할 수 있는 전용 그래픽 화면(시각화 화면) 완비</div>
               <div>· <strong>고성능 저비용 사내 보안망 최적화:</strong> 외부 기밀 유출이 차단된 RTX 4090 환경 전용으로 최적화 배포하여 중소 제약사의 무리한 연간 라이선스 출혈 구제</div>
             </div>
           </div>

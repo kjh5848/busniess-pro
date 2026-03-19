@@ -91,7 +91,7 @@ export default function BusinessPlanUI() {
         
         <ul className="list-disc pl-6 text-gray-800 space-y-2 text-sm mt-4 font-sans">
           <li><strong>비용 급증 및 양극화</strong>: 2024년 3분기 인프라 지출 115.3% 증가. 반면 국내 바이오 벤처 66%는 매출 5억 미만으로 출혈 극심.</li>
-          <li><strong>보안 한계</strong>: 민감한 데이터(GxP 규제)로 인해 클라우드 사용을 주저하며, 수억 원 대의 폐쇄형(On-premise) 외산 솔루션에 의존 중.</li>
+          <li><strong>보안 한계</strong>: 민감한 데이터(GxP 규제)로 인해 클라우드 사용을 주저하며, 수억 원 대의 폐쇄형(자체 구축형(폐쇄망)) 외산 솔루션에 의존 중.</li>
         </ul>
       </section>
 
@@ -132,8 +132,8 @@ export default function BusinessPlanUI() {
             <div className="flex-1 bg-gray-800 border border-gray-800 text-white p-4 text-center shadow-sm relative">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-400 text-black font-bold text-xs px-2 py-0.5 rounded-sm">최종 도출</div>
               <Monitor className="mx-auto mb-2 text-white" size={32} />
-              <div className="font-bold text-sm mb-1">GUI 대시보드 (SaaS)</div>
-              <div className="text-xs text-gray-300 font-sans">연구원 맞춤형 결과 시각화<br/>(폐쇄형 온프레미스 연동)</div>
+              <div className="font-bold text-sm mb-1">시각화 제어 화면 (클라우드 서비스(웹))</div>
+              <div className="text-xs text-gray-300 font-sans">연구원 맞춤형 결과 시각화<br/>(폐쇄형 자체 구축형(폐쇄망) 연동)</div>
             </div>
           </div>
         </div>
@@ -183,7 +183,7 @@ export default function BusinessPlanUI() {
                 </tr>
                 <tr className="border-b border-gray-300">
                   <td className="py-3 px-2 text-center font-semibold">외주용역비</td>
-                  <td className="py-3 px-2 font-medium">단백질 시각화 웹 GUI 대시보드(SaaS) 프론트/UX 설계</td>
+                  <td className="py-3 px-2 font-medium">단백질 시각화 웹 시각화 제어 화면(클라우드 서비스(웹)) 프론트/UX 설계</td>
                   <td className="py-3 px-2 text-center text-xs">외주 계약 1식</td>
                   <td className="py-3 px-2 text-right font-bold">2,000만 (20%)</td>
                 </tr>
@@ -221,7 +221,7 @@ export default function BusinessPlanUI() {
             <ShieldCheck className="mr-3 mt-1 text-black" size={24} />
             <div>
               <div className="font-bold text-base mb-1">대표자 (1인 풀스택 융합 인재)</div>
-              <div className="text-sm text-gray-700">계산화학 및 전산약학 전공 지식 + 파운데이션 모델 아키텍처 리딩 및 MLOps 풀스택 병렬 처리 개발 역량 보유</div>
+              <div className="text-sm text-gray-700">계산화학 및 전산약학 전공 지식 + 파운데이션 모델 아키텍처 리딩 및 인공지능 운영관리 풀스택 병렬 처리 개발 역량 보유</div>
             </div>
           </div>
           <div className="flex-1 border border-gray-300 p-4 bg-white flex items-start">

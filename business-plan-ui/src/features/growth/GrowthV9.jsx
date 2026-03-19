@@ -8,7 +8,7 @@ const ACCENT = '#dfe6f7';
 const gtmSteps = [
   { label: '초기 레퍼런스 확보', sub: '(대학/연구소 무상 배포)' },
   { label: '국내 B2B 실증',      sub: '(바이오 벤처 유료화)' },
-  { label: '아시아/중견 확장',    sub: '(SaaS 구독 모델 확산)' },
+  { label: '아시아/중견 확장',    sub: '(클라우드 서비스(웹) 구독 모델 확산)' },
   { label: '글로벌 스케일업',     sub: '(Big Pharma 파트너십)' },
 ];
 
@@ -22,7 +22,7 @@ const tamChartData = [
 /* ── 예상 매출 ── */
 const revenueProjection = [
   { period: "'26 하반기", b2c: '0 (무료 베타)', b2b: '0 (PoC)', total: '0', note: '레퍼런스 확보' },
-  { period: "'27 상반기", b2c: '600만', b2b: '3,000만', total: '3,600만', note: 'SaaS 유료 전환' },
+  { period: "'27 상반기", b2c: '600만', b2b: '3,000만', total: '3,600만', note: '클라우드 서비스(웹) 유료 전환' },
   { period: "'27 하반기", b2c: '1,200만', b2b: '8,000만', total: '9,200만', note: 'B2B 1차 계약' },
   { period: "'28", b2c: '3,600만', b2b: '2.4억', total: '2.76억', note: '아시아 확장' },
 ];
@@ -62,7 +62,7 @@ const GrowthV9 = () => {
           </div>
 
           <div style={{ fontSize: '0.72rem', color: '#666', marginBottom: '1.2rem' }}>
-            *출처: Grand View Research 2024. CAGR 29.4% (2024~2030). No-Code + 온프레미스 + 저비용 동시 충족 제품 전무 → 명확한 시장 틈새 존재.
+            *출처: Grand View Research 2024. CAGR 29.4% (2024~2030). 노코드(코딩 불필요) + 자체 구축형(폐쇄망) + 저비용 동시 충족 제품 전무 → 명확한 시장 틈새 존재.
           </div>
 
           {/* ── 고객 특성 (압축 2열) ── */}
@@ -74,7 +74,7 @@ const GrowthV9 = () => {
               <div style={{ padding: '0.5rem 0.6rem', fontSize: '0.8rem', lineHeight: '1.6' }}>
                 · 중소·중견 제약사, 국공립 바이오 연구실<br/>
                 · AI 도입 시급하나 클라우드 비용·보안·개발조직 부재<br/>
-                · <strong>→ 온프레미스 설치형 수요 높음</strong>
+                · <strong>→ 자체 구축형(폐쇄망) 설치형 수요 높음</strong>
               </div>
             </div>
             <div style={{ border: '1.5px solid #000' }}>
@@ -84,7 +84,7 @@ const GrowthV9 = () => {
               <div style={{ padding: '0.5rem 0.6rem', fontSize: '0.8rem', lineHeight: '1.6' }}>
                 · 대학원생·포닥·개인 연구자<br/>
                 · 서버 구축 권한·자금 없이 즉시 구동 필요<br/>
-                · <strong>→ 브라우저 즉시 실행 SaaS 수요</strong>
+                · <strong>→ 브라우저 즉시 실행 클라우드 서비스(웹) 수요</strong>
               </div>
             </div>
           </div>
@@ -106,9 +106,9 @@ const GrowthV9 = () => {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0', marginBottom: '1.2rem' }}>
             {[
-              { tag: 'B2C', title: 'SaaS 구독', price: '월/연 정기결제', target: '개인 연구자·대학원생' },
+              { tag: 'B2C', title: '클라우드 서비스(웹) 구독', price: '월/연 정기결제', target: '개인 연구자·대학원생' },
               { tag: 'GPU', title: '연산 종량제', price: '시간당 과금', target: '고용량 시뮬레이션 수요' },
-              { tag: 'B2B', title: 'Enterprise 온프레미스', price: '설치비 + 연간 유지보수', target: '보안 필수 중견 제약사' },
+              { tag: 'B2B', title: 'Enterprise 자체 구축형(폐쇄망)', price: '설치비 + 연간 유지보수', target: '보안 필수 중견 제약사' },
             ].map((item, i) => (
               <div key={i} style={{ border: '1.5px solid #000', borderLeft: i === 0 ? '1.5px solid #000' : 'none' }}>
                 <div style={{ backgroundColor: i === 2 ? '#1e293b' : ACCENT, color: i === 2 ? '#fff' : '#000', padding: '0.3rem 0.5rem', fontWeight: '700', fontSize: '0.78rem', fontFamily: 'var(--hwp-font-heading)', textAlign: 'center', borderBottom: '1px solid #000' }}>
@@ -144,7 +144,7 @@ const GrowthV9 = () => {
               <tr>
                 <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>대응자금 (현물)</td>
                 <td style={{ fontSize: '0.8rem', fontWeight: '700', textAlign: 'center' }}>대표자 인건비</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>Bio-MLOps 핵심 엔진 직접 개발 — 전 사업기간 풀타임 투입</td>
+                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>바이오 인공지능 운영관리 핵심 엔진 직접 개발 — 전 사업기간 풀타임 투입</td>
               </tr>
             </tbody>
           </table>
@@ -163,7 +163,7 @@ const GrowthV9 = () => {
             </div>
             {[
               { cat: '특허권', name: '국내 특허 출원', amount: '3,500,000', qty: '1식', note: '핵심기술 권리 보호' },
-              { cat: '외주용역비', name: 'UI/UX 설계 + 디자인 시스템', amount: '4,500,000', qty: '1식', note: 'No-Code 대시보드 UX' },
+              { cat: '외주용역비', name: 'UI/UX 설계 + 디자인 시스템', amount: '4,500,000', qty: '1식', note: '노코드(코딩 불필요) 대시보드 UX' },
               { cat: '', name: '웹 프론트엔드 개발 (React)', amount: '6,500,000', qty: '1식', note: '대시보드·3D뷰어·모니터링' },
               { cat: '', name: '반응형 QA + 사용성 테스트', amount: '2,500,000', qty: '1식', note: '크로스브라우저·UT' },
               { cat: '광고선전비', name: '홈페이지 + 홍보영상 + 마케팅', amount: '3,000,000', qty: '1식', note: '랜딩페이지·데모영상·SNS' },
@@ -206,7 +206,7 @@ const GrowthV9 = () => {
             <tbody>
               <tr>
                 <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>생산·출시</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>B2C SaaS 무료 베타 → 유료 전환 / B2B 온프레미스 PoC</td>
+                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>B2C 클라우드 서비스(웹) 무료 베타 → 유료 전환 / B2B 자체 구축형(폐쇄망) PoC</td>
                 <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>'26 하반기 베타 / '27 정식 / PoC 3사+</td>
               </tr>
               <tr>
@@ -253,7 +253,7 @@ const GrowthV9 = () => {
             background: '#1e293b', color: '#fff', padding: '0.5rem 0.8rem',
             fontWeight: '700', fontSize: '0.82rem', wordBreak: 'keep-all', lineHeight: '1.5',
           }}>
-            ▶ '28년 누적 매출 <strong>2.76억 원</strong> 목표. B2B 온프레미스 계약 단가(3,000~5,000만원/건)가 핵심 매출 드라이버.
+            ▶ '28년 누적 매출 <strong>2.76억 원</strong> 목표. B2B 자체 구축형(폐쇄망) 계약 단가(3,000~5,000만원/건)가 핵심 매출 드라이버.
           </div>
         </section>
 
@@ -310,7 +310,7 @@ const GrowthV9 = () => {
                 <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>대표자</td>
                 <td style={{ fontSize: '0.8rem', fontWeight: '700', textAlign: 'center' }}>CEO /<br/>기술 총괄</td>
                 <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>
-                  · MLOps·DevOps 핵심 엔진 직접 개발<br/>
+                  · 인공지능 운영관리·DevOps 핵심 엔진 직접 개발<br/>
                   · 오픈소스 AI 도구 통합·자동화 설계<br/>
                   · 사업 전략·고객 발굴·투자 유치
                 </td>

@@ -26,8 +26,8 @@ const GrowthV1 = () => {
           {/* 인용구 강조 (개조식 치환) */}
           <div className="v2-info-box" style={{ borderLeft: '4px solid #1e293b', marginBottom: '1.5rem', backgroundColor: '#f8fafc', padding: '1rem' }}>
             <p style={{ fontWeight: 'bold', margin: '0', fontSize: '0.90rem', wordBreak: 'keep-all', lineHeight: '1.6' }}>
-              ▶ <strong>초기 저항 축소:</strong> 저렴한 SaaS 버전 선행 제공으로 솔루션 효용성 사전 검증 유도<br/>
-              ▶ <strong>프리미엄 락인(Lock-in):</strong> 검증 완료 고객 대상 고수익 데이터 보안 확보용 온프레미스 패키지 최종 납품 확정
+              ▶ <strong>초기 저항 축소:</strong> 저렴한 클라우드 서비스(웹) 버전 선행 제공으로 솔루션 효용성 사전 검증 유도<br/>
+              ▶ <strong>프리미엄 락인(Lock-in):</strong> 검증 완료 고객 대상 고수익 데이터 보안 확보용 자체 구축형(폐쇄망) 패키지 최종 납품 확정
             </p>
           </div>
 
@@ -41,12 +41,12 @@ const GrowthV1 = () => {
             </thead>
             <tbody>
               <tr>
-                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.82rem', textAlign: 'center' }}>SaaS PoC<br/>(단기 구독형)</td>
+                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.82rem', textAlign: 'center' }}>클라우드 서비스(웹) PoC<br/>(단기 구독형)</td>
                 <td style={{ fontSize: '0.8rem', textAlign: 'center', fontWeight: 'bold' }}>미끼 상품 전략<br/><span style={{ fontSize: '0.75rem', fontWeight: 'normal', color: '#555' }}>(초기 성능 검증용)</span></td>
                 <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>시스템 성능 및 유효성 검증을 위한 저가형 단기 구독 서비스 라인업. 고객이 실제 연구 데이터로 플랫폼의 성능을 스스로 즉각 검증할 수 있는 통로 마련.</td>
               </tr>
               <tr>
-                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.82rem', textAlign: 'center' }}>온프레미스 통합 패키지</td>
+                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.82rem', textAlign: 'center' }}>자체 구축형(폐쇄망) 통합 패키지</td>
                 <td style={{ fontSize: '0.8rem', textAlign: 'center', fontWeight: 'bold' }}>메인 수익원<br/><span style={{ fontSize: '0.75rem', fontWeight: 'normal', color: '#555' }}>(중소 제약사 중심)</span></td>
                 <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>검증을 마친 중소 제약사를 타깃으로, 최적화된 저비용 하드웨어 랙(Rack) 및 소프트웨어 라이선스를 묶어 데이터 외부 유출이 차단된 상태로 납품.</td>
               </tr>
@@ -85,14 +85,14 @@ const GrowthV1 = () => {
                 <td className="label" style={{ backgroundColor: '#1e293b', color: '#fff', fontWeight: '700', fontSize: '0.8rem', textAlign: 'center' }}>2단계 (스케일업)</td>
                 <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>
                   <strong>[AI 바우처 지원 사업 공급 기업 등록]</strong><br/>
-                  가격 민감도가 높은 초기 바이오 벤처가 SaaS PoC로 쉽게 유입될 수 있도록 정부 바우처 정책 자금을 전략적으로 흡수 및 활용.
+                  가격 민감도가 높은 초기 바이오 벤처가 클라우드 서비스(웹) PoC로 쉽게 유입될 수 있도록 정부 바우처 정책 자금을 전략적으로 흡수 및 활용.
                 </td>
               </tr>
               <tr>
                 <td className="label" style={{ backgroundColor: '#1e293b', color: '#fff', fontWeight: '700', fontSize: '0.8rem', textAlign: 'center' }}>3단계 (본격 성장)</td>
                 <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>
                   <strong>[초기 Seed 투자 유치 달성]</strong><br/>
-                  연내 확보한 베타 테스터(5곳 이상)의 B2B 실증 성공 사례(레퍼런스)를 기반으로 Seed 투자를 선점하고, 폐쇄형 온프레미스 기업 시장에 공격적으로 진입.
+                  연내 확보한 베타 테스터(5곳 이상)의 B2B 실증 성공 사례(레퍼런스)를 기반으로 Seed 투자를 선점하고, 폐쇄형 자체 구축형(폐쇄망) 기업 시장에 공격적으로 진입.
                 </td>
               </tr>
             </tbody>

@@ -16,7 +16,7 @@ import ComparisonTable from './ComparisonTable';
 
 const bmItems = [
   {
-    title: 'SaaS 구독 (Main)',
+    title: '클라우드 서비스(웹) 구독 (Main)',
     main: '월 요금',
     sub: '초기 스타트업/연구소 타겟',
   },
@@ -35,7 +35,7 @@ const bmItems = [
 const gtmSteps = [
   { label: '초기 레퍼런스 확보', sub: '(대학/연구소 무상 배포)' },
   { label: '국내 B2B 실증',      sub: '(바이오 벤처 유료화)' },
-  { label: '아시아/중견 확장',    sub: '(SaaS 구독 모델 확산)' },
+  { label: '아시아/중견 확장',    sub: '(클라우드 서비스(웹) 구독 모델 확산)' },
   { label: '글로벌 스케일업',     sub: '(Big Pharma 파트너십)' },
 ];
 
@@ -62,7 +62,7 @@ const roadmapYears = [
     footers: [
       {
         title: '(비즈니스 모델)',
-        items: ['Credit 기반 과금(GPU)', 'SaaS Freemium (무료+유료)'],
+        items: ['Credit 기반 과금(GPU)', '클라우드 서비스(웹) Freemium (무료+유료)'],
       },
       {
         title: '(지식재산권)',
@@ -72,7 +72,7 @@ const roadmapYears = [
   },
   {
     year: '2년차 (성장기)',
-    subtitle: '자동화 및 SaaS 확산',
+    subtitle: '자동화 및 클라우드 서비스(웹) 확산',
     sections: [
       {
         title: '기술 고도화',
@@ -92,7 +92,7 @@ const roadmapYears = [
     footers: [
       {
         title: '(비즈니스 모델)',
-        items: ['SaaS 구독 패키지(Basic/Pro)', '대규모 연산 On-Demand 과금'],
+        items: ['클라우드 서비스(웹) 구독 패키지(Basic/Pro)', '대규모 연산 On-Demand 과금'],
       },
       {
         title: '(지식재산권)',
@@ -132,7 +132,7 @@ const roadmapYears = [
   },
 ];
 
-const compHeaders = ['구분', '기존 방식 (CADD SW)', '단순 AI 모델 (Black-box)', '동사 (Hybrid Engine)'];
+const compHeaders = ['구분', '기존 방식 (신약설계 소프트웨어)', '단순 AI 모델 (블랙박스(내부 구조 파악 불가))', '동사 (Hybrid Engine)'];
 const compRows = [
   {
     label: '핵심가치',
@@ -140,7 +140,7 @@ const compRows = [
   },
   {
     label: '사용성',
-    cells: ['명령어(CLI) 기반 복잡함', '블랙박스로 해석 난해', 'Web GUI (No-Code)'],
+    cells: ['명령어(개발자용 명령어) 기반 복잡함', '블랙박스로 해석 난해', '웹 시각화 화면 (노코드(코딩 불필요))'],
   },
   {
     label: '기술 특징',
