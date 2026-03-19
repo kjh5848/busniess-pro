@@ -1,6 +1,6 @@
 import React from 'react';
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, LabelList } from 'recharts';
-import newsClippingsImg from '../assets/news_clippings.png';
+import newsClippingsImg from '../../assets/news_clippings.png';
 
 const ACCENT = '#dfe6f7';
 
@@ -28,7 +28,7 @@ const valueProps = [
   { num: '다', title: '사내 PC Grid 연산', desc: '유휴 PC 자원 묶어 비용 1/10 절감' },
 ];
 
-const ProblemRecognitionV9 = () => {
+const ProblemRecognitionV2 = () => {
   return (
     <div className="v2-theme v2-container">
       <div className="v2-paper">
@@ -37,8 +37,57 @@ const ProblemRecognitionV9 = () => {
           1. 문제 인식 (Problem)_창업 아이템의 필요성
         </div>
 
+        {/* 1-1. 창업 아이템의 국내·외 시장 현황 및 문제점 */}
         <section>
-          <h2 className="hwp-subsection-title">1-1. 창업아이템의 개발동기</h2>
+          <h2 className="hwp-subsection-title">1-1. 창업 아이템의 국내·외 시장 현황 및 문제점</h2>
+
+          {/* ── 뉴스 기사 + 시장 그래프 (2열) ── */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem', marginBottom: '1.5rem' }}>
+            {/* 뉴스 */}
+            <div style={{ border: '1.5px solid #000', overflow: 'hidden' }}>
+              <div style={{
+                backgroundColor: '#1e293b', color: '#fff', padding: '0.35rem 0.6rem',
+                fontWeight: '700', fontSize: '0.8rem', fontFamily: 'var(--hwp-font-heading)',
+                textAlign: 'center', borderBottom: '1px solid #000',
+              }}>
+                AI 신약개발 시장 주요 동향
+              </div>
+              <img src={newsClippingsImg} alt="뉴스" style={{ width: '100%', display: 'block' }} />
+            </div>
+
+            {/* 시장 그래프 */}
+            <div style={{ border: '1.5px solid #000', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+              <div style={{
+                backgroundColor: '#1e293b', color: '#fff', padding: '0.35rem 0.6rem',
+                fontWeight: '700', fontSize: '0.8rem', fontFamily: 'var(--hwp-font-heading)',
+                textAlign: 'center', borderBottom: '1px solid #000',
+              }}>
+                글로벌 시장 규모 전망 (CAGR 30%+)
+              </div>
+              <div style={{ backgroundColor: '#fafbfc', flex: 1, position: 'relative', minHeight: '250px' }}>
+                <div style={{ position: 'absolute', top: '20px', left: 0, right: 0, bottom: '15px', padding: '0 0.5rem' }}>
+                  <ResponsiveContainer width="100%" height="100%">
+                    <AreaChart data={marketChartData} margin={{ top: 20, right: 20, bottom: 5, left: 5 }}>
+                      <defs>
+                        <linearGradient id="mg9" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stopColor="#1e293b" stopOpacity={0.3} />
+                          <stop offset="100%" stopColor="#dfe6f7" stopOpacity={0.1} />
+                        </linearGradient>
+                      </defs>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                      <XAxis dataKey="year" fontSize={13} tick={{ fill: '#374151', fontWeight: '700' }} />
+                      <YAxis fontSize={12} tick={{ fill: '#6b7280', fontWeight: '600' }} tickFormatter={(v) => `${v}조`} domain={[0, 48]} tickCount={5} />
+                      <Tooltip formatter={(val) => [`${val}조 원`, '시장 규모']} />
+                      <Area type="monotone" dataKey="size" stroke="#1e293b" strokeWidth={2} fill="url(#mg9)"
+                        dot={{ r: 3, fill: '#1e293b', stroke: '#fff', strokeWidth: 1.5 }}>
+                        <LabelList dataKey="label" position="top" style={{ fontSize: '0.9rem', fontWeight: '800', fill: '#1e293b' }} offset={8} />
+                      </Area>
+                    </AreaChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div style={{
             background: '#1e293b', color: '#fff', padding: '0.8rem 1.2rem',
@@ -67,78 +116,11 @@ const ProblemRecognitionV9 = () => {
             ))}
           </div>
 
-          {/* ── 대표자 역량 ── */}
-          <div style={{ border: '1.5px solid #000', marginBottom: '1.5rem', overflow: 'hidden' }}>
-            <div style={{
-              backgroundColor: ACCENT, padding: '0.4rem 0.8rem', fontWeight: '700',
-              fontSize: '0.85rem', fontFamily: 'var(--hwp-font-heading)', borderBottom: '1px solid #000',
-            }}>
-              ■ 대표자 역량 및 발굴 배경
-            </div>
-            <div style={{ padding: '0.6rem 0.8rem', fontSize: '0.84rem', lineHeight: '1.7' }}>
-              <div style={{ marginBottom: '0.3rem' }}>
-                · <strong>현장 경험:</strong> AI 신약개발 전문기업 팜캐드(PharmCAD)에서 AlphaFold·RDKit·AutoDock 등 오픈소스 AI를 실제 R&amp;D 파이프라인에 통합 운용한 실무 경험 보유
-              </div>
-              <div style={{ marginBottom: '0.3rem' }}>
-                · <strong>문제 체감:</strong> 우수한 AI가 공개되어도 리눅스 환경 구축·의존성 충돌·GPU 세팅 등 IT 장벽이 너무 높아 생물학·화학 전공 연구원이 독자 활용 불가능함을 반복 체감
-              </div>
-              <div>
-                · <strong>가치관:</strong> "AI 신약 기술의 민주화" — 오픈소스를 누구나 쉽게 쓸 수 있는 '곡괭이(인프라)'로 가공·제공하는 것이 핵심 미션
-              </div>
-            </div>
-          </div>
         </section>
 
+        {/* 1-2. 문제 해결을 위한 창업 아이템의 개발 필요성 */}
         <section>
-          <h2 className="hwp-subsection-title">1-2. 창업아이템의 사업화 목적 및 필요성</h2>
-
-          {/* ── 뉴스 기사 + 시장 그래프 (2열) ── */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem', marginBottom: '1.5rem' }}>
-            {/* 뉴스 */}
-            <div style={{ border: '1.5px solid #000', overflow: 'hidden' }}>
-              <div style={{
-                backgroundColor: '#1e293b', color: '#fff', padding: '0.35rem 0.6rem',
-                fontWeight: '700', fontSize: '0.8rem', fontFamily: 'var(--hwp-font-heading)',
-                textAlign: 'center', borderBottom: '1px solid #000',
-              }}>
-                AI 신약개발 시장 주요 동향
-              </div>
-              <img src={newsClippingsImg} alt="뉴스" style={{ width: '100%', display: 'block' }} />
-            </div>
-
-            {/* 시장 그래프 */}
-            <div style={{ border: '1.5px solid #000', overflow: 'hidden' }}>
-              <div style={{
-                backgroundColor: '#1e293b', color: '#fff', padding: '0.35rem 0.6rem',
-                fontWeight: '700', fontSize: '0.8rem', fontFamily: 'var(--hwp-font-heading)',
-                textAlign: 'center', borderBottom: '1px solid #000',
-              }}>
-                글로벌 시장 규모 전망 (CAGR 30%+)
-              </div>
-              <div style={{ padding: '0.5rem 0.3rem 0.2rem', backgroundColor: '#fafbfc' }}>
-                <div style={{ height: 200 }}>
-                  <ResponsiveContainer width="100%" height="100%">
-                    <AreaChart data={marketChartData} margin={{ top: 20, right: 20, bottom: 5, left: 5 }}>
-                      <defs>
-                        <linearGradient id="mg9" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="0%" stopColor="#1e293b" stopOpacity={0.3} />
-                          <stop offset="100%" stopColor="#dfe6f7" stopOpacity={0.1} />
-                        </linearGradient>
-                      </defs>
-                      <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-                      <XAxis dataKey="year" fontSize={10} tick={{ fill: '#374151', fontWeight: '600' }} />
-                      <YAxis fontSize={10} tick={{ fill: '#6b7280' }} tickFormatter={(v) => `${v}조`} domain={[0, 48]} tickCount={5} />
-                      <Tooltip formatter={(val) => [`${val}조 원`, '시장 규모']} />
-                      <Area type="monotone" dataKey="size" stroke="#1e293b" strokeWidth={2} fill="url(#mg9)"
-                        dot={{ r: 3, fill: '#1e293b', stroke: '#fff', strokeWidth: 1.5 }}>
-                        <LabelList dataKey="label" position="top" style={{ fontSize: '0.65rem', fontWeight: '700', fill: '#1e293b' }} offset={6} />
-                      </Area>
-                    </AreaChart>
-                  </ResponsiveContainer>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h2 className="hwp-subsection-title">1-2. 문제 해결을 위한 창업 아이템의 개발 필요성</h2>
 
           {/* ── 사업화 목적 (압축) ── */}
           <div style={{ border: '1.5px solid #000', marginBottom: '1.2rem', overflow: 'hidden' }}>
@@ -157,7 +139,7 @@ const ProblemRecognitionV9 = () => {
           </div>
 
           {/* ── 3대 가치 제안 (압축) ── */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.5rem', marginBottom: '0.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.5rem', marginBottom: '1.5rem' }}>
             {valueProps.map((vp, i) => (
               <div key={i} style={{ border: '1.5px solid #000', overflow: 'hidden' }}>
                 <div style={{
@@ -173,6 +155,28 @@ const ProblemRecognitionV9 = () => {
               </div>
             ))}
           </div>
+
+          {/* ── 대표자 역량 ── */}
+          <div style={{ border: '1.5px solid #000', marginBottom: '0.5rem', overflow: 'hidden' }}>
+            <div style={{
+              backgroundColor: ACCENT, padding: '0.4rem 0.8rem', fontWeight: '700',
+              fontSize: '0.85rem', fontFamily: 'var(--hwp-font-heading)', borderBottom: '1px solid #000',
+            }}>
+              ■ 대표자 역량 및 발굴 배경 (당위성)
+            </div>
+            <div style={{ padding: '0.6rem 0.8rem', fontSize: '0.84rem', lineHeight: '1.7' }}>
+              <div style={{ marginBottom: '0.3rem' }}>
+                · <strong>현장 경험:</strong> AI 신약개발 전문기업 팜캐드(PharmCAD)에서 AlphaFold·RDKit·AutoDock 등 오픈소스 AI를 실제 R&amp;D 파이프라인에 통합 운용한 실무 경험 보유
+              </div>
+              <div style={{ marginBottom: '0.3rem' }}>
+                · <strong>문제 체감:</strong> 우수한 AI가 공개되어도 리눅스 환경 구축·의존성 충돌·GPU 세팅 등 IT 장벽이 너무 높아 생물학·화학 전공 연구원이 독자 활용 불가능함을 반복 체감
+              </div>
+              <div>
+                · <strong>가치관:</strong> "AI 신약 기술의 민주화" — 오픈소스를 누구나 쉽게 쓸 수 있는 '곡괭이(인프라)'로 가공·제공하는 것이 핵심 미션
+              </div>
+            </div>
+          </div>
+
         </section>
 
       </div>
@@ -180,4 +184,4 @@ const ProblemRecognitionV9 = () => {
   );
 };
 
-export default ProblemRecognitionV9;
+export default ProblemRecognitionV2;

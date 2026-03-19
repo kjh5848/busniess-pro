@@ -1,6 +1,6 @@
 import React from 'react';
 import SummaryV1 from './archive/SummaryV1';
-import ProblemRecognitionV1 from './archive/ProblemRecognitionV1';
+import ProblemRecognitionV2 from './features/problem-recognition/ProblemRecognitionV2';
 import FeasibilityV1 from './archive/FeasibilityV1';
 import PerformanceV1 from './archive/PerformanceV1';
 import ScaleUpV1 from './archive/ScaleUpV1';
@@ -30,7 +30,7 @@ function App() {
         <div style={{ padding: '20px', backgroundColor: '#f1f5f9', boxSizing: 'border-box', position: 'relative' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <SummaryV1 />
-            <ProblemRecognitionV1 />
+            <ProblemRecognitionV2 />
             <FeasibilityV1 />
             <PerformanceV1 />
             <ScaleUpV1 />
