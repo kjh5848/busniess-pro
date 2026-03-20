@@ -23,9 +23,9 @@ const barriers = [
 
 /* ── 3대 가치 제안 ── */
 const valueProps = [
-  { num: '가', title: '1-Click AI 인프라', desc: 'GitHub 최신 오픈소스를 원클릭 셋업·모듈 조합' },
-  { num: '나', title: '자체 구축형 폐쇄망', desc: '폐쇄망 완전 독립 구동, 유출 제로(0)' },
-  { num: '다', title: '사내 PC Grid 연산', desc: '유휴 PC 자원 묶어 비용 1/10 절감' },
+  { num: '가', title: '1-Click AI 인프라', desc: '코딩 없이 버튼 한 번으로 최신 인공지능 설치 끝' },
+  { num: '나', title: '자체 구축형 폐쇄망', desc: '인터넷 없이 회사 내부에만 독립 구동하여 정보 유출 원천 차단' },
+  { num: '다', title: '사내 PC 전력 모아쓰기', desc: '회사 내 남는 PC들의 연산 능력을 하나로 묶어(Grid) 인프라 유지비용 1/10 절감' },
 ];
 
 const ProblemRecognitionV2 = () => {
@@ -129,11 +129,11 @@ const ProblemRecognitionV2 = () => {
               fontWeight: '700', fontSize: '0.86rem', lineHeight: '1.5',
               borderBottom: '1px solid #000', wordBreak: 'keep-all',
             }}>
-              "AI 신약개발의 민주화" — 빅파마 독점 AI 인프라를 중소 연구 생태계에 보급하여 기술 양극화를 해소
+              "AI 신약개발의 민주화" — 글로벌 대형 제약사들이 독점하던 AI 기술을 중소기업에 보급하여 양극화 해소
             </div>
             <div style={{ padding: '0.6rem 0.8rem', fontSize: '0.84rem', lineHeight: '1.7' }}>
               <div style={{ marginBottom: '0.3rem' }}>· <strong>시장 기회:</strong> 중소·중견 제약사의 90% 이상이 비용·인력·보안 장벽으로 AI 전환 실패 중 → 거대한 미충족 수요</div>
-              <div style={{ marginBottom: '0.3rem' }}>· <strong>곡괭이(Pick &amp; Shovel) 전략:</strong> AI 파이프라인을 직접 운영하지 않고, 인프라를 팔아 수익을 확보하는 안정적 B2B 모델</div>
+              <div style={{ marginBottom: '0.3rem' }}>· <strong>인프라(도구) 공급 전략:</strong> 직접 신약을 개발하여 모험을 거는 대신, '금을 캐는 사람들에게 곡괭이를 팔듯' 개발 도구(소프트웨어)를 확정적으로 공급해 수익을 내는 안정적 비즈니스 모델</div>
               <div>· <strong>타이밍:</strong> AlphaFold 3 등 무료 AI가 쏟아지지만 현장에서 구동할 자동화 도구는 전무 → 지금만 가능한 선점 기회</div>
             </div>
           </div>
@@ -166,10 +166,10 @@ const ProblemRecognitionV2 = () => {
             </div>
             <div style={{ padding: '0.6rem 0.8rem', fontSize: '0.84rem', lineHeight: '1.7' }}>
               <div style={{ marginBottom: '0.3rem' }}>
-                · <strong>현장 경험:</strong> AI 신약개발 전문기업 팜캐드(PharmCAD)에서 AlphaFold·RDKit·AutoDock 등 오픈소스 AI를 실제 R&amp;D 파이프라인에 통합 운용한 실무 경험 보유
+                · <strong>현장 경험:</strong> AI 신약개발 전문기업에서 알파폴드(AlphaFold) 등 최신 딥러닝 기술을 실제 연구 현장에 설치하고 운용해 본 강력한 소프트웨어 실무 경험 보유
               </div>
               <div style={{ marginBottom: '0.3rem' }}>
-                · <strong>문제 체감:</strong> 우수한 AI가 공개되어도 리눅스 환경 구축·의존성 충돌·GPU 세팅 등 IT 장벽이 너무 높아 생물학·화학 전공 연구원이 독자 활용 불가능함을 반복 체감
+                · <strong>문제 체감:</strong> 무료 AI가 공개되어도 복잡한 운영체제(Linux) 프로그래밍과 고가의 장비 세팅 등 IT 장벽이 너무 높아, 일반 바이오 연구원들은 아예 손도 댈 수 없음을 현장에서 직접 목격함
               </div>
               <div>
                 · <strong>가치관:</strong> "AI 신약 기술의 민주화" — 오픈소스를 누구나 쉽게 쓸 수 있는 '곡괭이(인프라)'로 가공·제공하는 것이 핵심 미션

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, LabelList } from 'recharts';
+import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, LabelList } from 'recharts';
 import ArrowFlowLayout from '../../shared/ui/ArrowFlowLayout';
 
 const ACCENT = '#dfe6f7';
@@ -7,7 +7,7 @@ const ACCENT = '#dfe6f7';
 /* ── GTM 4단계 ── */
 const gtmSteps = [
   { label: '초기 레퍼런스 확보', sub: '(대학/연구소 무상 배포)' },
-  { label: '국내 B2B 실증',      sub: '(바이오 벤처 유료화)' },
+  { label: '국내 B2B 실증',      sub: '(바이오 벤처 유료 PoC)' },
   { label: '아시아/중견 확장',    sub: '(클라우드 서비스(웹) 구독 모델 확산)' },
   { label: '글로벌 스케일업',     sub: '(Big Pharma 파트너십)' },
 ];
@@ -36,316 +36,284 @@ const GrowthV9 = () => {
           3. 성장전략 (Scale-up)_사업화 추진 전략
         </div>
 
-        {/* ══════════════════ 4-1. 목표시장 분석 ══════════════════ */}
-        <section>
-          <h2 className="hwp-subsection-title">4-1. 제품·서비스의 목표시장 분석</h2>
+        <div className="hwp-guide-text" style={{ border: '1px dotted blue', padding: '0.8rem', marginBottom: '1.5rem', lineHeight: '1.6', fontSize: '0.85rem' }}>
+          ※ 경쟁제품·경쟁사 분석, 창업 아이템의 목표 시장 진입 전략 등 기재<br />
+          &nbsp;&nbsp;&nbsp;창업 아이템의 비즈니스 모델(수익화 모델), 사업 확장을 위한 투자유치 전략<br />
+          &nbsp;&nbsp;&nbsp;사업 전체 로드맵(일정)과 중장기적 사회적 가치 도입계획<br />
+          - 환경 : 폐기물 배출 감소, 재활용 확대, 친환경 원료 개발, 에너지 절감 등 환경보호 노력<br />
+          - 사회 : 지역사회 교류, 사회 환원, 인권, 평등, 다양성 존중 등 사회적 책임경영 노력<br />
+          - 지배구조 : 윤리경영, 상호 존중 조직문화 구축, 근로 환경 개선 등의 투명 경영 노력
+        </div>
 
-          {/* ── TAM/SAM/SOM ── */}
+        {/* ══════════════════ 3-1. 경쟁사 분석, 목표 시장 진입 전략 ══════════════════ */}
+        <section>
+          <h2 className="hwp-subsection-title">3-1. 경쟁사 분석, 목표 시장 진입 전략</h2>
+
+          {/* ── 경쟁사 분석 ── */}
+          <div style={{ fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '0.5rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
+            ■ 주요 경쟁사 분석 및 차별적 진입 전략
+          </div>
+          <table className="hwp-table" style={{ marginBottom: '1.2rem' }}>
+            <thead>
+              <tr>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '20%' }}>비교 항목</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '26%' }}>기존 S/W (퍼블릭 클라우드)</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '26%' }}>SaaS (외부 서버 집중형)</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '28%' }}>당사 (설치형+노코드 AI)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>보안성 (데이터 유출)</td>
+                <td style={{ fontSize: '0.8rem', textAlign: 'center' }}>가상망(VPC) 활용 (보장 한계)</td>
+                <td style={{ fontSize: '0.8rem', textAlign: 'center' }}>데이터 서버 외부 전송 필수</td>
+                <td style={{ fontSize: '0.8rem', textAlign: 'center', fontWeight: '800', color: '#2563eb' }}>사내 폐쇄망 100% 독립 구축</td>
+              </tr>
+              <tr>
+                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>UI/UX 편의성</td>
+                <td style={{ fontSize: '0.8rem', textAlign: 'center' }}>리눅스 커맨드(CLI) 필수</td>
+                <td style={{ fontSize: '0.8rem', textAlign: 'center' }}>웹 대시보드 지원 (우수)</td>
+                <td style={{ fontSize: '0.8rem', textAlign: 'center', fontWeight: '800', color: '#2563eb' }}>1-Click 웹 기반 노코드 GUI</td>
+              </tr>
+              <tr>
+                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>도입/유지 비용</td>
+                <td style={{ fontSize: '0.8rem', textAlign: 'center' }}>수억 원대 초기 구축비</td>
+                <td style={{ fontSize: '0.8rem', textAlign: 'center' }}>데이터 양/API 호출 종량 과금</td>
+                <td style={{ fontSize: '0.8rem', textAlign: 'center', fontWeight: '800', color: '#2563eb' }}>하이엔드 PC 1대 비용으로 해결</td>
+              </tr>
+            </tbody>
+          </table>
+
+          {/* ── 목표 시장 분석 (TAM/SAM/SOM) ── */}
+          <div style={{ fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '0.5rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
+            ■ 목표 시장 규모 (단위: 억 원)
+          </div>
           <div style={{ border: '1.5px solid #000', marginBottom: '0.8rem', overflow: 'hidden' }}>
-            <div style={{
-              backgroundColor: '#1e293b', color: '#fff', padding: '0.35rem 0.6rem',
-              fontWeight: '700', fontSize: '0.8rem', fontFamily: 'var(--hwp-font-heading)',
-              textAlign: 'center', borderBottom: '1px solid #000',
-            }}>TAM → SAM → SOM (단위: 억 원)</div>
             <div style={{ padding: '0.5rem 0.3rem 0.2rem', backgroundColor: '#fff' }}>
-              <ResponsiveContainer width="100%" height={130}>
+              <ResponsiveContainer width="100%" height={120}>
                 <BarChart data={tamChartData} layout="vertical" margin={{ top: 5, right: 70, left: 5, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" horizontal={false} />
                   <XAxis type="number" hide />
                   <YAxis type="category" dataKey="name" width={42} tick={{ fontSize: 12, fontWeight: 700 }} />
-                  <Bar dataKey="value" radius={[0, 5, 5, 0]} barSize={28} fill="#1e293b">
+                  <Bar dataKey="value" radius={[0, 5, 5, 0]} barSize={24} fill="#1e293b">
                     <LabelList dataKey="label" position="right" style={{ fontSize: '0.72rem', fontWeight: '600', fill: '#1e293b' }} />
                   </Bar>
                 </BarChart>
               </ResponsiveContainer>
             </div>
           </div>
-
-          <div style={{ fontSize: '0.72rem', color: '#666', marginBottom: '1.2rem' }}>
-            *출처: Grand View Research 2024. CAGR 29.4% (2024~2030). 노코드(코딩 불필요) + 자체 구축형(폐쇄망) + 저비용 동시 충족 제품 전무 → 명확한 시장 틈새 존재.
+          <div style={{ fontSize: '0.72rem', color: '#666', marginBottom: '1.2rem', wordBreak: 'keep-all' }}>
+            *출처: Grand View Research 2024. 노코드 + 파이프라인 자동화 + 사내망 보안이 결합된 하이브리드 시장 수요 급증.
           </div>
 
-          {/* ── 고객 특성 (압축 2열) ── */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0', marginBottom: '1.2rem' }}>
-            <div style={{ border: '1.5px solid #000', borderRight: 'none' }}>
-              <div style={{ backgroundColor: '#1e293b', color: '#fff', padding: '0.35rem 0.6rem', fontWeight: '700', fontSize: '0.82rem', fontFamily: 'var(--hwp-font-heading)', textAlign: 'center', borderBottom: '1px solid #000' }}>
-                B2B 타겟 (핵심)
-              </div>
-              <div style={{ padding: '0.5rem 0.6rem', fontSize: '0.8rem', lineHeight: '1.6' }}>
-                · 중소·중견 제약사, 국공립 바이오 연구실<br/>
-                · AI 도입 시급하나 클라우드 비용·보안·개발조직 부재<br/>
-                · <strong>→ 자체 구축형(폐쇄망) 설치형 수요 높음</strong>
-              </div>
-            </div>
-            <div style={{ border: '1.5px solid #000' }}>
-              <div style={{ backgroundColor: ACCENT, padding: '0.35rem 0.6rem', fontWeight: '700', fontSize: '0.82rem', fontFamily: 'var(--hwp-font-heading)', textAlign: 'center', borderBottom: '1px solid #000' }}>
-                B2C 타겟 (확장)
-              </div>
-              <div style={{ padding: '0.5rem 0.6rem', fontSize: '0.8rem', lineHeight: '1.6' }}>
-                · 대학원생·포닥·개인 연구자<br/>
-                · 서버 구축 권한·자금 없이 즉시 구동 필요<br/>
-                · <strong>→ 브라우저 즉시 실행 클라우드 서비스(웹) 수요</strong>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ══════════════════ 4-2. 사업화 전략 ══════════════════ */}
-        <section>
-          <h2 className="hwp-subsection-title">4-2. 창업아이템의 개발 사업화 전략</h2>
-
-          {/* GTM */}
+          {/* ── GTM 전략 ── */}
           <div style={{ fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '0.5rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
-            ■ GTM(Go-To-Market) 4단계
+            ■ 목표 시장 진입 전략 (GTM 4단계)
           </div>
           <ArrowFlowLayout steps={gtmSteps} accentColor={ACCENT} />
+          
+        </section>
 
-          {/* 수익 모델 (3열 압축) */}
-          <div style={{ fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '0.5rem', marginTop: '1.2rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
-            ■ 3대 수익원
+        {/* ══════════════════ 3-2. 비즈니스 모델 ══════════════════ */}
+        <section style={{ marginTop: '2rem' }}>
+          <h2 className="hwp-subsection-title">3-2. 창업 아이템의 비즈니스 모델(수익화 모델)</h2>
+
+          {/* 3대 수익원 */}
+          <div style={{ fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '0.5rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
+            ■ 3 다각화 수익 라인 (B2B + B2C)
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0', marginBottom: '1.2rem' }}>
             {[
-              { tag: 'B2C', title: '클라우드 서비스(웹) 구독', price: '월/연 정기결제', target: '개인 연구자·대학원생' },
-              { tag: 'GPU', title: '연산 종량제', price: '시간당 과금', target: '고용량 시뮬레이션 수요' },
-              { tag: 'B2B', title: 'Enterprise 자체 구축형(폐쇄망)', price: '설치비 + 연간 유지보수', target: '보안 필수 중견 제약사' },
+              { tag: 'B2B Enterprise', title: '설치형(폐쇄망) 솔루션', price: '초기 구축비 + 연간 라이선스', target: '데이터 유출에 민감한 중견 제약사 및 국공립 바이오 연구소' },
+              { tag: 'B2C Cloud', title: '클라우드 웹 구독 서비스', price: '월/연 단위 정기 구독료', target: '서버 인프라가 없는 대학원생 및 소규모 랩실 개인 연구자' },
+              { tag: 'ADD-ON', title: '클라우드 GPU 종량 모델', price: '시간/컴퓨팅 리소스 당 과금', target: '일시적으로 대용량 시뮬레이션·도킹 분석이 필요한 사용자' },
             ].map((item, i) => (
-              <div key={i} style={{ border: '1.5px solid #000', borderLeft: i === 0 ? '1.5px solid #000' : 'none' }}>
-                <div style={{ backgroundColor: i === 2 ? '#1e293b' : ACCENT, color: i === 2 ? '#fff' : '#000', padding: '0.3rem 0.5rem', fontWeight: '700', fontSize: '0.78rem', fontFamily: 'var(--hwp-font-heading)', textAlign: 'center', borderBottom: '1px solid #000' }}>
-                  {item.tag} — {item.title}
+              <div key={i} style={{ border: '1.5px solid #000', borderLeft: i === 0 ? '1.5px solid #000' : 'none', display: 'flex', flexDirection: 'column' }}>
+                <div style={{ backgroundColor: i === 0 ? '#1e293b' : ACCENT, color: i === 0 ? '#fff' : '#000', padding: '0.35rem 0.5rem', fontWeight: '700', fontSize: '0.75rem', fontFamily: 'var(--hwp-font-heading)', textAlign: 'center', borderBottom: '1px solid #000' }}>
+                  {item.tag} <br/> {item.title}
                 </div>
-                <div style={{ padding: '0.4rem 0.5rem', fontSize: '0.78rem', lineHeight: '1.5' }}>
-                  <div style={{ fontWeight: '700', marginBottom: '0.15rem' }}>💰 {item.price}</div>
-                  <div style={{ color: '#555' }}>{item.target}</div>
+                <div style={{ padding: '0.6rem 0.5rem', fontSize: '0.75rem', lineHeight: '1.5', flex: 1, backgroundColor: '#fff' }}>
+                  <div style={{ fontWeight: '800', marginBottom: '0.3rem', color: '#2563eb' }}>💰 {item.price}</div>
+                  <div style={{ color: '#475569', wordBreak: 'keep-all' }}>👩‍🔬 {item.target}</div>
                 </div>
               </div>
             ))}
           </div>
-        </section>
 
-        {/* ══════════════════ 4-4. 자금 조달 계획 ══════════════════ */}
-        <section>
-          <h2 className="hwp-subsection-title">4-4. 자금 조달 계획</h2>
-
-          <table className="hwp-table" style={{ marginBottom: '0.8rem' }}>
-            <thead>
-              <tr>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '22%' }}>구분</th>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '20%' }}>금액</th>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '58%' }}>세부 내용</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>정부지원금</td>
-                <td style={{ fontSize: '0.8rem', fontWeight: '700', textAlign: 'center' }}>20,000,000원</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>외주용역비 13,500,000 + 특허출원 3,500,000 + 광고선전비 3,000,000</td>
-              </tr>
-              <tr>
-                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>대응자금 (현물)</td>
-                <td style={{ fontSize: '0.8rem', fontWeight: '700', textAlign: 'center' }}>대표자 인건비</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>바이오 인공지능 운영관리 핵심 엔진 직접 개발 — 전 사업기간 풀타임 투입</td>
-              </tr>
-            </tbody>
-          </table>
-
-          {/* 세부 집행 (압축) */}
-          <div style={{ border: '1.5px solid #000', marginBottom: '1.2rem', overflow: 'hidden' }}>
-            <div style={{
-              display: 'grid', gridTemplateColumns: '15% 30% 15% 15% 25%',
-              backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.78rem',
-              fontFamily: 'var(--hwp-font-heading)', textAlign: 'center',
-              borderBottom: '1.5px solid #000',
-            }}>
-              {['비목', '세부 항목', '금액(원)', '수량', '집행 목적'].map((h, i) => (
-                <div key={i} style={{ padding: '0.35rem 0.3rem', borderRight: i < 4 ? '1px solid #000' : 'none' }}>{h}</div>
-              ))}
-            </div>
-            {[
-              { cat: '특허권', name: '국내 특허 출원', amount: '3,500,000', qty: '1식', note: '핵심기술 권리 보호' },
-              { cat: '외주용역비', name: 'UI/UX 설계 + 디자인 시스템', amount: '4,500,000', qty: '1식', note: '노코드(코딩 불필요) 대시보드 UX' },
-              { cat: '', name: '웹 프론트엔드 개발 (React)', amount: '6,500,000', qty: '1식', note: '대시보드·3D뷰어·모니터링' },
-              { cat: '', name: '반응형 QA + 사용성 테스트', amount: '2,500,000', qty: '1식', note: '크로스브라우저·UT' },
-              { cat: '광고선전비', name: '홈페이지 + 홍보영상 + 마케팅', amount: '3,000,000', qty: '1식', note: '랜딩페이지·데모영상·SNS' },
-            ].map((item, i) => (
-              <div key={i} style={{
-                display: 'grid', gridTemplateColumns: '15% 30% 15% 15% 25%',
-                fontSize: '0.78rem', borderBottom: '1px solid #ccc',
-              }}>
-                <div style={{ padding: '0.3rem', borderRight: '1px solid #ccc', fontWeight: item.cat ? '700' : '400', backgroundColor: item.cat ? '#f5f5f5' : 'transparent', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{item.cat}</div>
-                <div style={{ padding: '0.3rem 0.4rem', borderRight: '1px solid #ccc', lineHeight: '1.3' }}>{item.name}</div>
-                <div style={{ padding: '0.3rem', borderRight: '1px solid #ccc', textAlign: 'right', fontWeight: '700' }}>{item.amount}</div>
-                <div style={{ padding: '0.3rem', borderRight: '1px solid #ccc', textAlign: 'center' }}>{item.qty}</div>
-                <div style={{ padding: '0.3rem 0.4rem', lineHeight: '1.3' }}>{item.note}</div>
-              </div>
-            ))}
-            <div style={{
-              display: 'grid', gridTemplateColumns: '60% 15% 25%',
-              fontSize: '0.82rem', fontWeight: '700', borderTop: '1.5px solid #000',
-              backgroundColor: ACCENT, fontFamily: 'var(--hwp-font-heading)',
-            }}>
-              <div style={{ padding: '0.35rem', textAlign: 'center', borderRight: '1px solid #000' }}>합 계</div>
-              <div style={{ padding: '0.35rem', textAlign: 'right', borderRight: '1px solid #000' }}>20,000,000</div>
-              <div style={{ padding: '0.35rem' }}></div>
-            </div>
-          </div>
-        </section>
-
-        {/* ══════════════════ 4-5. 시장진입 전략 ══════════════════ */}
-        <section>
-          <h2 className="hwp-subsection-title">4-5. 시장진입 및 성과 창출 전략</h2>
-
-          <table className="hwp-table" style={{ marginBottom: '1rem' }}>
-            <thead>
-              <tr>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '15%' }}>영역</th>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '50%' }}>구체적 방안</th>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '35%' }}>일정/KPI</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>생산·출시</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>B2C 클라우드 서비스(웹) 무료 베타 → 유료 전환 / B2B 자체 구축형(폐쇄망) PoC</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>'26 하반기 베타 / '27 정식 / PoC 3사+</td>
-              </tr>
-              <tr>
-                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>홍보</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>바이오 학회·데모데이 / LinkedIn 타겟 마케팅 / 대학원 무상 배포</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>컨퍼런스 2회 / 대학 10곳+ 도입</td>
-              </tr>
-              <tr>
-                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>유통·판매</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>B2C 자사 웹 직접 판매 / B2B 직접 영업 + 인큐베이터 연계</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>B2C 100명+ / B2B 3건+ ('27)</td>
-              </tr>
-            </tbody>
-          </table>
-
-          {/* 매출 테이블 */}
+          {/* 예상 매출 테이블 */}
           <div style={{ fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '0.5rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
-            ■ 예상 매출금액
+            ■ 예상 매출 금액 지표
           </div>
           <table className="hwp-table" style={{ marginBottom: '0.8rem' }}>
             <thead>
               <tr>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '15%' }}>시기</th>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '20%' }}>B2C</th>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '22%' }}>B2B</th>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '18%' }}>합계</th>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '25%' }}>비고</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '16%' }}>시기</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '20%' }}>B2C (클라우드)</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '20%' }}>B2B (설치형)</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '20%' }}>합계</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '24%' }}>비고</th>
               </tr>
             </thead>
             <tbody>
               {revenueProjection.map((r, i) => (
                 <tr key={i}>
-                  <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>{r.period}</td>
+                  <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem', textAlign: 'center' }}>{r.period}</td>
                   <td style={{ fontSize: '0.8rem', textAlign: 'center' }}>{r.b2c}</td>
                   <td style={{ fontSize: '0.8rem', textAlign: 'center' }}>{r.b2b}</td>
-                  <td style={{ fontSize: '0.8rem', textAlign: 'center', fontWeight: '700' }}>{r.total}</td>
-                  <td style={{ fontSize: '0.8rem' }}>{r.note}</td>
+                  <td style={{ fontSize: '0.8rem', textAlign: 'center', fontWeight: '800', color: '#1e3a8a' }}>{r.total}</td>
+                  <td style={{ fontSize: '0.75rem' }}>{r.note}</td>
                 </tr>
               ))}
             </tbody>
           </table>
-
-          <div style={{
-            background: '#1e293b', color: '#fff', padding: '0.5rem 0.8rem',
-            fontWeight: '700', fontSize: '0.82rem', wordBreak: 'keep-all', lineHeight: '1.5',
-          }}>
-            ▶ '28년 누적 매출 <strong>2.76억 원</strong> 목표. B2B 자체 구축형(폐쇄망) 계약 단가(3,000~5,000만원/건)가 핵심 매출 드라이버.
-          </div>
         </section>
 
-        {/* ══════════════════ 5. 팀 구성 (Team) ══════════════════ */}
-        <section>
-          <h2 className="hwp-subsection-title">5. 팀 구성 (Team)</h2>
+        {/* ══════════════════ 3-3. 투자 유치 전략 ══════════════════ */}
+        <section style={{ marginTop: '2rem' }}>
+          <h2 className="hwp-subsection-title">3-3. 사업 확장을 위한 투자 유치 전략</h2>
 
-          {/* ── 대표자 프로필 (서술형) ── */}
           <div style={{ fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '0.5rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
-            ■ 대표자 이력 및 제품 관련 역량
+            ■ 단계별 자금 조달 및 활용 목표
           </div>
-
-          <p className="hwp-guide-text" style={{ marginBottom: '0.6rem' }}>
-            ※ 제품(서비스)과 관련하여 대표자가 보유하고 있는 이력, 역량 등을 기재
-          </p>
-
-          <div style={{ border: '1.5px solid #000', marginBottom: '1.2rem', overflow: 'hidden' }}>
-            {/* 이름 헤더 */}
-            <div style={{
-              backgroundColor: '#1e293b', color: '#fff',
-              padding: '0.4rem 0.8rem', fontWeight: '700', fontSize: '0.85rem',
-              fontFamily: 'var(--hwp-font-heading)',
-              borderBottom: '1px solid #000',
-            }}>
-              대표자 — 정호준 (경상국립대학교 졸, 정보처리기사)
-            </div>
-
-            {/* 개조식 본문 */}
-            <div style={{ padding: '0.6rem 0.8rem', fontSize: '0.82rem', lineHeight: '1.75', wordBreak: 'keep-all' }}>
-              <div style={{ marginBottom: '0.2rem' }}>· <strong>SW 개발·유지보수 실무 경력 5년+</strong>, 개발팀장 출신</div>
-              <div style={{ marginBottom: '0.2rem' }}>· AI 신약개발 전문기업에서 <strong>AlphaFold·RDKit·AutoDock 등 오픈소스 AI 도구</strong>를 실제 제약 R&amp;D 파이프라인에 통합·운용한 실무 경험 보유</div>
-              <div style={{ marginBottom: '0.2rem' }}>· 상기 경험 기반으로 본 제품 핵심 기능 <strong>Auto-Setup Engine</strong>(원클릭 AI 환경 구축), <strong>Pipeline SDK</strong>(14종 분자 파일 호환), <strong>Grid Orchestrator</strong>(유휴 PC 분산 연산) 직접 설계·개발 — 전 사업기간 풀타임 투입</div>
-              <div>· 대학·기업 대상 <strong>시스템 구조 설계 및 기업 협력 프로젝트 강의 경력</strong> 다수 → B2B 고객 기술 컨설팅·온보딩 교육 직접 수행 가능</div>
-            </div>
-          </div>
-
-          {/* ── 조직 구성 ── */}
-          <div style={{ fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '0.5rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
-            ■ 조직 구성 및 채용 계획
-          </div>
-
-          <table className="hwp-table" style={{ marginBottom: '1rem' }}>
+          <table className="hwp-table" style={{ marginBottom: '1.2rem' }}>
             <thead>
               <tr>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '14%' }}>구분</th>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '16%' }}>포지션</th>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '35%' }}>역할 및 자격 요건</th>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '20%' }}>채용 시기</th>
-                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '15%' }}>상태</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '22%' }}>투자 라운드 (시기)</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '18%' }}>목표 금액</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '60%' }}>유치 전략 및 자금 활용 목적</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { phase: 'Seed / TIPS\n(2026.11)', amount: '3~5억원', detail: '제품 정식 출시(V1.0) 후 기술 딥테크 평가를 통한 TIPS 프로그램 선정 및 전문 엔젤·초기 액셀러레이터(AC) 시드 투자 유치. (목적: 우수 인재 영입 및 클라우드 인프라 확충)' },
+                { phase: 'Pre-A 라운드\n(2027.08)', amount: '10~15억원', detail: '국내 B2B 레퍼런스(매출 발생) 및 10개사 이상 PoC 완료 지표를 바탕으로 바이오 및 SaaS 전문 VC 대상 투자 유치. (목적: 서비스 고도화 및 아시아 시장 진출 초기 자본)' },
+                { phase: 'Series A\n(2028.09)', amount: '30억원 이상', detail: '아시아 시장 구독자 확보 및 글로벌 Big Pharma 도입 성공 사례 구축 후 스케일업 자금 확보. (목적: 글로벌 마케팅 및 AI 신약개발 파이프라인 추가 융합)' },
+              ].map((item, i) => (
+                <tr key={i}>
+                  <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem', textAlign: 'center', whiteSpace: 'pre-line', lineHeight: '1.4' }}>{item.phase}</td>
+                  <td style={{ fontSize: '0.85rem', textAlign: 'center', fontWeight: '800', color: '#2563eb' }}>{item.amount}</td>
+                  <td style={{ fontSize: '0.8rem', lineHeight: '1.5', wordBreak: 'keep-all' }}>{item.detail}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
+        {/* ══════════════════ 3-4. 사업 전체 로드맵 및 ESG 전략 ══════════════════ */}
+        <section style={{ marginTop: '2rem' }}>
+          <h2 className="hwp-subsection-title">3-4. 사업 전체 로드맵(일정 등) 및 중장기 사회적 가치 도입계획</h2>
+
+          {/* 로드맵 */}
+          <div style={{ fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '0.5rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
+            ■ 3개년 사업·제품 고도화 로드맵
+          </div>
+          <div style={{ position: 'relative', border: '1.5px solid #000', padding: '1rem', backgroundColor: '#fff', marginBottom: '1.5rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem', position: 'relative', zIndex: 1 }}>
+              <div style={{ backgroundColor: '#fdfdfd', border: '1px solid #ccc', padding: '0.8rem', borderRadius: '4px' }}>
+                <div style={{ fontWeight: '800', color: '#1d4ed8', marginBottom: '0.4rem', fontSize: '0.9rem' }}>2026 (초기 진입)</div>
+                <ul style={{ margin: 0, paddingLeft: '1.2rem', fontSize: '0.75rem', lineHeight: '1.6', color: '#333' }}>
+                  <li>솔루션 V1.0 정식 플랫폼 개발 완료</li>
+                  <li>국내 초기 연구소·대학 대상 무상 시범 배포</li>
+                  <li>엔젤투자 및 TIPS 연계 자금 확보</li>
+                </ul>
+              </div>
+              <div style={{ backgroundColor: '#fdfdfd', border: '1px solid #ccc', padding: '0.8rem', borderRadius: '4px' }}>
+                <div style={{ fontWeight: '800', color: '#16a34a', marginBottom: '0.4rem', fontSize: '0.9rem' }}>2027 (레퍼런스 확장)</div>
+                <ul style={{ margin: 0, paddingLeft: '1.2rem', fontSize: '0.75rem', lineHeight: '1.6', color: '#333' }}>
+                  <li>B2C 웹 클라우드 구독 서비스 유료화 상용화</li>
+                  <li>국내 B2B 중견 제약사 핵심 레퍼런스 확립</li>
+                  <li>Pre-A 투자 라운드 성공적 클로징</li>
+                </ul>
+              </div>
+              <div style={{ backgroundColor: '#fdfdfd', border: '1px solid #ccc', padding: '0.8rem', borderRadius: '4px' }}>
+                <div style={{ fontWeight: '800', color: '#9333ea', marginBottom: '0.4rem', fontSize: '0.9rem' }}>2028 (글로벌 스케일업)</div>
+                <ul style={{ margin: 0, paddingLeft: '1.2rem', fontSize: '0.75rem', lineHeight: '1.6', color: '#333' }}>
+                  <li>아시아 및 주요 북미 B2B 시장 본격 진출</li>
+                  <li>신약 파이프라인 전 과정 올인원 지능형 통합</li>
+                  <li>글로벌 사업화 기반 Series A 메가 라운드 유치</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* ESG 중장기 계획 */}
+          <div style={{ fontWeight: 'bold', fontSize: '0.85rem', marginBottom: '0.5rem', paddingLeft: '2px', fontFamily: 'var(--hwp-font-heading)' }}>
+            ■ 중장기적 사회적 가치(ESG) 도입 방안
+          </div>
+          <table className="hwp-table" style={{ marginBottom: '1.2rem' }}>
+            <thead>
+              <tr>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '15%' }}>분류</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '25%' }}>도입 가치</th>
+                <th style={{ backgroundColor: '#1e293b', color: '#fff', width: '60%' }}>구체적 실천 계획 노력</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }}>대표자</td>
-                <td style={{ fontSize: '0.8rem', fontWeight: '700', textAlign: 'center' }}>CEO /<br/>기술 총괄</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>
-                  · 인공지능 운영관리·DevOps 핵심 엔진 직접 개발<br/>
-                  · 오픈소스 AI 도구 통합·자동화 설계<br/>
-                  · 사업 전략·고객 발굴·투자 유치
+                <td className="label" style={{ backgroundColor: '#f1f8e9', fontWeight: '800', fontSize: '0.85rem', textAlign: 'center', color: '#2e7d32' }}>환경<br/>(E)</td>
+                <td style={{ fontSize: '0.8rem', fontWeight: '700', textAlign: 'center' }}>폐기물 배출 감소 및<br/>에너지 절감</td>
+                <td style={{ fontSize: '0.8rem', lineHeight: '1.5' }}>
+                  · <strong>에너지 절감 (전력 소비 최소화):</strong> 불필요한 AI 연산을 자동으로 필터링하는 파이프라인 최적화 시스템 구축 도입<br/>
+                  · <strong>실험실 폐기물 감축 (자원 절감):</strong> in-silico(가상) 정확도 90% 달성으로 불필요한 생물/화학 실험을 최소화하여 유해 폐기물 배출 감소
                 </td>
-                <td style={{ fontSize: '0.8rem', textAlign: 'center' }}>—</td>
-                <td style={{ fontSize: '0.8rem', textAlign: 'center', fontWeight: '700', color: '#16a34a' }}>✔ 재직</td>
               </tr>
               <tr>
-                <td className="label" style={{ backgroundColor: ACCENT, fontWeight: '700', fontSize: '0.8rem' }} rowSpan={2}>채용<br/>예정</td>
-                <td style={{ fontSize: '0.8rem', fontWeight: '700', textAlign: 'center' }}>신약개발<br/>도메인 전문가</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>
-                  · 박사급 (약학·생물정보학·화학 등)<br/>
-                  · AI 신약 파이프라인 도메인 검증·PoC 지원<br/>
-                  · B2B 고객 기술 컨설팅
+                <td className="label" style={{ backgroundColor: '#e3f2fd', fontWeight: '800', fontSize: '0.85rem', textAlign: 'center', color: '#1565c0' }}>사회<br/>(S)</td>
+                <td style={{ fontSize: '0.8rem', fontWeight: '700', textAlign: 'center' }}>지역사회 사회 환원<br/>및 인권/평등 존중</td>
+                <td style={{ fontSize: '0.8rem', lineHeight: '1.5' }}>
+                  · <strong>사회 환원 (보건 의료 기여):</strong> 희귀 난치성 질환을 연구하는 대학/지역 거점 연구기관 대상 교육용 소프트웨어 무상 지원 실시<br/>
+                  · <strong>다양성 존중 (DEI):</strong> 성별, 학력 차별 없는 블라인드 개발자 채용 및 가족친화적 유연근무제 도입으로 책임경영 구축
                 </td>
-                <td style={{ fontSize: '0.8rem', textAlign: 'center' }}>'26.06<br/>목표</td>
-                <td style={{ fontSize: '0.8rem', textAlign: 'center', fontWeight: '700', color: '#d97706' }}>◎ 채용 중</td>
               </tr>
               <tr>
-                <td style={{ fontSize: '0.8rem', fontWeight: '700', textAlign: 'center' }}>데이터<br/>전처리 엔지니어</td>
-                <td style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>
-                  · 분자 데이터(SDF·PDB·SMILES) 전처리<br/>
-                  · Pipeline SDK 14종 분자 파일 호환성 확보<br/>
-                  · 학습 데이터셋 구축·관리
+                <td className="label" style={{ backgroundColor: '#fff3e0', fontWeight: '800', fontSize: '0.85rem', textAlign: 'center', color: '#e65100' }}>지배구조<br/>(G)</td>
+                <td style={{ fontSize: '0.8rem', fontWeight: '700', textAlign: 'center' }}>윤리경영 및 상호 존중<br/>투명 경영 내재화</td>
+                <td style={{ fontSize: '0.8rem', lineHeight: '1.5' }}>
+                  · <strong>투명한 데이터 권리 보장:</strong> 고객사의 구조 데이터를 절대로 무단 학습 모델로 사용하지 않는 투명한 약관 명시 (윤리경영)<br/>
+                  · <strong>선진 조직문화 체계:</strong> 전 직원 경영 실적 분기별 공유 (타운홀 미팅)를 통해 직원과 성장하는 근로환경 개선 및 상호 존중 확립
                 </td>
-                <td style={{ fontSize: '0.8rem', textAlign: 'center' }}>'26.06<br/>목표</td>
-                <td style={{ fontSize: '0.8rem', textAlign: 'center', fontWeight: '700', color: '#d97706' }}>◎ 채용 중</td>
               </tr>
             </tbody>
           </table>
-
           <div style={{
             background: '#1e293b', color: '#fff', padding: '0.5rem 0.8rem',
-            fontWeight: '700', fontSize: '0.82rem', lineHeight: '1.5',
+            fontWeight: '700', fontSize: '0.82rem', wordBreak: 'keep-all', lineHeight: '1.5',
           }}>
-            ▶ 대표자가 핵심 기술을 직접 개발하고, 박사급 도메인 전문가 + 데이터 엔지니어를 조기 확보하여 <strong>'26년 하반기 베타 출시</strong> 일정을 달성함.
+            ▶ 단기적 이윤 창출을 넘어, <strong>'고효율 AI 최적화를 통한 실험실 폐기물 절감(E)과 소외 연구를 위한 소프트웨어 자원 사회 환원(S)'</strong>을 실천하여 건실하고 존경받는 기업 문화(G)를 구축함.
+          </div>
+
+          {/* ── 일정표: < 사업추진 일정(전체 사업단계) > ── */}
+          <div style={{ marginTop: '2.5rem' }}>
+            <div style={{ fontWeight: 'bold', fontSize: '1rem', marginBottom: '0.6rem', textAlign: 'center', fontFamily: 'var(--hwp-font-heading)' }}>
+              {'< 사업추진 일정(전체 사업단계) >'}
+            </div>
+            <table style={{ width: '100%', borderCollapse: 'collapse', borderTop: '2px solid #000', borderBottom: '2px solid #000', fontSize: '0.8rem', textAlign: 'center', fontFamily: 'var(--hwp-font-body), "Malgun Gothic", sans-serif' }}>
+              <thead>
+                <tr style={{ backgroundColor: '#e2e2e2', color: '#000', borderBottom: '1px solid #000' }}>
+                  <th style={{ padding: '0.6rem 0.2rem', borderRight: '1px solid #000', borderLeft: '1px solid #000', width: '8%', fontWeight: '500' }}>구분</th>
+                  <th style={{ padding: '0.6rem 0.2rem', borderRight: '1px solid #000', width: '25%', fontWeight: '500' }}>추진 내용</th>
+                  <th style={{ padding: '0.6rem 0.2rem', borderRight: '1px solid #000', width: '22%', fontWeight: '500' }}>추진 기간</th>
+                  <th style={{ padding: '0.6rem 0.2rem', borderRight: '1px solid #000', fontWeight: '500' }}>세부 내용</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { no: '1', title: '초융합 파이프라인\n설계 및 개발', period: "'26. 04 ~ '26. 07", detail: 'Boltz-2 기반 모듈 분석 및 통합 1-Click GUI 구축' },
+                  { no: '2', title: 'Beta 사내망 포팅\n및 내부 최적화', period: "'26. 08 ~ '26. 09", detail: '데이터 유출 방지형 사내망 이식 및 유효성 시뮬레이션' },
+                  { no: '3', title: '제품 정식 출시 및\n특허/상표 출원', period: "'26. 10 ~ '26. 11", detail: '플랫폼 정식 상용화(V1.0) 런칭 및 원천 기술 지재권 확보' },
+                  { no: '4', title: '레퍼런스 선점 및\nSeed 자금 확보', period: "'26년 하반기", detail: '초기 바이오 벤처 무상 시범 배포 및 TIPS/엔젤 투자 유치' },
+                  { no: '5', title: 'B2C 클라우드 및\nB2B 솔루션 수익화', period: "'27. 01 ~ '27. 12", detail: '개인용 웹 구독 모델 정식 유료화 및 중견 제약사 납품 확산' },
+                  { no: '6', title: '글로벌 스케일업 및\nSeries A 유치', period: "'28년 상반기 ~", detail: '북미/아시아 Big Pharma 파트너십 도출 및 메가 라운드 진행' },
+                ].map((row, i) => (
+                  <tr key={i} style={{ borderBottom: '1px solid #000', backgroundColor: '#fff' }}>
+                    <td style={{ padding: '0.7rem 0.4rem', borderRight: '1px solid #000', borderLeft: '1px solid #000', color: 'blue', fontStyle: 'italic', fontSize: '0.85rem' }}>{row.no}</td>
+                    <td style={{ padding: '0.7rem 0.4rem', borderRight: '1px solid #000', color: 'blue', fontStyle: 'italic', fontSize: '0.85rem', whiteSpace: 'pre-line' }}>{row.title}</td>
+                    <td style={{ padding: '0.7rem 0.4rem', borderRight: '1px solid #000', color: 'blue', fontStyle: 'italic', fontSize: '0.85rem' }}>{row.period}</td>
+                    <td style={{ padding: '0.7rem 0.4rem', borderRight: '1px solid #000', color: 'blue', fontStyle: 'italic', fontSize: '0.85rem', textAlign: 'left', paddingLeft: '1rem' }}>{row.detail}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </section>
 

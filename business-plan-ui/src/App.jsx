@@ -1,9 +1,8 @@
 import React from 'react';
 import SummaryV1 from './archive/SummaryV1';
-import ProblemRecognitionV2 from './features/problem-recognition/ProblemRecognitionV2';
-import FeasibilityV1 from './archive/FeasibilityV1';
-import PerformanceV1 from './archive/PerformanceV1';
-import ScaleUpV1 from './archive/ScaleUpV1';
+import ProblemRecognitionV3 from './features/problem-recognition/ProblemRecognitionV3';
+import FeasibilityV2 from './features/feasibility/FeasibilityV2';
+import GrowthV9 from './features/growth/GrowthV9';
 import TeamV1 from './archive/TeamV1';
 import GlossarySidebar from './shared/ui/GlossarySidebar';
 import { BookOpen } from 'lucide-react';
@@ -30,10 +29,9 @@ function App() {
         <div style={{ padding: '20px', backgroundColor: '#f1f5f9', boxSizing: 'border-box', position: 'relative' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <SummaryV1 />
-            <ProblemRecognitionV2 />
-            <FeasibilityV1 />
-            <PerformanceV1 />
-            <ScaleUpV1 />
+            <ProblemRecognitionV3 />
+            <FeasibilityV2 />
+            <GrowthV9 />
             <TeamV1 />
           </div>
           <GlossarySidebar />

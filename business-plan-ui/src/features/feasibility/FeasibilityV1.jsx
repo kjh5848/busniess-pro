@@ -1,9 +1,9 @@
 import React from 'react';
 import ComparisonTable from '../../shared/ui/ComparisonTable';
-import uiImage1 from '../assets/step1_alphafold.png';
-import uiImage2 from '../assets/step2_diffdock.png';
-import uiImage3 from '../assets/step3_rfdiffusion.png';
-import dashboardUI from '../assets/메인 대시보드 UI.png';
+import uiImage1 from '../../assets/step1_alphafold.png';
+import uiImage2 from '../../assets/step2_diffdock.png';
+import uiImage3 from '../../assets/step3_rfdiffusion.png';
+import dashboardUI from '../../assets/메인 대시보드 UI.png';
 
 const ACCENT = '#dfe6f7';
 
@@ -60,7 +60,7 @@ const positioningData = [
   { name: '동사', x: 82, y: 88, desc: '노코드(코딩 불필요)+자체 구축형(폐쇄망)', color: '#1e293b', highlight: true },
 ];
 
-const FeasibilityV9 = () => {
+const FeasibilityV1 = () => {
   return (
     <div className="v2-theme v2-container">
       <div className="v2-paper">
@@ -390,4 +390,4 @@ const FeasibilityV9 = () => {
   );
 };
 
-export default FeasibilityV9;
+export default FeasibilityV1;
