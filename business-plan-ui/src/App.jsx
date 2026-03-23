@@ -1,10 +1,10 @@
 import React from 'react';
-import BusinessPlanV2 from './components/BusinessPlanV2';
+import BusinessPlanV3 from './components/BusinessPlanV3';
 
 function App() {
   return (
     <div>
-      <BusinessPlanV2 />
+      <BusinessPlanV3 />
     </div>
   );
 }
