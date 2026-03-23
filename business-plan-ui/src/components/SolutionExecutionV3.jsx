@@ -36,7 +36,80 @@ export default function SolutionExecutionV3() {
           </tr>
           <tr>
             <td style={{ textAlign: 'center', fontWeight: 'bold' }}>[Phase 2]<br/>연소 직후 잔여물(재)의<br/>천연 비료 100% 완전 환원</td>
-            <td style={{ padding: '12px', lineHeight: '1.6' }}><strong>(종량제 폐기 면제 혜택 및 농가 지력 상승 환원)</strong> 연소 후 남은 찌꺼기 재를 맨 땅바닥 흙에 그대로 털어 버려도 법적 제한이나 생태계 지장 전무함. 오히려 농촌진흥청에서 산성화된 토양 원상 복구를 위해 적극 파종을 인센티브로 지원 중인 '천연 패화석(석회질) 비료'와 원자재 구성 성분이 소수점 아래까지 정확히 100% 일치하여 최상위 등급의 친환경 가설 도달 완료.</td>
+            <td style={{ padding: '12px', lineHeight: '1.6' }}><strong>(종량제 폐기 면제 혜택 및 농가 지력 상승 환원)</strong> 연소 후 남은 찌꺼기 재를 맨 땅바닥 흙에 그대로 털어 버려도 법적 제한이나 생태계 지장 전무함. 오히려 농촌진흥청에서 산성화된 토양 원상 복구를 위해 적극 파종을 인센티브로 지원 중인 '천연 패화석(석회질) 비료'와 원자재 구성 성분이 소수점 아래까지 정확히 100% 일치하며, <strong>토양 산성화 방지(pH 개선 20% 이상) 목표치 달성</strong>으로 최상위 등급의 친환경 가설 도달 완료.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '16px', marginBottom: '10px', marginTop: '40px', color: '#000', letterSpacing: '-0.5px' }}>
+        &lt; 최종 산출물 작성(전체 사업단계) &gt;
+      </div>
+      <table style={{ width: '100%', borderTop: '2px solid #000', borderBottom: '2px solid #000', borderCollapse: 'collapse', color: '#000' }}>
+        <colgroup>
+          <col width="22%" />
+          <col width="48%" />
+          <col width="10%" />
+          <col width="20%" />
+        </colgroup>
+        <thead>
+          <tr style={{ borderBottom: '3px double #000', backgroundColor: '#e2e2e2' }}>
+            <th style={{ padding: '8px', borderRight: '1px solid #000', fontWeight: 'bold', textAlign: 'center' }}>구분</th>
+            <th style={{ padding: '8px', borderRight: '1px solid #000', fontWeight: 'bold', textAlign: 'center' }}>최종 산출물</th>
+            <th style={{ padding: '8px', borderRight: '1px solid #000', fontWeight: 'bold', textAlign: 'center' }}>수량</th>
+            <th style={{ padding: '8px', fontWeight: 'bold', textAlign: 'center' }}>완료 일정</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowSpan={3} style={{ borderRight: '1px solid #000', borderBottom: '1px solid #000', backgroundColor: '#e2e2e2', fontWeight: 'bold', textAlign: 'center', fontSize: '15px' }}>
+              단기(협약 기간 내)
+            </td>
+            <td style={{ borderRight: '1px solid #000', borderBottom: '1px solid #000', padding: '12px', textAlign: 'left', color: 'blue', fontStyle: 'italic' }}>
+              <div style={{ textAlign: 'center', marginBottom: '12px', fontSize: '14.5px' }}>친환경 캠핑 착화재(20% 배합) 시제품</div>
+              <div style={{ fontSize: '13px', paddingLeft: '8px', marginBottom: '4px', textIndent: '-8px' }}>* 협약기간 내 추진가능한 산출물의 제작 완료 일정으로 작성</div>
+              <div style={{ fontSize: '13px', paddingLeft: '14px', textIndent: '-14px' }}>** 협약기간 : '26.5월~12월</div>
+            </td>
+            <td style={{ borderRight: '1px solid #000', borderBottom: '1px solid #000', textAlign: 'center', color: 'blue', fontStyle: 'italic' }}>1</td>
+            <td style={{ borderBottom: '1px solid #000', textAlign: 'center', color: 'blue', fontStyle: 'italic' }}>~’26.11.30.</td>
+          </tr>
+          <tr>
+            <td style={{ borderRight: '1px solid #000', borderBottom: '1px solid #000', padding: '12px', textAlign: 'center', color: 'blue', fontStyle: 'italic', fontSize: '14.5px' }}>
+              성형탄 규격·품질기준 적합 공인 성적서
+            </td>
+            <td style={{ borderRight: '1px solid #000', borderBottom: '1px solid #000', textAlign: 'center', color: 'blue', fontStyle: 'italic' }}>1</td>
+            <td style={{ borderBottom: '1px solid #000', textAlign: 'center', color: 'blue', fontStyle: 'italic' }}>~’26.12.31.</td>
+          </tr>
+          <tr>
+            <td style={{ borderRight: '1px solid #000', borderBottom: '1px solid #000', padding: '12px', textAlign: 'center', color: 'blue', fontStyle: 'italic', fontSize: '14.5px' }}>
+              ...
+            </td>
+            <td style={{ borderRight: '1px solid #000', borderBottom: '1px solid #000', textAlign: 'center', color: 'blue', fontStyle: 'italic' }}></td>
+            <td style={{ borderBottom: '1px solid #000', textAlign: 'center', color: 'blue', fontStyle: 'italic' }}></td>
+          </tr>
+
+          <tr>
+            <td rowSpan={3} style={{ borderRight: '1px solid #000', backgroundColor: '#e2e2e2', fontWeight: 'bold', textAlign: 'center', fontSize: '15px' }}>
+              중·장기<br/>최종 산출물
+            </td>
+            <td style={{ borderRight: '1px solid #000', borderBottom: '1px solid #000', padding: '12px', textAlign: 'center', color: 'blue', fontStyle: 'italic', fontSize: '14.5px' }}>
+              프리미엄 조리용 참나무 톱밥 착화재
+            </td>
+            <td style={{ borderRight: '1px solid #000', borderBottom: '1px solid #000', textAlign: 'center', color: 'blue', fontStyle: 'italic' }}>1</td>
+            <td style={{ borderBottom: '1px solid #000', textAlign: 'center', color: 'blue', fontStyle: 'italic' }}>~’27.06.30.</td>
+          </tr>
+          <tr>
+            <td style={{ borderRight: '1px solid #000', borderBottom: '1px solid #000', padding: '12px', textAlign: 'center', color: 'blue', fontStyle: 'italic', fontSize: '14.5px' }}>
+              자연물 하이브리드 업사이클링 제품군 생산
+            </td>
+            <td style={{ borderRight: '1px solid #000', borderBottom: '1px solid #000', textAlign: 'center', color: 'blue', fontStyle: 'italic' }}>-</td>
+            <td style={{ borderBottom: '1px solid #000', textAlign: 'center', color: 'blue', fontStyle: 'italic' }}>~’27.09.30.</td>
+          </tr>
+          <tr>
+            <td style={{ borderRight: '1px solid #000', padding: '12px', textAlign: 'center', color: 'blue', fontStyle: 'italic', fontSize: '14.5px' }}>
+              캠핑 특화 K-에코테크 기어 디자인 개발
+            </td>
+            <td style={{ borderRight: '1px solid #000', textAlign: 'center', color: 'blue', fontStyle: 'italic' }}>1</td>
+            <td style={{ textAlign: 'center', color: 'blue', fontStyle: 'italic' }}>~’27.12.31.</td>
           </tr>
         </tbody>
       </table>

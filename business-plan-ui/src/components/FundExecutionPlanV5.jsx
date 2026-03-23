@@ -1,7 +1,7 @@
 import React from 'react';
 import '../index.css';
 
-export default function FundExecutionPlanV3() {
+export default function FundExecutionPlanV5() {
   return (
     <div className="hwp-document-section">
       {/* 3-2. 창업아이템 시장 진입 등 사업화 전략 */}
@@ -14,7 +14,7 @@ export default function FundExecutionPlanV3() {
 
         <div style={{ borderLeft: '4px solid #333', paddingLeft: '14px', marginBottom: '24px' }}>
           <p style={{ fontWeight: 'bold', margin: '0', fontSize: '15.5px', color: '#000', lineHeight: '1.4' }}>
-            "투박한 외관을 탈피한 모던 감성의 캠핑 소품으로 초기 시장을 장악하고, 표고버섯 폐배지를 융합한 프리미엄 라인 확장을 거쳐 북미/유럽의 'LNT(Leave No Trace)' 트렌드를 저격하는 K-에코테크 브랜드로 도약함"
+            "기존 투박한 포장을 벗어나 조개껍데기의 오가닉한 질감을 살린 모던 감성 '캠핑용 착화재'로 초기 진입하고, '바비큐용 프리미엄 성형장작/성형숯'과 '캠핑 불멍 오브제'로 라인업을 확장하여 B2B/글로벌 시장을 장악함"
           </p>
         </div>
 
@@ -24,15 +24,15 @@ export default function FundExecutionPlanV3() {
           <thead>
             <tr>
               <th style={{ width: '20%', textAlign: 'center', backgroundColor: '#e5e5e5', color: '#000', borderRight: '1px solid #000', fontWeight: 'bold' }}>진입 단계</th>
-              <th style={{ width: '30%', textAlign: 'center', backgroundColor: '#e5e5e5', color: '#000', borderRight: '1px solid #000', fontWeight: 'bold' }}>핵심 타겟 고객군</th>
-              <th style={{ width: '50%', textAlign: 'center', backgroundColor: '#e5e5e5', color: '#000', fontWeight: 'bold' }}>세부 마케팅 및 유통 확장 전략</th>
+              <th style={{ width: '25%', textAlign: 'center', backgroundColor: '#e5e5e5', color: '#000', borderRight: '1px solid #000', fontWeight: 'bold' }}>핵심 타겟 라인업</th>
+              <th style={{ width: '55%', textAlign: 'center', backgroundColor: '#e5e5e5', color: '#000', fontWeight: 'bold' }}>세부 마케팅 및 유통 확장 전략</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000' }}>[초기] 인지도 확보<br/><span style={{ fontSize: '12px', fontWeight: 'normal', color: '#555' }}>(협약 기간 내)</span></td>
               <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000', textAlign: 'center', wordBreak: 'keep-all' }}>
-                안전성에 민감한<br/><strong>3040 가족 캠퍼</strong>
+                안전성에 민감한 D2C<br/><strong>캠핑용 착화재</strong>
               </td>
               <td style={{ padding: '12px', lineHeight: '1.6', wordBreak: 'keep-all' }}>
                 - 기존의 투박한 포장을 벗어나 <strong>조개껍데기 특유의 오가닉한 질감을 살린 모던 감성 소품</strong>으로 포지셔닝<br/>
@@ -40,23 +40,23 @@ export default function FundExecutionPlanV3() {
               </td>
             </tr>
             <tr>
-              <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000' }}>[중기] 라인업 확장<br/><span style={{ fontSize: '12px', fontWeight: 'normal', color: '#555' }}>(출시 후 1~2년)</span></td>
+              <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000' }}>[중기] 볼륨 극대화<br/><span style={{ fontSize: '12px', fontWeight: 'normal', color: '#555' }}>(출시 후 1~2년)</span></td>
               <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000', textAlign: 'center', wordBreak: 'keep-all' }}>
-                객단가가 높은<br/><strong>프리미엄 숯불 바비큐 시장</strong>
+                대량 소비/고열량 B2B<br/><strong>바비큐용 성형장작/숯</strong>
               </td>
               <td style={{ padding: '12px', lineHeight: '1.6', wordBreak: 'keep-all' }}>
-                - 농가에서 버려지는 <strong>'표고버섯 참나무 폐배지' 톱밥과 굴 껍데기 결합</strong><br/>
-                - 나무 벌목 없이도 진짜 훈제 향을 내는 <strong>초프리미엄 하이엔드 라인업</strong>으로 B2B 영업이익 극대화
+                - 농가에서 버려지는 <strong>'표고버섯 참나무 폐배지' 톱밥과 굴 껍데결합</strong> 모델 B2B 세일즈 집중<br/>
+                - 프리미엄 숯불 바비큐/요식업체, 숯가마, 대형 글램핑장, <strong>농업용 비닐하우스 화목난로 장작</strong>으로 대량 유통 포트폴리오 다각화
               </td>
             </tr>
             <tr>
               <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000' }}>[장기] 글로벌 선점<br/><span style={{ fontSize: '12px', fontWeight: 'normal', color: '#555' }}>(출시 후 3~5년)</span></td>
               <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000', textAlign: 'center', wordBreak: 'keep-all' }}>
-                목재 규제가 강한 <strong>북미·유럽<br/>대형 아웃도어 벤더</strong>
+                하이엔드 감성 오브제<br/><strong>캠핑용 불멍</strong>
               </td>
               <td style={{ padding: '12px', lineHeight: '1.6', wordBreak: 'keep-all' }}>
-                - 벌목 규제 및 바이오 연료 대체 기조에 맞춘 <strong>LNT(Leave No Trace) 철학 수출</strong><br/>
-                - 흔적 없는 친환경의 강점을 앞세워 <strong>K-에코테크 브랜드로 북미 및 유럽 시장 대형 벤더 역수출 추진</strong>
+                - 시각/청각적 미학을 극대화한 오브제 형태로 <strong>화학 매연 걱정 없는 최고급 안심 캠핑용 불멍 굿즈</strong> 한정판 및 시그니처 출시<br/>
+                - 우수한 디자인 및 무해성을 무기로 <strong>북미·유럽 아웃도어 LNT(Leave No Trace) 특화 벤더 시장 수출</strong>
               </td>
             </tr>
           </tbody>
@@ -68,17 +68,17 @@ export default function FundExecutionPlanV3() {
           <div style={{ flex: 1, border: '1px solid #ccc', borderRadius: '4px', padding: '16px', background: '#fafafa', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
             <div style={{ fontSize: '13px', color: '#555', fontWeight: 'bold', marginBottom: '8px', textAlign: 'center' }}>와디즈/자사몰 초기 매출</div>
             <div style={{ fontSize: '24px', color: '#000', fontWeight: '900', textAlign: 'center', marginBottom: '8px', letterSpacing: '-0.5px' }}>초과 달성</div>
-            <div style={{ fontSize: '12.5px', color: '#333', lineHeight: '1.5', textAlign: 'center', wordBreak: 'keep-all' }}>크라우드 펀딩을 통한 첫 시장 반응 입증 및 직영 D2C몰 론칭으로 초기 캠퍼 타깃 직접 수주액 극대화</div>
+            <div style={{ fontSize: '12.5px', color: '#333', lineHeight: '1.5', textAlign: 'center', wordBreak: 'keep-all' }}>유튜버 리뷰 및 퍼포먼스 마케팅에 정부지원금을 집중 투자하여 캠핑용 착화재의 단일 매출 극대화</div>
           </div>
           <div style={{ flex: 1, border: '1px solid #ccc', borderRadius: '4px', padding: '16px', background: '#fafafa', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
-            <div style={{ fontSize: '13px', color: '#555', fontWeight: 'bold', marginBottom: '8px', textAlign: 'center' }}>원료 수급 파이프라인</div>
+            <div style={{ fontSize: '13px', color: '#555', fontWeight: 'bold', marginBottom: '8px', textAlign: 'center' }}>바비큐용 성형장작 원료망</div>
             <div style={{ fontSize: '24px', color: '#000', fontWeight: '900', textAlign: 'center', marginBottom: '8px', letterSpacing: '-0.5px' }}>100% 안정화</div>
-            <div style={{ fontSize: '12.5px', color: '#333', lineHeight: '1.5', textAlign: 'center', wordBreak: 'keep-all' }}>통영 수산폐기물 자원화 시설과의 선제적 MOU로 1차 소성 원료를 초저가에 무역 공급받는 압도적 제조망 구축</div>
+            <div style={{ fontSize: '12.5px', color: '#333', lineHeight: '1.5', textAlign: 'center', wordBreak: 'keep-all' }}>통영 굴껍데기 자원화 시설 및 표고버섯 폐배지 농가와의 MOU로 바비큐용 성형장작/숯의 장기 대량 납품 파이프라인 선점</div>
           </div>
           <div style={{ flex: 1, border: '1px solid #ccc', borderRadius: '4px', padding: '16px', background: '#fafafa', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' }}>
             <div style={{ fontSize: '13px', color: '#555', fontWeight: 'bold', marginBottom: '8px', textAlign: 'center' }}>정규직 신규 고용 (마케터)</div>
             <div style={{ fontSize: '24px', color: '#000', fontWeight: '900', textAlign: 'center', marginBottom: '8px', letterSpacing: '-0.5px' }}>1명 채용</div>
-            <div style={{ fontSize: '12.5px', color: '#333', lineHeight: '1.5', textAlign: 'center', wordBreak: 'keep-all' }}>대표자는 생산/수율에 집중하고, B2B 납품 영업과 온라인 광고 퍼포먼스를 전담할 든든한 핵심 경력 인재 조기 영입</div>
+            <div style={{ fontSize: '12.5px', color: '#333', lineHeight: '1.5', textAlign: 'center', wordBreak: 'keep-all' }}>대표자는 생산/수율에 집중하고, 캠퍼 타깃 퍼포먼스 광고와 B2B 영업을 전담할 경력 마케터 조기 영입</div>
           </div>
         </div>
       </div>
@@ -110,7 +110,7 @@ export default function FundExecutionPlanV3() {
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>1</td>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>제품 기획 및 원료 수급</td>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>'26년 상반기</td>
-              <td style={{ padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>통영 굴껍데기 원료 수급 및 제품 설계 완료</td>
+              <td style={{ padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>통영 굴껍데기 원료 수급 및 모던 감성 패키징 설계 완료</td>
             </tr>
             <tr style={{ borderBottom: '1px solid #000' }}>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>2</td>
@@ -122,13 +122,13 @@ export default function FundExecutionPlanV3() {
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>3</td>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>정식 출시 (펀딩)</td>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>'26년 하반기</td>
-              <td style={{ padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>와디즈 크라우드 펀딩을 통한 신제품 최초 출시</td>
+              <td style={{ padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>와디즈 크라우드 펀딩을 통한 캠핑용 착화재 최초 출시</td>
             </tr>
             <tr>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>4</td>
-              <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>B2B/B2C 온오프라인 확장</td>
+              <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>바비큐용 숯/B2B/불멍 확장</td>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>'26.12 ~ '27.12</td>
-              <td style={{ padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>글램핑장 납품, 퍼포먼스 마케팅 집중 프로모션 진행</td>
+              <td style={{ padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>초기 착화재 이후 B2B 요식업소용(바비큐) 성형장작/성형숯이나 3단계 산업용 탈황제로 대량 유통 포트폴리오 강화</td>
             </tr>
           </tbody>
         </table>
@@ -141,8 +141,8 @@ export default function FundExecutionPlanV3() {
 
         <p style={{ fontSize: '15px', color: '#000', fontWeight: 'bold', marginBottom: '8px' }}>가. 협약기간 및 중장기 핵심 목표 내용 요약</p>
         <ul style={{ listStyleType: "'ㅇ '", paddingLeft: '20px', fontSize: '14.5px', color: '#000', lineHeight: '1.6', marginBottom: '24px', letterSpacing: '-0.3px', wordBreak: 'keep-all' }}>
-          <li style={{ marginBottom: '8px' }}><strong>(단기 / 협약기간 내)</strong> 당면한 1차년도 최우선 목표는 <strong>'친환경 캠핑 착화재(굴 껍데기 20% 배합 비율) 시제품'</strong>을 기한('26.11월) 내에 조기 완성하고, 이를 바탕으로 성형탄 규격·품질기준 <strong>적합 공인 성적서('26.12월)</strong>를 정식 취득해 양산의 기술적 리스크를 완전히 소거하는 것입니다.</li>
-          <li><strong>(중·장기 / 협약기간 후)</strong> 2차년도를 기점으로 객단가가 높은 <strong>고급 조리용 참나무 톱밥 착화재('27.상반기)</strong> 및 자연물 <strong>하이브리드 업사이클링 제품군('27.하반기)</strong> 생산 라인을 공격적으로 포진시킵니다. 이를 통해 궁극적인 목표인 독보적 <strong>'캠핑 특화 K-에코테크 기어 디자인('27.연말)' 브랜드 리더십</strong>을 확고히 달성합니다.</li>
+          <li style={{ marginBottom: '8px' }}><strong>(단기 / 협약기간 내: 캠핑용 착화재 집중)</strong> 당면한 1차년도 최우선 목표는 <strong>'조개껍데기 오가닉 질감 기반 안심 캠핑용 착화재'</strong>를 조기 양산('26.11월)하고, 유튜버 리뷰 실증 및 타깃 브랜드 퍼포먼스 마케팅에 초기 창업자금을 집중 투입하여 단기 D2C 매출을 극대화하는 것입니다.</li>
+          <li><strong>(중·장기 / 협약기간 후: 바비큐장작/불멍 확장)</strong> 2차년도를 기점으로 일반 캠핑용을 넘어 <strong>프리미엄 바비큐용 성형장작/성형숯(B2B)</strong> 라인으로 포트폴리오를 다각화하고, 궁극적으로 디자인 가치를 극대화한 <strong>캠핑용 불멍 오브제</strong>를 출시해 글로벌 LNT 브랜드 리더십을 달성합니다.</li>
         </ul>
 
         <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '14.5px', marginBottom: '10px', color: '#000', letterSpacing: '-0.3px' }}>
@@ -160,27 +160,27 @@ export default function FundExecutionPlanV3() {
           <tbody>
             <tr style={{ borderBottom: '1px solid #000' }}>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>1</td>
-              <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>배합률 보완 및 개선 계획 수립</td>
+              <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>제품/공정 개선 계획 수립</td>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>'26.05 ~ '26.06</td>
-              <td style={{ padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>최적의 발화 효율 개선점(황금비율) 분석</td>
+              <td style={{ padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>오가닉 질감 모듈 및 발화 효율 개선 최적화</td>
             </tr>
             <tr style={{ borderBottom: '1px solid #000' }}>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>2</td>
-              <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>캠퍼/SNS 고객체험단 운영</td>
+              <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>유튜버 시딩/고객체험단</td>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>'26.07 ~ '26.08</td>
-              <td style={{ padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>실사용 고객 피드백을 통한 냄새/지속성 개선점 도출</td>
+              <td style={{ padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>"냄새 없는 착화재" 인식 프리론칭</td>
             </tr>
             <tr style={{ borderBottom: '1px solid #000' }}>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>3</td>
-              <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>제품·서비스 검증 및 개선 진행</td>
+              <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>제품·서비스 검증 및 공인 인증</td>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>'26.09 ~ '26.10</td>
-              <td style={{ padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>성형탄 규격·품질기준 적합 보완 및 와디즈 상세페이지 제작</td>
+              <td style={{ padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>성형탄 품질기준 적합 획득 및 퍼포먼스 마케팅</td>
             </tr>
             <tr>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>4</td>
-              <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>초도 양산품 출시 및 개선 완료</td>
+              <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic' }}>초도 양산품 출시 완료</td>
               <td style={{ borderRight: '1px solid #000', padding: '10px', color: '#0047b3', fontStyle: 'italic', textDecoration: 'underline' }}>협약기간 말</td>
-              <td style={{ padding: '10px', color: '#0047b3', fontStyle: 'italic' }}><span style={{ textDecoration: 'underline' }}>협약기간 내 초도 양산 발주(3천) 완료</span></td>
+              <td style={{ padding: '10px', color: '#0047b3', fontStyle: 'italic' }}><span style={{ textDecoration: 'underline' }}>협약기간 내 초도 양산 발주 완료</span></td>
             </tr>
           </tbody>
         </table>
@@ -200,7 +200,7 @@ export default function FundExecutionPlanV3() {
           <tbody>
             <tr style={{ borderBottom: '1px solid #000' }}>
               <td rowSpan={2} style={{ backgroundColor: '#e5e5e5', borderRight: '1px solid #000', padding: '10px', fontWeight: 'bold', letterSpacing: '-0.5px' }}>단기<span style={{ fontSize: '12.5px', fontWeight: 'normal' }}><br/>(협약 기간 내)</span></td>
-              <td style={{ borderRight: '1px solid #000', padding: '10px', textAlign: 'left', paddingLeft: '15px' }}>친환경 캠핑 착화재(20% 배합) 시제품</td>
+              <td style={{ borderRight: '1px solid #000', padding: '10px', textAlign: 'left', paddingLeft: '15px' }}>오가닉 질감 모던 감성 캠핑용 착화재 시제품</td>
               <td style={{ borderRight: '1px solid #000', padding: '10px' }}>1</td>
               <td style={{ padding: '10px' }}>~'26.11.30.</td>
             </tr>
@@ -211,17 +211,17 @@ export default function FundExecutionPlanV3() {
             </tr>
             <tr style={{ borderBottom: '1px solid #000' }}>
               <td rowSpan={3} style={{ backgroundColor: '#e5e5e5', borderRight: '1px solid #000', padding: '10px', fontWeight: 'bold', letterSpacing: '-0.5px' }}>중·장기<br/>최종 산출물</td>
-              <td style={{ borderRight: '1px solid #000', padding: '10px', textAlign: 'left', paddingLeft: '15px' }}>프리미엄 조리용 참나무 톱밥 착화재</td>
+              <td style={{ borderRight: '1px solid #000', padding: '10px', textAlign: 'left', paddingLeft: '15px' }}>프리미엄 바비큐용 성형장작/성형숯 (표고버섯 톱밥 융합형)</td>
               <td style={{ borderRight: '1px solid #000', padding: '10px' }}>1</td>
               <td style={{ padding: '10px' }}>~'27.06.30.</td>
             </tr>
             <tr style={{ borderBottom: '1px solid #000' }}>
-              <td style={{ borderRight: '1px solid #000', padding: '10px', textAlign: 'left', paddingLeft: '15px' }}>자연물 하이브리드 업사이클링 제품군 생산</td>
+              <td style={{ borderRight: '1px solid #000', padding: '10px', textAlign: 'left', paddingLeft: '15px' }}>자연물 하이브리드 캠핑용 불멍 오브제 출시</td>
               <td style={{ borderRight: '1px solid #000', padding: '10px' }}>~</td>
               <td style={{ padding: '10px' }}>~'27.09.30.</td>
             </tr>
             <tr>
-              <td style={{ borderRight: '1px solid #000', padding: '10px', textAlign: 'left', paddingLeft: '15px' }}>캠핑 특화 K-에코테크 기어 디자인 개발</td>
+              <td style={{ borderRight: '1px solid #000', padding: '10px', textAlign: 'left', paddingLeft: '15px' }}>북미/유럽 수출용 캠핑 특화 K-에코테크 기어 디자인 개발</td>
               <td style={{ borderRight: '1px solid #000', padding: '10px' }}>1</td>
               <td style={{ padding: '10px', backgroundColor: '#e6edfe' }}>~'27.12.31.</td>
             </tr>
@@ -234,21 +234,21 @@ export default function FundExecutionPlanV3() {
         </div>
         <ul style={{ listStyleType: "'ㅇ '", paddingLeft: '20px', fontSize: '14.5px', color: '#000', lineHeight: '1.6', marginBottom: '30px', letterSpacing: '-0.3px', wordBreak: 'keep-all' }}>
           <li style={{ marginBottom: '15px' }}>
-            <strong>(자금의 필요성)</strong> 본 지원사업(7,000만 원)을 통해 초기 안전성 검증 및 시제품 고도화가 이뤄집니다. 하지만 본격적인 양산 설비 라인 구축 및 B2B 대규모 납품망(물류창고) 확보, 원천 기술 IP 특허 방어 등을 위해 <u>대규모 스케일업 자본금이 필수적</u>입니다.
+            <strong>(자금의 필요성)</strong> 본 지원사업(7,000만 원)을 통해 초기 안전성 검증 및 착화재 마케팅 고도화(유튜버 리뷰/광고)가 이뤄집니다. 하지만 본격적인 양산 설비 라인 구축 및 B2B 대량 납품용 물류창고 확보(바비큐 성형장작/성형숯), 그리고 하이엔드 캠핑용 불멍 오브제 R&D 등을 위해 <u>대규모 스케일업 자본금이 필수적</u>입니다.
             <div style={{ padding: '12px 16px', background: '#f8f9fa', borderRadius: '4px', marginTop: '10px', border: '1px solid #e9ecef' }}>
               <ul style={{ listStyleType: "'- '", paddingLeft: '15px', fontSize: '13.5px', color: '#333', margin: '0' }}>
-                <li style={{ marginBottom: '6px' }}><strong>설비 투자 및 대량 양산 인프라:</strong> 통영 원료 1차 가공 라인 내재화 및 B2B 납품용 대형 물류 창고 임대/구축비</li>
-                <li style={{ marginBottom: '6px' }}><strong>R&D 및 IP 포트폴리오 강화:</strong> 하이브리드 업사이클링 착화재 제품군 후속 연구개발 및 배합 기술 국/내외 특허 출원 비용</li>
+                <li style={{ marginBottom: '6px' }}><strong>대량 양산 및 물류 인프라:</strong> 통영 원료 1차 가공 라인 내재화 및 B2B 납품용 대형 물류 창고 임대/구축비, <strong>전문 제조업체 위탁가공(OEM) 파트너사 발굴 및 외주 생산 라인 기초 공정 확립(1,500만 원 우선 집행)</strong></li>
+                <li style={{ marginBottom: '6px' }}><strong>R&D 및 IP 포트폴리오 강화:</strong> 바비큐용 성형장작/성형숯 및 불멍 제품군 후속 연구개발 및 배합 기술 국/내외 특허/디자인권 출원 비용</li>
                 <li><strong>글로벌/퍼포먼스 마케팅 확장:</strong> 국내외 관련 박람회 참가비, 퍼포먼스 마케팅 고도화 및 북미/유럽 대형 아웃도어 벤더 대상 샘플 영업 예산</li>
               </ul>
             </div>
           </li>
           <li>
-            <strong>(추가 조달계획)</strong> 초기 크라우드 펀딩 달성 실적과 B2B 초기 판로 개척 레퍼런스를 발판으로, <strong>2027년 상반기 Seed 및 Pre-A 단계(약 5~10억 원 규모) 엔젤/VC 기관 투자 유치를 공격적으로 추진</strong>할 계획입니다.
+            <strong>(추가 조달계획)</strong> 초기 크라우드 펀딩 달성 실적과 B2B 초기 판로 개척 레퍼런스(캠핑장, 요식업 납품 계약)를 발판으로, <strong>2027년 상반기 Seed 및 Pre-A 단계(약 5~10억 원 규모) 엔젤/VC 기관 투자 유치를 공격적으로 추진</strong>할 계획입니다.
             <div style={{ padding: '12px 16px', background: '#f8f9fa', borderRadius: '4px', marginTop: '10px', border: '1px solid #e9ecef' }}>
               <ul style={{ listStyleType: "'- '", paddingLeft: '15px', fontSize: '13.5px', color: '#333', margin: '0' }}>
-                <li style={{ marginBottom: '6px' }}><strong>1단계 간접 조달 ('26. 하반기, 1~2억 원):</strong> 초도 시제품 출시 및 와디즈 성공(마일스톤 1) 달성 시점, 신용·기술보증기금 청년창업특례보증 등 정책자금 융자 및 팁스(TIPS) 연계 디딤돌 R&D 과제 수주</li>
-                <li><strong>2단계 직접 유치 ('27. 상반기, 5억 원~):</strong> 월 매출 안정화 및 B2B 판로 30곳 돌파(마일스톤 2) 이후, 기후테크/지속가능성 특화 임팩트 투자사(소풍벤처스, D3쥬빌리 등) 및 엑셀러레이터 대상 지분 투자 오픈</li>
+                <li style={{ marginBottom: '6px' }}><strong>1단계 간접 조달 ('26. 하반기, 1~2억 원):</strong> 초도 시제품 출시 및 와디즈 성공(마일스톤 1) 달성 시점, 신용·기술보증기금 청년창업특례보증 등 정책자금 융자 및 팁스(TIPS) 연계 과제 수주</li>
+                <li><strong>2단계 직접 유치 ('27. 상반기, 5억 원~):</strong> 월 매출 안정화 및 B2B 판로 30곳 돌파(마일스톤 2) 이후, 기후테크/지속가능성 특화 임팩트 투자사(소풍벤처스 등) 대상 지분 투자 오픈</li>
               </ul>
             </div>
           </li>
@@ -274,20 +274,30 @@ export default function FundExecutionPlanV3() {
           </thead>
           <tbody>
             <tr>
-              <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000', borderBottom: '1px solid #000' }}>외주용역비</td>
+              <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000', borderBottom: '1px solid #000' }}>외주용역비<br/><span style={{ fontSize: '11px', fontWeight: 'normal' }}>(디자인)</span></td>
               <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000', borderBottom: '1px solid #000', wordBreak: 'keep-all', fontSize: '12.5px' }}>
-                - 감각적인 C/X를 제공하는 <strong>D2C 자사몰 브랜드 커머스 웹앱 디자인 외주 제작</strong><br/>
-                - 캠핑 박람회 부스 전시 인테리어 렌더링 및 프로덕트 3D 모델링 용역
+                - <strong>오가닉 질감 모던 감성 패키징 및 제품 디자인 모델링</strong> 외주<br/>
+                - D2C 자사몰 임대형 플랫폼 커머스 웹앱 디자인 렌더링 세팅
               </td>
-              <td style={{ textAlign: 'right', borderRight: '1px solid #000', borderBottom: '1px solid #000', paddingRight: '5px' }}>22,000,000</td>
+              <td style={{ textAlign: 'right', borderRight: '1px solid #000', borderBottom: '1px solid #000', paddingRight: '5px' }}>7,000,000</td>
               <td style={{ textAlign: 'right', borderRight: '1px solid #000', borderBottom: '1px solid #000', paddingRight: '5px' }}>0</td>
               <td style={{ textAlign: 'right', borderRight: '1px solid #000', borderBottom: '1px solid #000', paddingRight: '5px' }}>0</td>
-              <td style={{ textAlign: 'right', borderBottom: '1px solid #000', paddingRight: '5px', color: '#0047b3' }}>22,000,000</td>
+              <td style={{ textAlign: 'right', borderBottom: '1px solid #000', paddingRight: '5px', color: '#0047b3' }}>7,000,000</td>
+            </tr>
+            <tr>
+              <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000', borderBottom: '1px solid #000' }}>외주용역비<br/><span style={{ fontSize: '11px', fontWeight: 'normal' }}>(시제품 제작)</span></td>
+              <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000', borderBottom: '1px solid #000', wordBreak: 'keep-all', fontSize: '12.5px' }}>
+                - <strong>전문 제조업체 위탁가공(OEM) 파트너사 발굴 및 외주 생산 라인 공정 확립</strong> (수율 개선)
+              </td>
+              <td style={{ textAlign: 'right', borderRight: '1px solid #000', borderBottom: '1px solid #000', paddingRight: '5px' }}>15,000,000</td>
+              <td style={{ textAlign: 'right', borderRight: '1px solid #000', borderBottom: '1px solid #000', paddingRight: '5px' }}>0</td>
+              <td style={{ textAlign: 'right', borderRight: '1px solid #000', borderBottom: '1px solid #000', paddingRight: '5px' }}>0</td>
+              <td style={{ textAlign: 'right', borderBottom: '1px solid #000', paddingRight: '5px', color: '#0047b3' }}>15,000,000</td>
             </tr>
             <tr>
               <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000', borderBottom: '1px solid #000' }}>인건비</td>
               <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000', borderBottom: '1px solid #000', wordBreak: 'keep-all', fontSize: '12.5px' }}>
-                - B2B 온/오프라인 채널 <strong>납품 영업 및 타깃 마케팅을 전담할 경력직 1인</strong> 채용<br/>
+                - <strong>퍼포먼스 마케팅 및 B2B/글로벌 온오프라인 영업을 전담할 경력직 1인</strong> 채용<br/>
                 <span style={{ fontSize: '12px', color: '#666' }}>※ 대표자는 양산 수율 안정화 기여분(현물)</span>
               </td>
               <td style={{ textAlign: 'right', borderRight: '1px solid #000', borderBottom: '1px solid #000', paddingRight: '5px' }}>17,000,000</td>
@@ -299,7 +309,7 @@ export default function FundExecutionPlanV3() {
               <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000', borderBottom: '1px solid #000' }}>재료비</td>
               <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000', borderBottom: '1px solid #000', wordBreak: 'keep-all', fontSize: '12.5px' }}>
                 - 1차 핵심 원료 <strong>'소성 굴껍데기 분말' 및 천연 왁스, 폐커피박 매입</strong> 비용<br/>
-                - 친환경 <strong>생분해성 에코 펄프 포장재</strong> 발주 비용
+                - 친환경 <strong>오가닉 질감 생분해성 에코 펄프 단상자</strong> 발주 비용
               </td>
               <td style={{ textAlign: 'right', borderRight: '1px solid #000', borderBottom: '1px solid #000', paddingRight: '5px' }}>16,000,000</td>
               <td style={{ textAlign: 'right', borderRight: '1px solid #000', borderBottom: '1px solid #000', paddingRight: '5px' }}>10,000,000</td>
@@ -309,8 +319,8 @@ export default function FundExecutionPlanV3() {
             <tr>
               <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000', borderBottom: '1px solid #000' }}>광고선전비</td>
               <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000', borderBottom: '1px solid #000', wordBreak: 'keep-all', fontSize: '12.5px' }}>
-                - 유튜브/인스타/메타 <strong>핵심 캠퍼 타겟팅 브랜드 퍼포먼스 광고 매체비</strong> 소진<br/>
-                - 인플루언서 리뷰 시딩 캠페인 및 와디즈 상세페이지 제작
+                - <strong>캠핑 유튜버 리뷰 실증 시딩 및 핵심 타깃 브랜드 퍼포먼스 광고 매체비</strong> 소진<br/>
+                - "냄새 없는 착화재" 인식 확산 프로모션 집중
               </td>
               <td style={{ textAlign: 'right', borderRight: '1px solid #000', borderBottom: '1px solid #000', paddingRight: '5px' }}>10,000,000</td>
               <td style={{ textAlign: 'right', borderRight: '1px solid #000', borderBottom: '1px solid #000', paddingRight: '5px' }}>0</td>
@@ -320,8 +330,8 @@ export default function FundExecutionPlanV3() {
             <tr>
               <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000', borderBottom: '1px solid #000' }}>지급수수료<br/>(및 기타)</td>
               <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000', borderBottom: '1px solid #000', wordBreak: 'keep-all', fontSize: '12.5px' }}>
-                - 성형탄 <strong>규격·품질기준 적합 공인 성적서</strong> 발급 비용<br/>
-                - 킨텍스/코엑스 오프라인 박람회 부스 임차료
+                - <strong>"냄새 없는 착화재" 우수성 입증을 위한 유해 성분 무검출 공인 성적서</strong> 발급 비용<br/>
+                - 킨텍스/코엑스 오프라인 캠핑 박람회 부스 임차료
               </td>
               <td style={{ textAlign: 'right', borderRight: '1px solid #000', borderBottom: '1px solid #000', paddingRight: '5px' }}>5,000,000</td>
               <td style={{ textAlign: 'right', borderRight: '1px solid #000', borderBottom: '1px solid #000', paddingRight: '5px' }}>0</td>

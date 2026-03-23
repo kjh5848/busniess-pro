@@ -3,8 +3,9 @@ import ProblemBackgroundV3 from './ProblemBackgroundV3';
 import MarketAnalysisV3 from './MarketAnalysisV3';
 import SolutionPreparationV3 from './SolutionPreparationV3';
 import SolutionExecutionV3 from './SolutionExecutionV3';
-import BusinessModelStrategyV3 from './BusinessModelStrategyV3';
-import FundExecutionPlanV3 from './FundExecutionPlanV3';
+import BusinessModelStrategyV5 from './BusinessModelStrategyV5';
+import FundExecutionPlanV5 from './FundExecutionPlanV5';
+import TeamCompositionV5 from './TeamCompositionV5';
 import '../index.css';
 
 export default function BusinessPlanV3() {
@@ -12,7 +13,7 @@ export default function BusinessPlanV3() {
     <div className="hwp-document">
       {/* 0. 문서 머리말 고정 타이틀 영역 */}
       <h1 className="hwp-title">
-        폐굴껍데기의 다공성 구조를 활용해 유해 가스와 악취를 잡은 친환경 안심 캠핑 착화재
+        [가제: 쉘파이어(Shell-Fire)] 폐굴껍데기의 다공성 구조를 활용해 유해 가스와 악취를 잡은 친환경 안심 캠핑 착화재
       </h1>
       
       {/* 사업 전체의 명분을 담은 서두 인용구 */}
@@ -44,8 +45,16 @@ export default function BusinessPlanV3() {
       <div className="hwp-chapter-divider" style={{ borderBottom: '3px solid #000', paddingBottom: '12px', marginBottom: '30px', marginTop: '60px' }}>
         <h1 style={{ fontSize: '26px', fontWeight: '900', color: '#000', margin: 0 }}>3. 성장전략 (Scale-up)</h1>
       </div>
-      <BusinessModelStrategyV3 />
-      <FundExecutionPlanV3 />
+      <BusinessModelStrategyV5 />
+      <FundExecutionPlanV5 />
+
+      {/* ======================================= */}
+      {/* 챕터 4: 조직 구성 (Team) 모듈들         */}
+      {/* ======================================= */}
+      <div className="hwp-chapter-divider" style={{ borderBottom: '3px solid #000', paddingBottom: '12px', marginBottom: '30px', marginTop: '60px' }}>
+        <h1 style={{ fontSize: '26px', fontWeight: '900', color: '#000', margin: 0 }}>4. 팀 구성 (Team)</h1>
+      </div>
+      <TeamCompositionV5 />
     </div>
   );
 }

@@ -18,7 +18,7 @@ export default function SolutionPreparationV3() {
       <p style={{ fontSize: '15.5px', color: '#000', fontWeight: 'bold', marginBottom: '8px' }}>가. 문제 해결을 위한 3대 핵심 구현 원리</p>
       <ul style={{ listStyleType: "'ㅇ '", paddingLeft: '20px', fontSize: '14.5px', color: '#000', lineHeight: '1.6', marginBottom: '24px', letterSpacing: '-0.3px', wordBreak: 'keep-all' }}>
         <li style={{ marginBottom: '8px' }}><strong>(다공성 미세 구조 특수 보전)</strong> 굴 껍데기 전용 800도 고온 소성 시 생성되는 무수히 많은 나노 미세 구멍들이 천연 왁스를 스펀지처럼 대량 흡수하여, 악천후 속에서도 강력한 연소 체공 시간을 안정적으로 유지시킴</li>
-        <li style={{ marginBottom: '8px' }}><strong>(최고급 천연 탈황제 필터)</strong> 생석회 고유의 강알칼리성 탈황 화학 기믹을 제품에 도입하여, 본품 연소 시 현장 화로에서 발생하는 매연과 악취 성분을 즉석에서 강력 흡착 및 중화시킴</li>
+        <li style={{ marginBottom: '8px' }}><strong>(최고급 천연 탈황제 필터)</strong> 생석회 고유의 강알칼리성 탈황 화학 기믹을 제품에 도입하여, 본품 연소 시 현장 화로에서 발생하는 매연과 악취 성분을 즉석에서 강력 흡착 및 중화시킴 <strong>(기존 화학 착화재 대비 텐트 내 잔류 일산화탄소 농도 85% 이상 중화 흡착 테스트 목표)</strong></li>
         <li><strong>(초격차 원가 마진 선점)</strong> 고가의 소성 설비를 무리하게 자가 복제/구축하지 않고, 공공 예산으로 건립된 대형 '통영 수산폐기물 자원화 시설'과 최우선 납품 MOU를 체결하여 압도적 제조 원가 우위(GPM)를 단기 획득함</li>
       </ul>
 
@@ -35,7 +35,7 @@ export default function SolutionPreparationV3() {
           <tr>
             <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000' }}>인체 위해성 수준</td>
             <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000' }}>빠른 단기 발화만을 목적으로 메탄올 등 1급 발암 화학 성분 다량 첨가 및 공기 중 호흡기 배출 확산</td>
-            <td style={{ padding: '12px', lineHeight: '1.6', fontWeight: 'bold' }}>100% 천연 원료 기반 베이스 및 유해 가스 자체 흡착 중화 (국가공인기관 100% 무검출 안전 규격 취득 타겟)</td>
+            <td style={{ padding: '12px', lineHeight: '1.6', fontWeight: 'bold' }}>100% 천연 원료 기반 베이스 및 유해 가스 자체 흡착 중화 (국가공인기관 <strong>KTR 등 유해물질 7종 0.00% 무검출 달성 타겟</strong>)</td>
           </tr>
           <tr>
             <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000' }}>야외 연소 지속력</td>

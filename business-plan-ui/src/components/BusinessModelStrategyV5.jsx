@@ -16,7 +16,7 @@ const tamSamSomData = [
   { name: 'SOM 수익시장', size: 35, actual: '약 15억', color: '#111111' }
 ];
 
-export default function BusinessModelStrategyV3() {
+export default function BusinessModelStrategyV5() {
   return (
     <div className="hwp-section">
       <h2 className="hwp-section-title">3-1. 비즈니스 모델 및 성장(Scale-up) 전략</h2>
@@ -26,37 +26,37 @@ export default function BusinessModelStrategyV3() {
 
       <div style={{ borderLeft: '4px solid #333', paddingLeft: '14px', marginBottom: '24px' }}>
         <p style={{ fontWeight: 'bold', margin: '0', fontSize: '15.5px', color: '#000', lineHeight: '1.4' }}>
-          "D2C 중심의 감성 굿즈 단품 판매를 시작으로 프리미엄 B2B 글램핑장 대량 정기 납품 및 최종 '탄소 배출권(CERs)' 거래 수익까지 3대 메인 캐시카우를 구축함"
+          "D2C 자사몰 및 펀딩 기반의 초기 '캠핑용 착화재' 판매를 시작으로, B2B 대량 납품(바비큐용 성형장작/숯) 및 최종 '폐기물 처리 보조금 및 자발적 탄소시장(VCM) 등록 기반 임팩트 모델' 연계 수익까지 3대 명확한 캐시카우를 구축함"
         </p>
       </div>
 
-      <p style={{ fontSize: '15.5px', color: '#000', fontWeight: 'bold', marginBottom: '8px' }}>가. 핵심 고객(Target) 정의 및 3대 메인 수익 파이프라인</p>
+      <p style={{ fontSize: '15.5px', color: '#000', fontWeight: 'bold', marginBottom: '8px' }}>가. 핵심 고객(Target) 정의 및 명확한 수익 구조</p>
       <ul style={{ listStyleType: "'ㅇ '", paddingLeft: '20px', fontSize: '14.5px', color: '#000', lineHeight: '1.6', marginBottom: '16px', letterSpacing: '-0.3px', wordBreak: 'keep-all' }}>
-        <li style={{ marginBottom: '8px' }}><strong>(Main Target Focus)</strong> 영유아 동반 및 호흡기 민감성이 매우 높은 3040 메인 가족 단위 오토 캠퍼 및 전국 프리미엄 대형 캠핑장/글램핑장 운영 관리사</li>
+        <li style={{ marginBottom: '8px' }}><strong>(Main Target Focus)</strong> 호흡기 건강에 민감한 3040 가족 캠퍼 및 냄새 없는 고체 연료를 선호하는 프리미엄 글램핑장/식당</li>
       </ul>
       <table className="hwp-table" style={{ marginBottom: '30px', color: '#000', fontSize: '14.5px' }}>
         <thead>
           <tr>
-            <th style={{ width: '25%', textAlign: 'center', backgroundColor: '#333', color: '#fff', borderRight: '1px solid #000' }}>수익 모델 (BM) 구조</th>
-            <th style={{ width: '50%', textAlign: 'center', backgroundColor: '#555', color: '#fff', borderRight: '1px solid #000' }}>핵심 타겟 및 과금 구조 (Monetization 징수 모델)</th>
-            <th style={{ width: '25%', textAlign: 'center', backgroundColor: '#111', color: '#fff' }}>예상 이익률 (GPM)</th>
+            <th style={{ width: '20%', textAlign: 'center', backgroundColor: '#333', color: '#fff', borderRight: '1px solid #000' }}>수익 모델 구조</th>
+            <th style={{ width: '55%', textAlign: 'center', backgroundColor: '#555', color: '#fff', borderRight: '1px solid #000' }}>세부 타겟 및 과금 구조 (가치 제안: 안심 불쏘시개)</th>
+            <th style={{ width: '25%', textAlign: 'center', backgroundColor: '#111', color: '#fff' }}>예상 이익/보조금</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000' }}>단기: D2C 기어 판매</td>
-            <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000' }}>자사몰/와디즈/스마트스토어 스마트 스토어 기반 B2C 단품 판매 및 세트 구독 매달 정기 결제 플랜 시스템 가동</td>
-            <td style={{ textAlign: 'center', fontWeight: 'bold' }}>약 65% 수익 보존율</td>
+            <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000' }}>1. 자사몰(D2C) &<br/>크라우드 펀딩</td>
+            <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000' }}>안전성과 감성 중심의 <strong>캠핑용 착화재 및 불멍 소품</strong>을 크라우드 펀딩(와디즈)과 직영 D2C 자사몰을 통해 직접 판매</td>
+            <td style={{ textAlign: 'center', fontWeight: 'bold' }}>초기 유통 마진 극대화</td>
           </tr>
           <tr>
-            <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000' }}>중기: B2B 대량 납품</td>
-            <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000' }}>'국가공인 친환경 무검출' 인증 마크를 강력한 무기로 전국 지역구 프리미엄 글램핑장에 박스 묶음 대량 정기 납품 연간 계약 체결</td>
-            <td style={{ textAlign: 'center', fontWeight: 'bold' }}>약 45% (박리다매형)</td>
+            <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000' }}>2. B2B 대량 납품</td>
+            <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000' }}>유해 매연이 없는 프리미엄 품질을 앞세워 <strong>전국 캠핑장, 글램핑장 및 프리미엄 식당(숯불 바비큐용 성형장작/숯)</strong> 위주의 박스 단위 대량 정기 납품 결제 시스템</td>
+            <td style={{ textAlign: 'center', fontWeight: 'bold' }}>안정적 정기 구독 이익률</td>
           </tr>
           <tr>
-            <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000' }}>장기: CERs 탄소 거래증</td>
-            <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000' }}>공식 해양 폐기물(굴껍데기) 및 자영업 폐커피박의 적극적 완전 무해 자원 순환 공로 인정으로 정부 연계 탄소배출권(CERs) 무상 획득 및 기업간 B2B 매각 창출</td>
-            <td style={{ textAlign: 'center', fontWeight: 'bold' }}>약 95% 이상 프리미엄</td>
+            <td style={{ textAlign: 'center', fontWeight: 'bold', borderRight: '1px solid #000' }}>3. 폐기물 보조금 &<br/>VCM 크레딧</td>
+            <td style={{ padding: '12px', lineHeight: '1.6', borderRight: '1px solid #000' }}>대규모 투기되는 <strong>해양 폐기물(굴 껍데기) 재활용 공로에 따른 직접적인 폐기물 처리 보조금(톤당 3~4만원)</strong> 및 자발적 탄소시장(VCM)의 민간 크레딧(팝콘 등 연계) 등록을 통한 부가적 임팩트 파이프라인</td>
+            <td style={{ textAlign: 'center', fontWeight: 'bold' }}>원가 절감 및 추가수익</td>
           </tr>
         </tbody>
       </table>
@@ -91,25 +91,25 @@ export default function BusinessModelStrategyV3() {
           <tbody>
             <tr>
               <td style={{ padding: '12px 8px', fontWeight: 'bold', color: '#777', textAlign: 'center', borderBottom: '1px solid #eee' }}>TAM</td>
-              <td style={{ padding: '12px 8px', wordBreak: 'keep-all', borderBottom: '1px solid #eee' }}><strong>[캠핑·여가 시장 전반]</strong> 아웃도어 성수기 정착에 따른 라이프 트렌드 지속 우상향 추세 (약 5,000억원)</td>
+              <td style={{ padding: '12px 8px', wordBreak: 'keep-all', borderBottom: '1px solid #eee' }}><strong>[야외 바비큐 & 캠핑 시장]</strong> 아웃도어 트렌드 지속 확장에 따른 산업용/가정용 숯 및 연료 전반의 거시 시장 (약 5,000억원)</td>
             </tr>
             <tr>
               <td style={{ padding: '12px 8px', fontWeight: 'bold', color: '#555', textAlign: 'center', borderBottom: '1px solid #eee' }}>SAM</td>
-              <td style={{ padding: '12px 8px', wordBreak: 'keep-all', borderBottom: '1px solid #eee' }}><strong>[친환경 대체재 파이]</strong> 환경부 유해물질 규제 직격탄으로 도태된 기존 화학 착화재 파이가 전면 무주공산 편입 (약 500억원)</td>
+              <td style={{ padding: '12px 8px', wordBreak: 'keep-all', borderBottom: '1px solid #eee' }}><strong>[친환경 안심 고체연료 시장]</strong> 유해 물질 규제로 인해 대체제로 급부상하는 무검출/천연 베이스의 고체 착화재/불멍 장작 시장 (약 500억원)</td>
             </tr>
             <tr>
               <td style={{ padding: '12px 8px', fontWeight: 'bold', color: '#111', textAlign: 'center' }}>SOM</td>
-              <td style={{ padding: '12px 8px', wordBreak: 'keep-all' }}><strong>[초도 수익 핵심 타겟]</strong> 호흡기 유해 물질에 100% 민감한 3040 영유아 가족 및 전국 최상급 프리미엄 숯불 글램핑장 우선 선점 (약 15억원)</td>
+              <td style={{ padding: '12px 8px', wordBreak: 'keep-all' }}><strong>[호흡기 민감 초기 타겟 시장]</strong> 냄새와 유해 가스에 극도로 민감한 3040 가족 캠퍼 및 프리미엄 글램핑/요식업 기반 초기 수요 (약 15억원)</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <p style={{ fontSize: '15.5px', color: '#000', fontWeight: 'bold', marginBottom: '8px' }}>다. 단계별 자생적 스케일업(Scale-up) 전략 및 예상 매출액 성장성 지표</p>
+      <p style={{ fontSize: '15.5px', color: '#000', fontWeight: 'bold', marginBottom: '8px' }}>다. 단계별 자생적 스케일업(Scale-up) 전략 및 로드맵</p>
       <ul style={{ listStyleType: "'ㅇ '", paddingLeft: '20px', fontSize: '14.5px', color: '#000', lineHeight: '1.6', marginBottom: '24px', letterSpacing: '-0.3px', wordBreak: 'keep-all' }}>
-        <li style={{ marginBottom: '8px' }}><strong>(1단계 제품 라인업 다각화)</strong> 화로대 고광택 세척제, 캠핑 전용 비누 등 '무독성과 세정' 핵심 키워드를 완전히 확장한 토탈 라이프스타일 굿즈 라인업 무한 증식 설계</li>
-        <li style={{ marginBottom: '8px' }}><strong>(2단계 원재료 융합 확충)</strong> 표고버섯 폐배지 등을 이질적으로 융합한 농업 폐기물 추가 결합형 신규 모델을 출시하여 경쟁사가 따라오지 못할 지적재산권(특허) 보호 장벽 조기 구축</li>
-        <li><strong>(3단계 글로벌 LNT 진출)</strong> 환경 보존의 최고 등급인 LNT(Leave No Trace) 문화가 완벽히 오랫동안 100% 정착된 북미/유럽 선진 캠핑 시장으로의 수출 판로 적극 개척 및 수출액 타겟팅 수립</li>
+        <li style={{ marginBottom: '8px' }}><strong>(1단계 인지도 확보)</strong> 초기 자사몰 및 펀딩을 통해 조개껍데기 오가닉 질감이 돋보이는 모던 감성 <strong>'캠핑용 안심 착화재'</strong>로 아웃도어 시장을 빠르게 선점</li>
+        <li style={{ marginBottom: '8px' }}><strong>(2단계 원재료 융합 확충)</strong> 표고버섯 폐배지 등을 이질적으로 융합한 농업 폐기물 결합형 고열량 <strong>'프리미엄 바비큐용 성형장작/성형숯'</strong> 모델을 출시하여 B2B 프랜차이즈 식당 및 글램핑장 대량 납품 계약 확보</li>
+        <li><strong>(3단계 글로벌 LNT 진출)</strong> <strong>'캠핑용 불멍 오브제'</strong>로 라인업을 고도화하고, 제철소 산업용 탈황제로 피벗(Pivot)하거나 환경 보존(LNT: Leave No Trace) 트렌드에 특화된 글로벌 K-에코테크 기어로 북미 수출 개척</li>
       </ul>
 
       <div style={{ border: '2px solid #333', padding: '20px', marginBottom: '30px', background: '#fff' }}>
@@ -130,7 +130,7 @@ export default function BusinessModelStrategyV3() {
           </ResponsiveContainer>
         </div>
         <div style={{ fontSize: '12.5px', color: '#555', textAlign: 'right', marginTop: '10px' }}>
-          * 당사 자체 B2B 영업권 직접 확보율 및 국가 통계 기준을 기반으로 한 보수적 하이퍼 추정치 적용 산출 근거 (2025)
+          * 당사 자체 B2B 영업권 직접 확보율 및 폐기물 보조금 연계를 기반으로 한 보수적 하이퍼 추정치 적용 산출 근거 (2025)
         </div>
       </div>
     </div>

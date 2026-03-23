@@ -7,7 +7,7 @@ const marketDemandData = [
   { year: '22년', demand: 32 },
   { year: '23년', demand: 55 },
   { year: '24년', demand: 78 },
-  { year: '25년(예계)', demand: 110 }
+  { year: '25년', demand: 110 }
 ];
 
 export default function MarketAnalysisV2() {
