@@ -40,7 +40,7 @@ export default function BusinessModelStrategyV1() {
           </div>
           <div style={{ flex: 1, background: 'white', padding: '16px', borderRadius: '8px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
             <div style={{ fontWeight: 'bold', color: '#0f172a', marginBottom: '8px' }}>가치(Value) 창출</div>
-            <div style={{ fontSize: '13px', color: '#475569', lineHeight: '1.5' }}>KCL 유해성 무검출 프리미엄<br/>제로웨이스트 토양개량 ESG 포지셔닝</div>
+            <div style={{ fontSize: '13px', color: '#475569', lineHeight: '1.5' }}>국가공인 성형탄 품질기준 적합 프리미엄<br/>제로웨이스트 토양개량 ESG 포지셔닝</div>
           </div>
           <div style={{ flex: 1, background: 'white', padding: '16px', borderRadius: '8px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
             <div style={{ fontWeight: 'bold', color: '#0f172a', marginBottom: '8px' }}>수익(Revenue) 파이프라인</div>
@@ -82,8 +82,8 @@ export default function BusinessModelStrategyV1() {
             <TrendingUp size={24} />
           </div>
           <div>
-            <h3 style={{ margin: '0 0 8px 0', fontSize: '16px', color: '#1e293b' }}>3단계 スケ일업: 토탈 친환경 캠핑 기어 브랜드 도약</h3>
-            <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: '1.6' }}>캠핑 착화재 카테고리에서의 성공과 신뢰도를 발판 삼아, 직접 고기를 구울 수 있는 패화석 숯(BBQ용 단가 인상 모델) 개발 및 폐플라스틱을 결합한 캠핑 폴딩 박스 등 토탈 사이클 기어 브랜드로 파이프라인을 다각화합니다.</p>
+            <h3 style={{ margin: '0 0 8px 0', fontSize: '16px', color: '#1e293b' }}>3단계 스케일업: 토탈 친환경 캠핑 기어 브랜드 도약</h3>
+            <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: '1.6' }}>초기 성공을 발판으로 중장기 산출물을 본격 전개합니다. ①참나무 훈제향 장작(버섯 폐배지 톱밥 결합), ②자연 폐기물 하이브리드 업사이클링 제품군, ③캠핑 전용 기어/도구 디자인 개발 등 토탈 브랜드 라인업으로 다각화합니다.</p>
           </div>
         </div>
       </div>
