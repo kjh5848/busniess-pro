@@ -16,9 +16,33 @@ export default function ProblemBackgroundV1() {
            </h3>
            <ul className="hwp-list">
              <li><strong>지역 사회 폐기물 방치:</strong> 매년 해안가에 버려지는 30만 톤 이상의 통영/거제 굴껍데기로 인한 갯벌 악취 및 해양 생태계 훼손 문제 심화.</li>
-             <li><strong>발암물질 및 메탄올 9배 초과:</strong> 한국소비자원 검사 결과, 시중 저가형 캠핑 착화재에서 1군 발암물질(카드뮴) 및 허용 기준치의 9배를 초과하는 메탄올 적발.</li>
-             <li><strong>치명적인 호흡기 질환 유발:</strong> 밀폐된 텐트나 야외 직화 조리 중 발생하는 맹독성 화학 연기로 인해 안심해야 할 캠핑장에서 소비자의 중대한 안전사고 위험 상존.</li>
+             <li><strong>발암물질 및 유해가스 배출:</strong> 시중 저가형 캠핑 착화재에서 1군 발암물질(카드뮴) 적발 및 치명적인 호흡기 질환 유발.</li>
            </ul>
+
+           {/* HWP 스타일: 신문 기사/뉴스 스크랩 증빙 UI */}
+           <div style={{ margin: '15px 10px 10px 10px', border: '1px solid #666', backgroundColor: '#fff', padding: '12px', position: 'relative', boxShadow: '2px 2px 0px rgba(0,0,0,0.05)' }}>
+             {/* 스크랩 테이프 장식 */}
+             <div style={{ position: 'absolute', top: '-6px', left: '50%', transform: 'translateX(-50%)', width: '35px', height: '10px', backgroundColor: '#e5e5e5', border: '1px solid #aaa', opacity: 0.9 }}></div>
+             
+             <div style={{ borderBottom: '1px solid #000', paddingBottom: '3px', marginBottom: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+               <span style={{ fontSize: '11px', fontWeight: 'bold', fontFamily: 'serif', letterSpacing: '-0.5px', color: '#111' }}>[사회/안전] 관련 보도 주요 발췌</span>
+               <span style={{ fontSize: '9px', color: '#555' }}>한국소비자원 검사 기반</span>
+             </div>
+             
+             <h4 style={{ margin: '0 0 8px 0', fontSize: '13px', fontWeight: 'bold', lineHeight: '1.3', letterSpacing: '-0.5px', color: '#000' }}>
+               "겨울 캠핑장 '메탄올 겔' 착화재 중독 비상...<br/>밀폐 텐트서 일가족 가스 질식 위기"
+             </h4>
+             
+             <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+               {/* 뉴스 보도 사진 대체 박스 */}
+               <div style={{ width: '45px', height: '35px', backgroundColor: '#eee', border: '1px solid #aaa', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                 <span style={{ fontSize: '8px', color: '#666', textAlign: 'center', lineHeight: '1.2' }}>관련<br/>보도<br/>사진</span>
+               </div>
+               <p style={{ margin: 0, fontSize: '10px', color: '#333', lineHeight: '1.4', wordBreak: 'keep-all', textAlign: 'justify' }}>
+                 최근 오토캠핑 인구가 증가한 가운데, 허용 기준치의 9배를 초과하는 공업용 메탄올 착화재를 텐트 안에서 연소시켰다가 심각한 호흡기 질환 및 두통을 호소하는 안전사고가 속출하고 있다. 전문가들은 "맹독성 화학 연기가 호흡기에 치명적..." <span style={{ color: '#888' }}>[기사 중략]</span>
+               </p>
+             </div>
+           </div>
          </div>
 
          {/* 내부적 솔루션 (필요성 파트) */}
