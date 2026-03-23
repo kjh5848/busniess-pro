@@ -83,7 +83,7 @@ export default function BusinessModelStrategyV1() {
           </div>
           <div>
             <h3 style={{ margin: '0 0 8px 0', fontSize: '16px', color: '#1e293b' }}>3단계 스케일업: 토탈 친환경 캠핑 기어 브랜드 도약</h3>
-            <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: '1.6' }}>초기 성공을 발판으로 중장기 산출물을 본격 전개합니다. ①참나무 훈제향 장작(버섯 폐배지 톱밥 결합), ②자연 폐기물 하이브리드 업사이클링 제품군, ③캠핑 전용 기어/도구 디자인 개발 등 토탈 브랜드 라인업으로 다각화합니다.</p>
+            <p style={{ margin: 0, color: '#475569', fontSize: '14px', lineHeight: '1.6' }}>초기 성공을 발판으로 중장기 산출물을 본격 전개합니다. ①참나무 훈제향 장작(버섯 폐배지 톱밥 결합), ②자연 폐기물 하이브리드 업사이클링 제품군, ③굴패각 신소재 특화 캠핑 기어/도구 라인업 자체 디자인 구축 등 토탈 브랜드로 다각화합니다.</p>
           </div>
         </div>
       </div>
