@@ -60,22 +60,31 @@ export default function SolutionExecutionV1() {
             
             {/* --- 중장기 영역 --- */}
             <tr>
-              <td rowSpan={2} style={{ border: '1px solid #333', padding: '8px', backgroundColor: '#f7f7f7', fontWeight: 'bold' }}>
+              <td rowSpan={3} style={{ border: '1px solid #333', padding: '8px', backgroundColor: '#f7f7f7', fontWeight: 'bold' }}>
                 중·장기<br />최종 산출물
               </td>
               <td style={{ border: '1px solid #333', padding: '8px', textAlign: 'left', lineHeight: '1.4' }}>
-                <span style={{ color: '#0000ff', fontStyle: 'italic', fontSize: '12px', fontWeight: 'bold' }}>프리미엄 향 톱밥 숯불 바베큐용 라인업 디자인</span><br />
-                <span style={{ fontSize: '10px', color: '#0055ff' }}>* (양산 단계) 브랜드 하이엔드 모델 시장 확장</span>
+                <span style={{ color: '#0000ff', fontStyle: 'italic', fontSize: '12px', fontWeight: 'bold' }}>프리미엄 참나무 톱밥 착화재</span><br />
+                <span style={{ fontSize: '10px', color: '#0055ff' }}>* 버섯 폐기물에서 발생하는 참나무 톱밥을 결합한 훈제향 장작 개발</span>
               </td>
-              <td style={{ border: '1px solid #333', padding: '8px', color: '#0000ff', fontStyle: 'italic' }}>1세트</td>
-              <td style={{ border: '1px solid #333', padding: '8px', color: '#0000ff', fontStyle: 'italic' }}>~'27.05.31.</td>
+              <td style={{ border: '1px solid #333', padding: '8px', color: '#0000ff', fontStyle: 'italic' }}>1식</td>
+              <td style={{ border: '1px solid #333', padding: '8px', color: '#0000ff', fontStyle: 'italic' }}>~'27.06.30.</td>
             </tr>
             <tr>
-              <td style={{ border: '1px solid #333', padding: '8px', textAlign: 'left' }}>
-                <span style={{ color: '#0000ff', fontStyle: 'italic', fontSize: '12px', fontWeight: 'bold' }}>대량 양산 설비 라인 실가동 및 B2B 파이프라인(식당 납품) 달성</span>
+              <td style={{ border: '1px solid #333', padding: '8px', textAlign: 'left', lineHeight: '1.4' }}>
+                <span style={{ color: '#0000ff', fontStyle: 'italic', fontSize: '12px', fontWeight: 'bold' }}>자연물 하이브리드 업사이클링 제품군 생산</span><br />
+                <span style={{ fontSize: '10px', color: '#0055ff' }}>* 커피, 왕겨, 귤껍데기 등 다양한 자연 폐기물 이종 결합</span>
               </td>
               <td style={{ border: '1px solid #333', padding: '8px', color: '#0000ff', fontStyle: 'italic' }}>-</td>
-              <td style={{ border: '1px solid #333', padding: '8px', color: '#0000ff', fontStyle: 'italic' }}>~'27.05.31.</td>
+              <td style={{ border: '1px solid #333', padding: '8px', color: '#0000ff', fontStyle: 'italic' }}>~'27.09.30.</td>
+            </tr>
+            <tr>
+              <td style={{ border: '1px solid #333', padding: '8px', textAlign: 'left', lineHeight: '1.4' }}>
+                <span style={{ color: '#0000ff', fontStyle: 'italic', fontSize: '12px', fontWeight: 'bold' }}>캠핑 특화 전용 도구 디자인 및 개발</span><br />
+                <span style={{ fontSize: '10px', color: '#0055ff' }}>* 실전 캠핑장 환경에서도 활용 가능한 전용 캠핑기어 제품군 기획</span>
+              </td>
+              <td style={{ border: '1px solid #333', padding: '8px', color: '#0000ff', fontStyle: 'italic' }}>1건</td>
+              <td style={{ border: '1px solid #333', padding: '8px', color: '#0000ff', fontStyle: 'italic' }}>~'27.12.31.</td>
             </tr>
 
           </tbody>
