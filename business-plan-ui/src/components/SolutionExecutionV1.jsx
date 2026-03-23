@@ -51,8 +51,9 @@ export default function SolutionExecutionV1() {
               <td style={{ border: '1px solid #333', padding: '8px', color: '#0000ff', fontStyle: 'italic' }}>~'26.11.30.</td>
             </tr>
             <tr>
-              <td style={{ border: '1px solid #333', padding: '8px', textAlign: 'left' }}>
-                <span style={{ color: '#0000ff', fontStyle: 'italic', fontSize: '12px', fontWeight: 'bold' }}>KCL 배기가스 무해 인증 및 5대 안전 시험성적서</span>
+              <td style={{ border: '1px solid #333', padding: '8px', textAlign: 'left', lineHeight: '1.4' }}>
+                <span style={{ color: '#0000ff', fontStyle: 'italic', fontSize: '12px', fontWeight: 'bold' }}>성형탄(착화재) 규격·품질기준 적합 공인 성적서</span><br />
+                <span style={{ fontSize: '10px', color: '#0055ff' }}>* 국가 지정 검사기관(KTR·KCL 등) 유해물질 불검출 및 품질표시 인증</span>
               </td>
               <td style={{ border: '1px solid #333', padding: '8px', color: '#0000ff', fontStyle: 'italic' }}>1건</td>
               <td style={{ border: '1px solid #333', padding: '8px', color: '#0000ff', fontStyle: 'italic' }}>~'26.12.31.</td>
