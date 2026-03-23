@@ -3,6 +3,8 @@ import ProblemBackgroundV1 from './ProblemBackgroundV1';
 import MarketAnalysisV1 from './MarketAnalysisV1';
 import SolutionPreparationV1 from './SolutionPreparationV1';
 import SolutionExecutionV1 from './SolutionExecutionV1';
+import BusinessModelStrategyV1 from './BusinessModelStrategyV1';
+import FundExecutionPlanV1 from './FundExecutionPlanV1';
 import '../index.css';
 
 export default function BusinessPlanV1() {
@@ -30,6 +32,11 @@ export default function BusinessPlanV1() {
       <SolutionPreparationV1 />
       <SolutionExecutionV1 />
 
+      {/* ======================================= */}
+      {/* 챕터 3: 성장 전략 모듈들                */}
+      {/* ======================================= */}
+      <BusinessModelStrategyV1 />
+      <FundExecutionPlanV1 />
     </div>
   );
 }
