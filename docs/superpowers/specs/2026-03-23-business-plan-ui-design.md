@@ -1,36 +1,37 @@
-# Business Plan UI Design Spec
-**Date:** 2026-03-23
-**Topic:** HWP-styled Business Plan React Component (V3 Hybrid Mode)
+# 사업계획서 UI 디자인 스펙 명세서
+**작성일:** 2026-03-23
+**주제:** HWP(한글) 스타일 기반 사업계획서용 React 컴포넌트 (V3 하이브리드 모드)
 
-## 1. Overview
-The goal is to render the "폐굴껍데기 기반 캠핑 착화재" business plan as a single-page React UI component. Following the user's direction, it adopts the `hwp-styled-ui` V3 Data-Driven guidelines. It mixes "Public/Gov ESG Storytelling" (Level 3) with "VC/Investor Financial Data Validation" (Level 2).
+## 1. 개요 (Overview)
+본 스펙의 목적은 "폐굴껍데기 기반 캠핑 착화재" 사업계획서를 단일 페이지 React UI 컴포넌트로 구현하는 것입니다. 사용자의 결정에 따라 `hwp-styled-ui` V3 Data-Driven 가이드라인을 채택하여, "공공기관 및 초보자를 위한 ESG 스토리텔링"(Level 3 타겟) 요소와 "VC/투자자를 위한 수익성 데이터 입증"(Level 2 타겟) 요소를 하이브리드 형태로 결합합니다.
 
-## 2. Visual & Aesthetic Rules
-- **Monochrome Constraint**: Only black (`#333`), white, and shades of gray (`#666`, `#e5e5e5`). (Recharts may use muted dark grey variants).
-- **Strict Geometry**: No `border-radius`, no `box-shadow`. Uses sharp 1px/2px solid or dotted borders to mimic official HWP table (`글상자`) interfaces.
-- **Typography & Tonality**: 
-  - Uses clean Sans-serif (Main/Sub-headers) and Serif (Body).
-  - Enforces `word-break: keep-all;` and `line-height: 1.6;`.
-  - Content must be heavily bulleted (개조식) and localized into Korean business terminology (e.g., BM -> 수익 구조).
+## 2. 디자인 및 텍스트 작성 원칙 (Aesthetic & Language Rules)
+- **100% 한글화 원칙 (Korean-First Policy)**: 보고서 형태를 띠는 모든 UI 텍스트, 표시되는 문구, 코드 내부의 모든 주석은 **반드시 한국어로 작성**합니다. 불필요한 영문 비즈니스 용어(BM, Pain Point, GTM 등) 사용을 엄격히 금지하고, 누구나 이해하기 쉬운 한국어(수익 구조, 핵심 문제점, 시장 진입 등)로 순화하여 작성해야 합니다.
+- **색상 제한 (Monochrome Constraint)**: 검정색(`#333`), 흰색, 그리고 회색 계열(`#666`, `#e5e5e5`)만 엄격하게 사용합니다. (Recharts 차트 역시 무채색 계열-어두운 회색 변형만 허용).
+- **형태학적 제한 (Strict Geometry)**: 디자인에 라운딩(`border-radius`)이나 그림자(`box-shadow`) 효과를 절대 주지 않습니다. 날카로운 1px/2px의 실선 또는 점선을 사용하여 공문서의 전통적인 '글상자' 및 표 느낌을 완벽하게 재현합니다.
+- **타이포그래피 및 문체**: 
+  - 제목은 굵직하게, 본문은 정보 위주로 가독성 높게 배열합니다.
+  - 줄바꿈 방지(`word-break: keep-all;`) 및 줄간격 `1.6`을 강제 적용합니다.
+  - 본문 내용은 길게 쓰지 않고 반드시 '개조식(Bullet point)' 위주로 간결하게 작성합니다.
 
-## 3. Data Structure & Component Layout
-1. **Header Block ([개요/요약])**
-   - Title: 폐굴껍데기의 다공성 구조를 활용해 유해 가스와 악취를 잡은 친환경 안심 캠핑 착화재
-   - A pronounced left-bordered quote emphasizing the overarching ESG mission and immediate profitability.
+## 3. 데이터 구조 및 컴포넌트 레이아웃 
+1. **상단 타이틀 영역 ([개요/요약])**
+   - 제목: "폐굴껍데기의 다공성 구조를 활용해 유해 가스와 악취를 잡은 친환경 안심 캠핑 착화재"
+   - 두꺼운 좌측 테두리가 있는 굵직한 인용구를 배치하여 본 아이템의 핵심 ESG 명분과 즉각적인 수익성을 직관적으로 요약 강조합니다.
 
-2. **Section 1: 문제인식 및 해결방안 (ESG Story / L3 Persona)**
-   - Left Block (Problem): 30만 톤 굴껍데기 해안 방치 리스크 & 시중 캠핑 연료 1군 발암물질/메탄올 검출 안전 문제 (lucide-react Alert/Warning Icons).
-   - Right Block (Solution): 20% 황금 배합비 구조를 통해 "왜 구운 굴껍데기가 천연 매연 스펀지가 되는가" 강조.
+2. **섹션 1: 문제인식 및 해결방안 (ESG 스토리 / 초보자 페르소나)**
+   - 좌측 블록 (문제점): 30만 톤 굴껍데기 해안 방치 리스크 및 시중 착화재의 발암물질/메탄올 검출 문제 (lucide-react의 경고/사이렌 아이콘 활용).
+   - 우측 블록 (해결책): 20% 배합 비율과 천연 스펀지 탈황 메커니즘을 설명하는 "왜 구운 굴껍데기가 천연 매연 흡착제가 되는가"를 시각적 모듈로 삽입.
 
-3. **Section 2: 실현 가능성 및 비즈니스 방어력 (Investor Data / L2 Persona)**
-   - Recharts upward-trending chart (`BarChart` or `ComposedChart`) to visually demonstrate the dramatic unit-cost drop due to regional waste-processing subsidy (폐기물 처리 보조금 수령).
-   - Dual UI mockups/placeholders represented as clean, sharp rectangles showing early layout ideas for the D2C Commerce App interface.
+3. **섹션 2: 실현 가능성 및 비즈니스 방어력 (투자 데이터 / VC 페르소나)**
+   - Recharts 라이브러리의 우상향 차트(`BarChart` 또는 `ComposedChart`)를 삽입하여, 폐기물 처리 보조금 확보를 통한 극단적인 '단가 절감 효과'를 시각적으로 증명합니다.
+   - D2C 커머스 앱 화면을 상징하는 심플한 사각형(와이어프레임) 목업 두 개를 배치하여 B2C 진입 준비 상태를 보여줍니다.
 
-4. **Section 3: 실행 계획 및 시장 진입 (Tables)**
-   - B2B, B2C channel strategies visualized inside a robust HWP-style table with quantitative metrics (Target Sales, Marketing Budget, ROI expectations).
+4. **섹션 3: 실행 계획 및 시장 진입 (표 형태의 정량 데이터)**
+   - B2B, B2C 채널 판매 전략을 HWP 스타일의 표(Table)로 도식화하고, 판매 단가 / 마케팅 예산 / 목표 기댓값 등의 수치를 정량적으로 기입합니다.
 
-## 4. Dependencies
-- React (Next.js default structure)
-- `lucide-react` (Strict monochrome usage)
-- `recharts` (Grey-scaled upward trending visualization)
-- Vanilla CSS (`index.css` or equivalent variables) aligned with `--hwp-black`/`--hwp-gray` standards.
+## 4. 기술 스택 및 종속성 (Dependencies)
+- React 
+- `lucide-react` (엄격한 흑백 사용 원칙 적용)
+- `recharts` (회색 톤의 우상향 데이터 시각화)
+- Vanilla CSS (`--hwp-black`/`--hwp-gray` 등 변수로 HWP 톤앤매너 강제화)
