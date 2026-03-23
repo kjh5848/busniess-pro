@@ -1,7 +1,7 @@
 import React from 'react';
 import { AlertTriangle, CheckCircle, TrendingUp, ShieldCheck } from 'lucide-react';
 import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer, CartesianGrid, LabelList } from 'recharts';
-import '../indexV3.css';
+import '../index.css';
 
 // 차트 데이터 (투자 심사역 대상: 폐기물 보조금을 통한 단위 단가 절감 효과 시각화)
 const costData = [
@@ -10,7 +10,7 @@ const costData = [
   { 단계: '보조금 적용(목표)', 단가: 600, 마진: 600, label: '40% 절감' }
 ];
 
-export default function BusinessPlanV3() {
+export default function BusinessPlanV1() {
   return (
     <div className="hwp-document">
       {/* 타이틀 영역 */}
