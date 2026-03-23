@@ -23,18 +23,27 @@ export default function BusinessPlanV1() {
       {/* ======================================= */}
       {/* 챕터 1: 문제 인식 모듈들                */}
       {/* ======================================= */}
+      <div className="hwp-chapter-divider" style={{ borderBottom: '3px solid #1e3a8a', paddingBottom: '12px', marginBottom: '30px', marginTop: '40px' }}>
+        <h1 style={{ fontSize: '26px', fontWeight: '900', color: '#1e3a8a', margin: 0 }}>1. 문제인식 (Problem)</h1>
+      </div>
       <ProblemBackgroundV1 />
       <MarketAnalysisV1 />
 
       {/* ======================================= */}
       {/* 챕터 2: 실현 가능성 모듈들              */}
       {/* ======================================= */}
+      <div className="hwp-chapter-divider" style={{ borderBottom: '3px solid #16a34a', paddingBottom: '12px', marginBottom: '30px', marginTop: '60px' }}>
+        <h1 style={{ fontSize: '26px', fontWeight: '900', color: '#16a34a', margin: 0 }}>2. 실현가능성 (Solution)</h1>
+      </div>
       <SolutionPreparationV1 />
       <SolutionExecutionV1 />
 
       {/* ======================================= */}
       {/* 챕터 3: 성장 전략 모듈들                */}
       {/* ======================================= */}
+      <div className="hwp-chapter-divider" style={{ borderBottom: '3px solid #ea580c', paddingBottom: '12px', marginBottom: '30px', marginTop: '60px' }}>
+        <h1 style={{ fontSize: '26px', fontWeight: '900', color: '#ea580c', margin: 0 }}>3. 성장전략 (Scale-up)</h1>
+      </div>
       <BusinessModelStrategyV1 />
       <FundExecutionPlanV1 />
     </div>
