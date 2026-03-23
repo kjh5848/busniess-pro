@@ -2,7 +2,6 @@ import React from 'react';
 import { LineChart, Line, PieChart, Pie, Cell, ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import '../index.css';
 
-// 친환경 여가 시장 성장률 데이터 모의 설정 (단위: 억 원)
 const growthData = [
   { 연도: '2023년', 시장규모: 1200 },
   { 연도: '2024년', 시장규모: 1550 },
@@ -10,14 +9,12 @@ const growthData = [
   { 연도: '2026년(예측)', 시장규모: 2900 },
 ];
 
-// 핵심 전파 대상 고객층 (파이 차트용 데이터)
 const targetData = [
-  { name: '안전에 민감한 3040 가족 캠핑족', value: 65 },
-  { name: '가치 소비를 지향하는 젊은 세대', value: 25 },
-  { name: '일반 야외 레저 활동 인구', value: 10 },
+  { name: '안전에 가장 민감한 3040 가족 캠퍼', value: 65 },
+  { name: '오가닉/친환경 가치소비 캠퍼', value: 25 },
+  { name: '일반 레저 및 글램핑장(B2B)', value: 10 },
 ];
 
-// 공문서(HWP) 테마에 부합하는 무채색 배열
 const COLORS = ['#333333', '#777777', '#bbbbbb'];
 
 export default function MarketAnalysisV1() {
@@ -36,14 +33,14 @@ export default function MarketAnalysisV1() {
         </thead>
         <tbody>
           <tr>
-            <td><strong>원가 방어력 및 가격 경쟁력</strong></td>
+            <td><strong>원가 방어력(수익성)</strong></td>
             <td>제조원가 개당 평균 800원 내외 형성</td>
-            <td><strong>시 자체 폐기물 보조금 결합 시 실질적 마이너스 원가 달성 (압도적 우세)</strong></td>
+            <td><strong>순환경제 폐기물 보조금 결합 시 실질적 마이너스 원가 달성</strong></td>
           </tr>
           <tr>
-            <td><strong>인체 유해성 및 소비자 신뢰도 인식</strong></td>
-            <td>지속적인 발암물질 논란 및 시력저하 위험군 노출 상황</td>
-            <td><strong>100% 천연 안심 성분 인증으로 가족 단위 고객 대상 강력한 입소문 점유 유발</strong></td>
+            <td><strong>인체 유해성 및 정부 규제</strong></td>
+            <td>1급 발암물질(카드뮴) 논란, <strong>산림청 질산바륨 규제 초읽기</strong></td>
+            <td><strong>100% 천연 성분으로 산림청 '번개탄 바륨 전면 사용 금지(24-25년)' 정책의 유일무이한 완벽 대안</strong></td>
           </tr>
         </tbody>
       </table>
@@ -51,7 +48,7 @@ export default function MarketAnalysisV1() {
       {/* 시장 데이터의 신뢰성을 보장하는 시각적 대시보드 */}
       <div className="hwp-grid-2">
         
-        {/* 전체 관련 시장 성장성 (우상향 라인 차트) */}
+        {/* 전체 관련 시장 성장성 */}
         <div className="hwp-box">
           <div style={{ fontSize: '13px', fontWeight: 'bold', marginBottom: '15px', borderBottom: '1px solid #333', paddingBottom: '5px' }}>
             📈 국내 친환경 야외 용품 시장 성장률 추이 (단위: 억 원)
@@ -67,12 +64,12 @@ export default function MarketAnalysisV1() {
               </LineChart>
             </ResponsiveContainer>
           </div>
-          <p style={{ fontSize: '11px', color: '#666', marginTop: '10px' }}>
-            * 지속적인 기존 화학 연료 유해성 논란과 캠핑 인구 확대로 천연 대체재 시장 수요 폭발적 증가 전망
+          <p style={{ fontSize: '11px', color: '#666', marginTop: '10px', lineHeight: '1.4' }}>
+            * 산림청 유해물질 강력 규제 본격화 및 메탄올 공포 확산으로 100% 천연 대체재 특수 시장 폭발적 팽창 확정
           </p>
         </div>
 
-        {/* 최우선 고객층의 압도적인 파이 (도넛/파이 차트) */}
+        {/* 최우선 고객층의 압도적인 파이 */}
         <div className="hwp-box">
            <div style={{ fontSize: '13px', fontWeight: 'bold', marginBottom: '15px', borderBottom: '1px solid #333', paddingBottom: '5px' }}>
             🎯 최우선 진입 핵심 목표 고객층 (Target Segmentation)
@@ -100,8 +97,8 @@ export default function MarketAnalysisV1() {
               </ul>
             </div>
           </div>
-          <p style={{ fontSize: '11px', color: '#666', marginTop: '10px', letterSpacing: '-0.3px' }}>
-            * 가족의 건강과 안전에 가장 민감하게 반응하는 3040 부모 세대를 극초기 핵심 진입 대상으로 설정하여 빠르게 초기 브랜드 신뢰도를 확보함.
+          <p style={{ fontSize: '11px', color: '#666', marginTop: '10px', letterSpacing: '-0.3px', lineHeight: '1.4' }}>
+            * 직화 연기 등 자녀의 호흡기 질환 및 안전 사고 이슈에 가장 예민하며 브랜드 입소문 전파를 돕는 가족 단위 캠퍼 최우선 공략
           </p>
         </div>
 
